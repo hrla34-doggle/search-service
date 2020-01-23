@@ -1,0 +1,46 @@
+{
+  "name": "searchbar",
+  "version": "1.0.0",
+  "description": "searchbar and misc. informational components for replicating Trafalgar page",
+  "main": "server/index.js",
+  "scripts": {
+    "build": "webpack -d --watch",
+    "start": "nodemon server",
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Front-End-Capstone-hrla34/Searchbar.git"
+  },
+  "author": "Brian Price",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.1",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.15.2",
+    "bootstrap": "^4.4.1",
+    "chai": "^4.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1",
+    "mocha": "^7.0.0",
+    "mongoose": "^5.8.9",
+    "morgan": "^1.7.0",
+    "nodemon": "^2.0.2",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor"
+  },
+  "bugs": {
+    "url": "https://github.com/Front-End-Capstone-hrla34/Searchbar/issues"
+  },
+  "homepage": "https://github.com/Front-End-Capstone-hrla34/Searchbar#readme"
+}
