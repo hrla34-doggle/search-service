@@ -10,10 +10,10 @@ USAGE
 
 Combines with other components to recreate a Trafalagar trip description page.
 
-REQUIREMENTS
-
---
-
 DEVELOPMENT
 
---
+Installing Dependencies
+
+From within the root directory:
+
+npm install
