@@ -1,12 +1,12 @@
 // this file is run with npm run build
-// it uses babel to compile everything in client/src into bundle.js
+// it uses babel to compile everything in client/src into seachBarBundle.js
 const path = require('path');
 
 module.exports = {
   entry: path.resolve(__dirname, './client/src'),
   output: {
     path: path.resolve(__dirname, './client/dist'),
-    filename: 'bundle.js',
+    filename: 'searchBarBundle.js',
   },
   mode: 'development',
   module: {

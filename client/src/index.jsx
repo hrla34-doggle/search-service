@@ -5,4 +5,4 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import SearchBar from './components/SearchBar.jsx';
 
-ReactDom.render(<SearchBar />, document.getElementById('app'));
+ReactDom.render(<SearchBar />, document.getElementById('searchBar'));

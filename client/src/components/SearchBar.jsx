@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable import/no-unresolved */
-import React from 'React';
+import React from 'react';
 import ReactDom, { render } from 'react-dom';
 
 export default class SearchBar extends React.Component {
