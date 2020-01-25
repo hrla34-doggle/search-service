@@ -17,9 +17,9 @@ const tripSchema = new mongoose.Schema({
   year: { type: Number },
   imageUrl: { type: String },
   days: { type: Number },
-  countries: [{
+  country: {
     type: String,
-  }],
+  },
   cities: [{
     type: String,
   }],
@@ -53,7 +53,7 @@ const iconicNorth = new Trip({
   year: 2020,
   imageUrl: 'https://www.trafalgar.com/-/media/Project/Trafalgar/Product/hero-images/Iconic-North-Summer-2020-w.webp?smartCrop=1&centreCrop=1&w=2600&h=800',
   days: 7,
-  countries: ['New Zealand'],
+  country: 'New Zealand',
   cities: ['Auckland', 'Tauranga', 'Matamata', 'Rotorua', 'Wellington', 'Blenheim', 'Picton'],
 // eslint-disable-next-line max-len
   descriptions: ['BUBBLING MUD POOLS AND MĀORI CULTURE DEFINE THIS MEMORABLE ENCOUNTER WITH NEW ZEALANDS NORTH. EXPLORE AUCKLAND, ROTORUA AND WELLINGTON, WITH A STOP FOR LUNCH WITH A RETIRED CHAMPION JOCKEY.', 'Bubbling mud pools and Māori culture define this memorable encounter with New Zealands north. Explore Auckland, Rotorua and Wellington, with a stop for lunch with a retired champion jockey.'],
