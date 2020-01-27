@@ -82,22 +82,23 @@ export default class SearchBar extends React.Component {
             <table>
               <tbody>
                 <tr>
-                  <td style={{'width': '15%'}}><a href='#' id='Trafalgar'> Trafalgar </a></td>
+                  <td><a href='#' id='Trafalgar'> Trafalgar </a></td>
                   <td><span> <h2>SEARCH BAR GOES HERE AND ACROSS THE PAGE</h2> </span></td>
                   <td id='customers_agents'> <div><span style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</span></div> <div><span style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</span></div></td>
-                  <td style={{'width': '5%'}}><img style={{'height': '20px', 'width': '20px'}}src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png'></img></td>
+                  <td><img id='phoneReceiver' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png'></img></td>
                   <td id='customersAgentsSwitch'>{this.state.customersInfo ? <div><span style={{ 'fontWeight': 'bold' }}>866 513 1995</span><br /> Can we help you?</div> : <div><span style={{ 'fontWeight': 'bold' }}>800 854 0103</span><br /> or call your travel agent</div>}</td>
                 </tr>
                 <tr>
-                  <td style={{'width': '10%', 'fontWeight': 'bold'}}> <span>DESTINATIONS</span><i className='downArrow'></i></td>
-                  <td style={{'width': '10%', 'fontWeight': 'bold'}}> <span>DEALS</span><i className='downArrow'></i></td>
-                  <td style={{'width': '10%', 'fontWeight': 'bold'}}> <span>ABOUT US</span><i className='downArrow'></i></td>
-                  <td style={{'width': '20%', 'fontWeight': 'bold'}}> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i></td>
-                  <td></td>
-                  <td> <span style={{'fontSize': '12px', 'cursor': 'pointer'}}>Get a Quote</span></td>
-                  <td> <span style={{'fontSize': '12px', 'cursor': 'pointer'}}>Brands</span><i className='downArrow'></i></td>
-                  <td> <span style={{'fontSize': '12px', 'cursor': 'pointer'}}>Agents Login</span></td>
-                  <td> <span style={{'fontSize': '12px', 'cursor': 'pointer'}}>My Trafalgar</span><i className='downArrow'></i></td>
+                  <td className='row2part1' > <span>DESTINATIONS</span><i className='downArrow'></i></td>
+                  <td className='row2part1'> <span>DEALS</span><i className='downArrow'></i></td>
+                  <td className='row2part1'> <span>ABOUT US</span><i className='downArrow'></i></td>
+                  <td className='row2part1'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i></td>
+                  <td className='row2part2'> <span>Get a Quote</span></td>
+                  <td className='row2part2'> <span>Brands</span><i className='downArrow'></i></td>
+                  <td className='row2part2'> <span>Agents Login</span></td>
+                  <td> <img id='userAvatar'src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
+                  <span className = 'row2part2img'>My Trafalgar</span><i className='downArrow'></i>
+                  </td>
                 </tr>
               </tbody>
             </table>
