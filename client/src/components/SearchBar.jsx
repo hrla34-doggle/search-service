@@ -96,8 +96,13 @@ export default class SearchBar extends React.Component {
                   <td className='row2part2'> <span>Get a Quote</span></td>
                   <td className='row2part2'> <span>Brands</span><i className='downArrow'></i></td>
                   <td className='row2part2'> <span>Agents Login</span></td>
-                  <td> <img id='userAvatar'src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
-                  <span className = 'row2part2img'>My Trafalgar</span><i className='downArrow'></i>
+                  <td className = 'row2part2img'> <img id='userAvatar'src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
+                  <span>My Trafalgar<i className='downArrow'></i></span>
+                  <div className='myTrafalgarDropdown'>
+                    <a href='#'>Log in<i className='rightArrow'></i></a>
+                    <a href='#'>Sign up<i className='rightArrow'></i></a>
+                    <a href='#'>Manage My Booking<i className='rightArrow'></i></a>
+                  </div>
                   </td>
                 </tr>
               </tbody>
