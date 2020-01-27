@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon server",
-    "test": "mocha test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,18 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-15.4": "^1.4.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
     "eslint-config-hackreactor": "git://github.com/hackreactor-labs/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "puppeteer": "^2.0.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0"
   },
