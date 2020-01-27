@@ -94,15 +94,22 @@ export default class SearchBar extends React.Component {
                   <td className='row2part1'> <span>ABOUT US</span><i className='downArrow'></i></td>
                   <td className='row2part1'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i></td>
                   <td className='row2part2'> <span>Get a Quote</span></td>
-                  <td className='row2part2'> <span>Brands</span><i className='downArrow'></i></td>
-                  <td className='row2part2'> <span>Agents Login</span></td>
-                  <td className = 'row2part2img'> <img id='userAvatar'src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
-                  <span>My Trafalgar<i className='downArrow'></i></span>
-                  <div className='myTrafalgarDropdown'>
-                    <a href='#'>Log in<i className='rightArrow'></i></a>
-                    <a href='#'>Sign up<i className='rightArrow'></i></a>
-                    <a href='#'>Manage My Booking<i className='rightArrow'></i></a>
+
+                  <td className='row2part2' id='brands'> <span>Brands</span><i className='downArrow'></i>
+                  <div className='brandsDropdown'>
+                    <span><img className='brandsDropdownImg' src='https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png'></img></span>
+                    <span><img className='brandsDrowdownImg' src='https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png'></img></span>
                   </div>
+                  </td>
+                  <td className='row2part2'> <span>Agents Login</span></td>
+
+                  <td className='row2part2img'> <img id='userAvatar' src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
+                    <span>My Trafalgar<i className='downArrow'></i></span>
+                    <div className='myTrafalgarDropdown'>
+                      <a href='#'>Log in<i className='rightArrow'></i></a>
+                      <a href='#'>Sign up<i className='rightArrow'></i></a>
+                      <a href='#'>Manage My Booking<i className='rightArrow'></i></a>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -113,6 +120,4 @@ export default class SearchBar extends React.Component {
     );
   }
 }
-
-
 
