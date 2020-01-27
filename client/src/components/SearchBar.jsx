@@ -68,15 +68,12 @@ export default class SearchBar extends React.Component {
     this.getOneTrip(Math.floor(Math.random() * 100) + 1);
   }
 
-
-
   render() {
     var customersInfoStyle = {
       fontWeight: this.state.customersInfo ? 'bold' : 'normal'
     }
     var agentsInfoStyle = {
       fontWeight: this.state.agentsInfo ? 'bold' : 'normal'
-
     }
     return (
       <div>
@@ -87,9 +84,9 @@ export default class SearchBar extends React.Component {
                 <tr>
                   <td><a href='#' id='Trafalgar'> Trafalgar </a></td>
                   <td ><span> <h2>SEARCH BAR GOES HERE AND STRETCHES ACROSS PAGE</h2> </span></td>
-                  <td id='customers_agents'> <div><span style = {customersInfoStyle} onClick={this.toggleCustomers}>Customers</span></div> <div><span style = {agentsInfoStyle} onClick={this.toggleAgents}>Agents</span></div></td>
+                  <td id='customers_agents'> <div><span style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</span></div> <div><span style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</span></div></td>
                   <td>phone icon</td>
-                  <td id='customersAgentsSwitch'>{this.state.customersInfo ? <div><span style={{'font-weight': 'bold'}}>866 513 1995</span><br/> Can we help you?</div> : <div><span style={{'font-weight': 'bold'}}>800 854 0103</span><br/> or call your travel agent</div>}</td>
+                  <td id='customersAgentsSwitch'>{this.state.customersInfo ? <div><span style={{ 'font-weight': 'bold' }}>866 513 1995</span><br /> Can we help you?</div> : <div><span style={{ 'font-weight': 'bold' }}>800 854 0103</span><br /> or call your travel agent</div>}</td>
                 </tr>
                 <tr>
                   <td> <span>hi</span></td>

@@ -2,9 +2,9 @@
 
 const config = {
 
-  AWSAccessKeyId: 'AKIAJLBHXIZ2V4LHYENA',
+  AWSAccessKeyId: 'AKIAIUCG37RYAE4NI5LA',
 
-  AWSSecretKey: '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',
+  AWSSecretKey: 'Ngv3grRJW4D0779eDfO5XERwAKAyoVzNTh2Z51ma',
 
 };
 
