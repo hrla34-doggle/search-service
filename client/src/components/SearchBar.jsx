@@ -81,16 +81,41 @@ export default class SearchBar extends React.Component {
           <nav>
             <table>
               <tbody>
-                <tr>
+                <tr className='row1'>
                   <td><a href='#' id='Trafalgar'> Trafalgar </a></td>
-                  <td><span> <h2>SEARCH BAR GOES HERE AND ACROSS THE PAGE</h2> </span></td>
+                  <td><span> <h2>SEARCH BAR</h2> </span></td>
                   <td id='customers_agents'> <div><span style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</span></div> <div><span style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</span></div></td>
                   <td><img id='phoneReceiver' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png'></img></td>
                   <td id='customersAgentsSwitch'>{this.state.customersInfo ? <div><span style={{ 'fontWeight': 'bold' }}>866 513 1995</span><br /> Can we help you?</div> : <div><span style={{ 'fontWeight': 'bold' }}>800 854 0103</span><br /> or call your travel agent</div>}</td>
                 </tr>
 
                 <tr>
-                  <td className='row2part1' > <span>DESTINATIONS</span><i className='downArrow'></i></td>
+                  <td className='row2part1' id='destinations'> <span>DESTINATIONS</span><i className='downArrow'></i>
+                    <div className='destinationsDropdown'>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td style={{ 'border': 'none' }}><span className='tableHead'>EUROPE</span><i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>LATIN AMERICA</span><i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>USA, CANADA, AND MEXICO</span><i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>AFRICA AND MIDDLE EAST</span><i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>ASIA</span><i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>AUSTRALIA AND NEW ZEALAND</span><i className='rightArrow'></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
 
                   <td className='row2part1' id='deals'> <span>DEALS</span><i className='downArrow'></i>
                     <div className='dealsDropdown'>
@@ -149,7 +174,7 @@ export default class SearchBar extends React.Component {
                       <table>
                         <tbody>
                           <tr>
-                            <span className='tableHead'>JoinTrafalgar</span><br />72 countries. 7 continents. <br/>Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
+                            <span className='tableHead'>JoinTrafalgar</span><br />72 countries. 7 continents. <br />Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
                           </tr>
                           <tr>
                             <td><span className='tableHead'>OUR STORY</span> <br />A decade of positive impact<i className='rightArrow'></i></td>
@@ -183,7 +208,7 @@ export default class SearchBar extends React.Component {
 
                   <td className='row2part2img'> <img id='userAvatar' src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
                     <span>My Trafalgar<i className='downArrow'></i></span>
-                    <div className='myTrafalgarDropdown'>
+                    <div style={{ 'marginTop': '35px' }} className='myTrafalgarDropdown'>
                       <a href='#'>Log in<i className='rightArrow'></i></a>
                       <a href='#'>Sign up<i className='rightArrow'></i></a>
                       <a href='#'>Manage My Booking<i className='rightArrow'></i></a>
