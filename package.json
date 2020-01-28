@@ -6,6 +6,7 @@
   "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon server",
+    "seed": "node db/seed.js",
     "test": "jest"
   },
   "repository": {
@@ -15,6 +16,7 @@
   "author": "Brian Price",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.610.0",
     "axios": "^0.19.1",
     "bluebird": "^3.7.2",
     "body-parser": "^1.15.2",
