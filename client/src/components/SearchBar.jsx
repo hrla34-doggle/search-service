@@ -92,12 +92,12 @@ export default class SearchBar extends React.Component {
                 <tr>
                   <td className='row2part1' > <span>DESTINATIONS</span><i className='downArrow'></i></td>
 
-                    <td className='row2part1' id='deals'> <span>DEALS</span><i className='downArrow'></i>
+                  <td className='row2part1' id='deals'> <span>DEALS</span><i className='downArrow'></i>
                     <div className='dealsDropdown'>
-                    <table>
+                      <table>
                         <tbody>
                           <tr>
-                            <td><span className='tableHead'>DEALS</span><br />Our latest offers, making travel more affordable for you</td>
+                            <span className='tableHead'>DEALS</span><br />Our latest offers, making travel more affordable
                           </tr>
                           <tr>
                             <td><span className='tableHead'>EARLY PAYMENT DISCOUNTS</span> <br />Book early and save 7.5%* on select trips<i className='rightArrow'></i></td>
@@ -115,14 +115,14 @@ export default class SearchBar extends React.Component {
                         </tbody>
                       </table>
                     </div>
-                    </td>
+                  </td>
 
-                    <td className='row2part1' id='aboutus'> <span>ABOUT US</span><i className='downArrow'></i>
+                  <td className='row2part1' id='aboutus'> <span>ABOUT US</span><i className='downArrow'></i>
                     <div className='aboutusDropdown'>
                       <table>
                         <tbody>
                           <tr>
-                            <td><span className='tableHead'>ABOUT US</span><br />For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life</td>
+                            <span className='tableHead'>ABOUT US</span><br />For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
                           </tr>
                           <tr>
                             <td><span className='tableHead'>EXPLORE MORE</span> <br />About Be My Guest<i className='rightArrow'></i></td>
@@ -149,7 +149,7 @@ export default class SearchBar extends React.Component {
                       <table>
                         <tbody>
                           <tr>
-                            <td><span className='tableHead'>JoinTrafalgar</span><br />72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to make travel matter and have a positive impact on the places we visit and the people who call them home.</td>
+                            <span className='tableHead'>JoinTrafalgar</span><br />72 countries. 7 continents. <br/>Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
                           </tr>
                           <tr>
                             <td><span className='tableHead'>OUR STORY</span> <br />A decade of positive impact<i className='rightArrow'></i></td>
