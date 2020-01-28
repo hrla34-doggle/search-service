@@ -88,19 +88,49 @@ export default class SearchBar extends React.Component {
                   <td><img id='phoneReceiver' src='https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png'></img></td>
                   <td id='customersAgentsSwitch'>{this.state.customersInfo ? <div><span style={{ 'fontWeight': 'bold' }}>866 513 1995</span><br /> Can we help you?</div> : <div><span style={{ 'fontWeight': 'bold' }}>800 854 0103</span><br /> or call your travel agent</div>}</td>
                 </tr>
+
                 <tr>
                   <td className='row2part1' > <span>DESTINATIONS</span><i className='downArrow'></i></td>
+
                   <td className='row2part1'> <span>DEALS</span><i className='downArrow'></i></td>
+                  
                   <td className='row2part1'> <span>ABOUT US</span><i className='downArrow'></i></td>
-                  <td className='row2part1'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i></td>
+                  
+                  <td className='row2part1' id='makeadifference'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i>
+                  <div className='makeadifferenceDropdown'>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><span className='tableHead'>JoinTrafalgar</span><br/>72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to make travel matter and have a positive impact on the places we visit and the people who call them home.</td>
+                          </tr>
+                        <tr>
+                          <td><span className='tableHead'>OUR STORY</span> <br/>A decade of positive impact<i className='rightArrow'></i></td>
+                          <td><span className='tableHead'>WHAT WE DO</span> <br/>We do our part wherever we can<i className='rightArrow'></i></td>
+                          <td><span className='tableHead'>OUR PLEDGE</span> <br/>Make travel matter to people, places and wildlife<i className='rightArrow'></i></td>
+                        </tr>
+                        <tr>
+                          <td><span className='tableHead'>TREADRIGHT</span><br/>Supporting over 50 sustainable travel projects<i className='rightArrow'></i></td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  </td>
+                  
                   <td className='row2part2'> <span>Get a Quote</span></td>
 
                   <td className='row2part2' id='brands'> <span>Brands</span><i className='downArrow'></i>
                   <div className='brandsDropdown'>
-                    <span><img className='brandsDropdownImg' src='https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png'></img></span>
-                    <span><img className='brandsDrowdownImg' src='https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png'></img></span>
+                    <table>
+                      <tbody>
+                        <tr>
+                          <td><img className='brandsDropdownImg' src='https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png'></img></td>
+                          <td><img className='brandsDrowdownImg' src='https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png'></img></td>
+                        </tr>
+                      </tbody>
+                    </table>
                   </div>
                   </td>
+
                   <td className='row2part2'> <span>Agents Login</span></td>
 
                   <td className='row2part2img'> <img id='userAvatar' src='https://huntpng.com/images250/avatar-pic-circle-png-10.png'></img>
@@ -112,6 +142,7 @@ export default class SearchBar extends React.Component {
                     </div>
                   </td>
                 </tr>
+
               </tbody>
             </table>
           </nav>

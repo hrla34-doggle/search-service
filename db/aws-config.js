@@ -2,9 +2,9 @@
 
 const config = {
 
-  AWSAccessKeyId: 'AKIAIUCG37RYAE4NI5LA',
+  AWSAccessKeyId: // todo,
 
-  AWSSecretKey: 'Ngv3grRJW4D0779eDfO5XERwAKAyoVzNTh2Z51ma',
+  AWSSecretKey: // todo,
 
 };
 
