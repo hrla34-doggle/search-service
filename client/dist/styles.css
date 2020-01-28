@@ -1,0 +1,384 @@
+/* all header content */
+header {
+    border-bottom: 1px solid black;
+    display: flex;
+    line-height: 28px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    font-variant-ligatures: none;
+    font-feature-settings: "liga" 0;
+    font-family: FuturaNext-DemiBold,sans-serif;
+    color: #4c4c4c;
+    box-sizing: inherit; 
+}
+
+/*top row of header*/
+
+.row1 td {
+    padding-top: 30px;
+}
+
+/* Trafalgar logo in top left corner */
+#Trafalgar {
+    color: white;
+    background-color: red;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+    max-width: 100%;
+    width: 150px;
+    height: 30px;
+    margin: 0 20px 0 0px;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Customers and Agents next to search bar */
+#customers_agents {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    text-align: right;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin: 10px 15px 0 30px;
+    font: 12px/22px;
+    font-variant-ligatures: no-common-ligatures;
+    padding: 40px 30px 0 10px;
+    border-right: 1px solid #e6e6e6;
+}
+
+/* phone receiver img next to customers and agents */
+#phoneReceiver {
+    height: 20px;
+    width: 20px
+}
+
+/* the phone number/message next to the phone, toggled by customers/agents */
+#customersAgentsSwitch {
+    box-sizing: inherit;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font: 12px/22px;
+    font-variant-ligatures: no-common-ligatures;
+    position: relative;
+    padding: 0px 30px 0 10px;
+    margin: 10px 15px 0 30px;
+}
+
+/*Destinations/Deals/About Us/Make A Difference */
+.row2part1 {
+    width: 10%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*down arrows next to Destinations/Deals/About Us/Make A Difference */
+.downArrow {
+    border: solid lightgray;
+    margin-top: -20px;
+    margin-right: 50px;
+    margin-left: 5px;
+    margin-bottom: 2px;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 2px;
+    cursor: pointer;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*dropdown menu under Destinations */
+.destinationsDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer; 
+}
+
+/*show destinations dropdown when hovering over Destinations */
+#destinations:hover .destinationsDropdown {
+    display: inline;
+}
+
+/*destinations dropdown table settings */
+.destinationsDropdown table {
+    width:500px;
+    border: 1px solid black;
+    position: absolute;
+    top: 59px;
+    left: -180px;
+}
+
+/*destinations dropdown table cell settings */
+
+.destinationsDropdown td {
+    border-top: 1px solid;
+    padding-right: 10px;
+}
+
+/*dropdown menu under Deals */
+.dealsDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer; 
+}
+
+/*show dropdown menu when hovering over Deals */
+#deals:hover .dealsDropdown {
+    display: inline;
+}
+
+/*deals dropdown table settings */
+.dealsDropdown table {
+    width:1000px;
+    border: 1px solid black;
+    position: absolute;
+    top: 60px;
+    left: -115px;
+}
+
+/*deals dropdown table cell settings */
+
+.dealsDropdown td {
+    border-top: 1px solid;
+    padding-right: 10px;
+}
+
+/*dropdown menu under About Us */
+
+.aboutusDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer; 
+}
+
+/*show dropdown menu when hovering over About Us */
+#aboutus:hover .aboutusDropdown {
+    display: inline;
+}
+
+/* aboutus dropdown table settings */
+.aboutusDropdown table {
+    width:1000px;
+    border: 1px solid black;
+    position: absolute;
+    top: 60px;
+    left: -145px;
+}
+
+/*aboutus dropdown table cells */
+.aboutusDropdown td {
+    border-top: 1px solid;
+    padding-right: 10px;
+}
+
+/*dropdown menu under Make A Difference */
+.makeadifferenceDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer;
+}
+/*show dropdown menu when hovering over Make A Difference */
+#makeadifference:hover .makeadifferenceDropdown {
+    display: inline;
+}
+
+/* makeadifference dropdown table settings */
+.makeadifferenceDropdown table {
+    width:1000px;
+    border: 1px solid black;
+    position: absolute;
+    top: 32px;
+    left: -65px;
+}
+
+/*makeadifference dropdown table cells */
+.makeadifferenceDropdown td {
+    border-top: 1px solid;
+    padding-right: 10px;
+}
+
+/*Get A Quote/Brands/Agents Login */
+.row2part2 {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/*Drowndown for Brands*/
+.brandsDropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+}
+
+.brandsDropdown table {
+    width:1000px;
+    column-width: 20px;
+    border: 1px solid black;
+    position: absolute;
+    top: 32px;
+    left: -550px;
+}
+
+/*images from Brands dropdown*/
+.brandsDropdownImg {
+    box-sizing: border-box;
+    height: 20%;
+    width: 20%
+}
+
+/*Show Brands drowndown when hovering over brands*/
+#brands:hover .brandsDropdown {
+    display: block
+}
+
+/*user avatar next to My Trafalgar*/
+#userAvatar {
+    height: 20px;
+    width: 20px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+/*the entire My Trafalgar/user avatar/drowndown menu div*/
+.row2part2img {
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: underline;
+}
+/*dropdown menu for My Trafalgar*/
+.myTrafalgarDropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/*the individual links in my trafalgar drowndown menu*/
+.myTrafalgarDropdown a {
+  height: 40px;
+  color: black;
+  padding: 0px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-bottom: 1px solid;
+  
+}
+/*display my trafalgar dropdown menu when hovering over the div */
+.row2part2img:hover .myTrafalgarDropdown {
+    display: block;
+}
+/*right pointing arrows in dropdown*/
+.rightArrow {
+    border: solid lightgray;
+    margin-top: -20px;
+    margin-right: 50px;
+    margin-left: 100%;
+    margin-bottom: 20%;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    cursor: pointer;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+/*turn arrows red when hovering over links*/
+.myTrafalgarDropdown a:hover .rightArrow {
+    border-color: red;
+}
+/*turn arrows red when hovering over the arrows themselves*/
+.myTrafalgarDropdown .rightArrow:hover {
+    border-color: red;
+}
+
+/*arrows for makeadifferenceDropdown*/
+
+.makeadifferenceDropdown td:hover .rightArrow {
+    border-color: red;
+}
+
+.makeadifferenceDropdown .tableHead:hover {
+    color: red;
+}
+
+.makeadifferenceDropdown .rightArrow:hover .rightArrow {
+    border-color: red;
+}
+
+/*arrows for aboutusDropdown*/
+
+.aboutusDropdown td:hover .rightArrow {
+    border-color: red;
+}
+
+.aboutusDropdown .tableHead:hover {
+    color: red;
+}
+
+.aboutusDropdown .rightArrow:hover .rightArrow {
+    border-color: red;
+}
+
+/*arrows for dealsDropdown*/
+
+.dealsDropdown td:hover .rightArrow {
+    border-color: red;
+}
+
+.dealsDropdown .tableHead:hover {
+    color: red;
+}
+
+.dealsDropdown .rightArrow:hover .rightArrow {
+    border-color: red;
+}
+
+/*arrows for destinationsDropdown */
+.destinationsDropdown td:hover .rightArrow {
+    border-color: red;
+}
+
+.destinationsDropdown .tableHead:hover {
+    color: red;
+}
+
+.destinationsDropdown .rightArrow:hover .rightArrow {
+    border-color: red;
+}
+
+/*all table headers are bigger font */
+.tableHead {
+    font-size: 20px;
+}
+
+
