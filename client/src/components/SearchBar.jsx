@@ -92,43 +92,91 @@ export default class SearchBar extends React.Component {
                 <tr>
                   <td className='row2part1' > <span>DESTINATIONS</span><i className='downArrow'></i></td>
 
-                  <td className='row2part1'> <span>DEALS</span><i className='downArrow'></i></td>
-                  
-                  <td className='row2part1'> <span>ABOUT US</span><i className='downArrow'></i></td>
-                  
-                  <td className='row2part1' id='makeadifference'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i>
-                  <div className='makeadifferenceDropdown'>
+                    <td className='row2part1' id='deals'> <span>DEALS</span><i className='downArrow'></i>
+                    <div className='dealsDropdown'>
                     <table>
-                      <tbody>
-                        <tr>
-                          <td><span className='tableHead'>JoinTrafalgar</span><br/>72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to make travel matter and have a positive impact on the places we visit and the people who call them home.</td>
+                        <tbody>
+                          <tr>
+                            <td><span className='tableHead'>DEALS</span><br />Our latest offers, making travel more affordable for you</td>
                           </tr>
-                        <tr>
-                          <td><span className='tableHead'>OUR STORY</span> <br/>A decade of positive impact<i className='rightArrow'></i></td>
-                          <td><span className='tableHead'>WHAT WE DO</span> <br/>We do our part wherever we can<i className='rightArrow'></i></td>
-                          <td><span className='tableHead'>OUR PLEDGE</span> <br/>Make travel matter to people, places and wildlife<i className='rightArrow'></i></td>
-                        </tr>
-                        <tr>
-                          <td><span className='tableHead'>TREADRIGHT</span><br/>Supporting over 50 sustainable travel projects<i className='rightArrow'></i></td>
+                          <tr>
+                            <td><span className='tableHead'>EARLY PAYMENT DISCOUNTS</span> <br />Book early and save 7.5%* on select trips<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>EUROPE 2020</span> <br />SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>YEAR ROUND SAVINGS</span> <br />Savings for groups, multi trip bookings and more<i className='rightArrow'></i></td>
                           </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                          <tr>
+                            <td><span className='tableHead'>LAST MINUTE DEALS</span> <br />Save on soon to depart trips<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>SOLO TRAVELER DEALS</span> <br />Savings for solo travelers<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>TODAY'S BEST OFFERS</span> <br />Worldwide travel deals. Here today. Gone tomorrow.<i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>PAST GUEST EXCLUSIVE OFFERS</span> <br />Savings for our Very Important Travelers<i className='rightArrow'></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    </td>
+
+                    <td className='row2part1' id='aboutus'> <span>ABOUT US</span><i className='downArrow'></i>
+                    <div className='aboutusDropdown'>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td><span className='tableHead'>ABOUT US</span><br />For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life</td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>EXPLORE MORE</span> <br />About Be My Guest<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>WHO WE ARE</span> <br />We are the world's leading and most awarded travel brand<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>MAKE A DIFFERENCE</span> <br />Travel today, sustain tomorrow<i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>TRAFALGAR HIGHLIGHTS</span> <br />Our unique experiences that connect you to the world<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>WHAT OUR GUESTS SAY</span> <br />Our live, unedited reviews<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>BROCHURES</span> <br />Request a brochure and start dreaming<i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>MOMENTS</span> <br />7 continents. 302 trips. Magic moments on every one.<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>TRAFALGAR LIVE</span> <br />Share your moments with #SimplyTrafalgar<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>5 REASONS TO BOOK NOW</span> <br />Be confident<i className='rightArrow'></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </td>
-                  
+
+                  <td className='row2part1' id='makeadifference'> <span>MAKE A DIFFERENCE</span><i className='downArrow'></i>
+                    <div className='makeadifferenceDropdown'>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td><span className='tableHead'>JoinTrafalgar</span><br />72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to make travel matter and have a positive impact on the places we visit and the people who call them home.</td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>OUR STORY</span> <br />A decade of positive impact<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>WHAT WE DO</span> <br />We do our part wherever we can<i className='rightArrow'></i></td>
+                            <td><span className='tableHead'>OUR PLEDGE</span> <br />Make travel matter to people, places and wildlife<i className='rightArrow'></i></td>
+                          </tr>
+                          <tr>
+                            <td><span className='tableHead'>TREADRIGHT</span><br />Supporting over 50 sustainable travel projects<i className='rightArrow'></i></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </td>
+
                   <td className='row2part2'> <span>Get a Quote</span></td>
 
                   <td className='row2part2' id='brands'> <span>Brands</span><i className='downArrow'></i>
-                  <div className='brandsDropdown'>
-                    <table>
-                      <tbody>
-                        <tr>
-                          <td><img className='brandsDropdownImg' src='https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png'></img></td>
-                          <td><img className='brandsDrowdownImg' src='https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png'></img></td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                    <div className='brandsDropdown'>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td><img className='brandsDropdownImg' src='https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png'></img></td>
+                            <td><img className='brandsDrowdownImg' src='https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png'></img></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </td>
 
                   <td className='row2part2'> <span>Agents Login</span></td>
