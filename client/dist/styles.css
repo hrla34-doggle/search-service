@@ -381,4 +381,8 @@ header {
     font-size: 20px;
 }
 
+/* change search bar magnifying glass background to gray when hovered*/
+#magnifyingGlass:hover {
+    background-color: gray
+}
 
