@@ -144,14 +144,14 @@ export default class SearchBar extends React.Component {
                         <span style={{ fontWeight: 'bold' }}>866 513 1995</span>
                         <br />
                         {' '}
-Can we help you?
+                        Can we help you?
                       </div>
                     ) : (
                       <div>
                         <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
                         <br />
                         {' '}
-or call your travel agent
+                          or call your travel agent
                       </div>
                     )}
                   </td>
@@ -220,28 +220,28 @@ or call your travel agent
                           <tr>
                             <span className="tableHead">DEALS</span>
                             <br />
-Our latest offers, making travel more affordable
+                            Our latest offers, making travel more affordable
                           </tr>
                           <tr>
                             <td>
                               <span className="tableHead">EARLY PAYMENT DISCOUNTS</span>
                               {' '}
                               <br />
-Book early and save 7.5%* on select trips
+                              Book early and save 7.5%* on select trips
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">EUROPE 2020</span>
                               {' '}
                               <br />
-SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
+                              SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">YEAR ROUND SAVINGS</span>
                               {' '}
                               <br />
-Savings for groups, multi trip bookings and more
+                              Savings for groups, multi trip bookings and more
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -250,21 +250,21 @@ Savings for groups, multi trip bookings and more
                               <span className="tableHead">LAST MINUTE DEALS</span>
                               {' '}
                               <br />
-Save on soon to depart trips
+                              Save on soon to depart trips
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">SOLO TRAVELER DEALS</span>
                               {' '}
                               <br />
-Savings for solo travelers
+                              Savings for solo travelers
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">TODAY'S BEST OFFERS</span>
                               {' '}
                               <br />
-Worldwide travel deals. Here today. Gone tomorrow.
+                              Worldwide travel deals. Here today. Gone tomorrow.
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -273,7 +273,7 @@ Worldwide travel deals. Here today. Gone tomorrow.
                               <span className="tableHead">PAST GUEST EXCLUSIVE OFFERS</span>
                               {' '}
                               <br />
-Savings for our Very Important Travelers
+                              Savings for our Very Important Travelers
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -292,28 +292,28 @@ Savings for our Very Important Travelers
                           <tr>
                             <span className="tableHead">ABOUT US</span>
                             <br />
-For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
+                            For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
                           </tr>
                           <tr>
                             <td>
                               <span className="tableHead">EXPLORE MORE</span>
                               {' '}
                               <br />
-About Be My Guest
+                              About Be My Guest
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">WHO WE ARE</span>
                               {' '}
                               <br />
-We are the world's leading and most awarded travel brand
+                              We are the world's leading and most awarded travel brand
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">MAKE A DIFFERENCE</span>
                               {' '}
                               <br />
-Travel today, sustain tomorrow
+                              Travel today, sustain tomorrow
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -322,21 +322,21 @@ Travel today, sustain tomorrow
                               <span className="tableHead">TRAFALGAR HIGHLIGHTS</span>
                               {' '}
                               <br />
-Our unique experiences that connect you to the world
+                              Our unique experiences that connect you to the world
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">WHAT OUR GUESTS SAY</span>
                               {' '}
                               <br />
-Our live, unedited reviews
+                              Our live, unedited reviews
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">BROCHURES</span>
                               {' '}
                               <br />
-Request a brochure and start dreaming
+                              Request a brochure and start dreaming
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -345,21 +345,21 @@ Request a brochure and start dreaming
                               <span className="tableHead">MOMENTS</span>
                               {' '}
                               <br />
-7 continents. 302 trips. Magic moments on every one.
+                              7 continents. 302 trips. Magic moments on every one.
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">TRAFALGAR LIVE</span>
                               {' '}
                               <br />
-Share your moments with #SimplyTrafalgar
+                              Share your moments with #SimplyTrafalgar
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">5 REASONS TO BOOK NOW</span>
                               {' '}
                               <br />
-Be confident
+                              Be confident
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -378,31 +378,31 @@ Be confident
                           <tr>
                             <span className="tableHead">JoinTrafalgar</span>
                             <br />
-72 countries. 7 continents.
+                            72 countries. 7 continents.
                             {' '}
                             <br />
-Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
+                            Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
                           </tr>
                           <tr>
                             <td>
                               <span className="tableHead">OUR STORY</span>
                               {' '}
                               <br />
-A decade of positive impact
+                              A decade of positive impact
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">WHAT WE DO</span>
                               {' '}
                               <br />
-We do our part wherever we can
+                              We do our part wherever we can
                               <i className="rightArrow" />
                             </td>
                             <td>
                               <span className="tableHead">OUR PLEDGE</span>
                               {' '}
                               <br />
-Make travel matter to people, places and wildlife
+                              Make travel matter to people, places and wildlife
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -410,7 +410,7 @@ Make travel matter to people, places and wildlife
                             <td>
                               <span className="tableHead">TREADRIGHT</span>
                               <br />
-Supporting over 50 sustainable travel projects
+                              Supporting over 50 sustainable travel projects
                               <i className="rightArrow" />
                             </td>
                           </tr>
@@ -449,20 +449,20 @@ Supporting over 50 sustainable travel projects
                     {' '}
                     <img id="userAvatar" src="https://huntpng.com/images250/avatar-pic-circle-png-10.png" alt="User Avatar" />
                     <span>
-My Trafalgar
+                      My Trafalgar
                       <i className="downArrow" />
                     </span>
                     <div style={{ marginTop: '35px' }} className="myTrafalgarDropdown">
                       <a href="#">
-Log in
+                        Log in
                         <i className="rightArrow" />
                       </a>
                       <a href="#">
-Sign up
+                        Sign up
                         <i className="rightArrow" />
                       </a>
                       <a href="#">
-Manage My Booking
+                        Manage My Booking
                         <i className="rightArrow" />
                       </a>
                     </div>

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
