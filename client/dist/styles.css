@@ -75,9 +75,11 @@ header {
 
 /*Destinations/Deals/About Us/Make A Difference */
 .row2part1 {
+    table-layout: fixed;
     width: 10%;
     font-weight: bold;
     cursor: pointer;
+    padding-left: 30px;
 }
 
 /*down arrows next to Destinations/Deals/About Us/Make A Difference */
@@ -116,8 +118,8 @@ header {
     width:500px;
     border: 1px solid black;
     position: absolute;
-    top: 59px;
-    left: -180px;
+    top: 45px;
+    left: -55px;
 }
 
 /*destinations dropdown table cell settings */
@@ -148,8 +150,8 @@ header {
     width:1000px;
     border: 1px solid black;
     position: absolute;
-    top: 60px;
-    left: -115px;
+    top: 45px;
+    left: -55px;
 }
 
 /*deals dropdown table cell settings */
@@ -182,8 +184,8 @@ header {
     width:1000px;
     border: 1px solid black;
     position: absolute;
-    top: 60px;
-    left: -145px;
+    top: 45px;
+    left: -55px;
 }
 
 /*aboutus dropdown table cells */
@@ -214,7 +216,7 @@ header {
     border: 1px solid black;
     position: absolute;
     top: 32px;
-    left: -65px;
+    left: -55px;
 }
 
 /*makeadifference dropdown table cells */
@@ -227,6 +229,7 @@ header {
 .row2part2 {
     font-size: 12px;
     cursor: pointer;
+    padding-left: 70px;
 }
 
 /*Drowndown for Brands*/
@@ -245,7 +248,7 @@ header {
     border: 1px solid black;
     position: absolute;
     top: 32px;
-    left: -550px;
+    left: -400px;
 }
 
 /*images from Brands dropdown*/

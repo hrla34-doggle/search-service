@@ -21,6 +21,7 @@ export default class SearchBar extends React.Component {
       allTrips: [],
       currentTrip: [],
       // query: '',
+      // queryResults: [],
       customersInfo: true,
       agentsInfo: false,
     };
@@ -39,7 +40,7 @@ export default class SearchBar extends React.Component {
     Axios.get('/api/trips')
       .then((trips) => this.setState({
         allTrips: trips.data,
-      }), console.log(this.state.allTrips))
+      }, () => console.log(this.state.allTrips)))
       .catch((err) => console.error(err));
   }
 
@@ -51,7 +52,7 @@ export default class SearchBar extends React.Component {
     Axios.get(`/api/trips/${id}`)
       .then((trip) => this.setState({
         currentTrip: trip.data,
-      }), console.log(this.state.currentTrip))
+      }, () => console.log(this.state.currentTrip)))
       .catch((err) => console.error(err));
   }
 
@@ -123,7 +124,11 @@ or call your travel agent
                     )}
                   </td>
                 </tr>
+              </tbody>
+            </table>
 
+            <table>
+              <tbody>
                 <tr>
                   <td className="row2part1" id="destinations">
                     {' '}
