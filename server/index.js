@@ -10,7 +10,6 @@ const cors = require('cors');
 const path = require('path');
 // eslint-disable-next-line import/no-unresolved
 const router = require('./router.js');
-// const db = require('../db)
 
 // middleware
 
