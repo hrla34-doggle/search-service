@@ -1,3 +1,5 @@
+/* eslint-disable react/destructuring-assignment */
+/* eslint-disable react/prop-types */
 import React from 'react';
 
 const Search = (props) => {
@@ -20,6 +22,9 @@ const Search = (props) => {
     border: '1px solid gray',
     display: 'inline-block',
   };
+  const resultsStyle = {
+    border: '1px solid black',
+  };
   return (
     <div>
       <table>
@@ -27,10 +32,11 @@ const Search = (props) => {
           <tr>
             <td>
               {' '}
-              <input id="searchBar" style={barStyle} type="text" placeholder="Where to or what trip?" />
+              <input id="searchBar" style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
             </td>
             <td><img id="magnifyingGlass" style={imgStyle} src="https://cdn1.iconfinder.com/data/icons/utility/100/SVG_Utility-07-512.png" alt="magnifying glass" /></td>
           </tr>
+          {props.searchResults.map((result) => <tr style={resultsStyle} key={result[1]}>{result[0]}</tr>)}
         </tbody>
       </table>
     </div>

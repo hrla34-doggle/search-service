@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unused-state */
 /* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -20,8 +21,8 @@ export default class SearchBar extends React.Component {
     this.state = {
       allTrips: [],
       currentTrip: [],
-      // query: '',
-      // queryResults: [],
+      query: '',
+      queryResults: [],
       customersInfo: true,
       agentsInfo: false,
     };
@@ -29,6 +30,8 @@ export default class SearchBar extends React.Component {
     this.getOneTrip = this.getOneTrip.bind(this);
     this.toggleCustomers = this.toggleCustomers.bind(this);
     this.toggleAgents = this.toggleAgents.bind(this);
+    this.updateQuery = this.updateQuery.bind(this);
+    this.updateSearchResults = this.updateSearchResults.bind(this);
   }
 
   getAllTrips() {
@@ -56,6 +59,34 @@ export default class SearchBar extends React.Component {
       .catch((err) => console.error(err));
   }
 
+  updateQuery(e) {
+    // as user types in search bar, update the state with their text
+    // run function to update search results each time
+    this.setState({
+      query: e.target.value,
+    }, () => this.updateSearchResults());
+  }
+
+  updateSearchResults() {
+    const search = this.state.query;
+    // if user has typed less than 3 letters, don't check for results
+    if (search.length > 0 && search.length < 3) {
+      this.setState({
+        queryResults: [['Keep typing to see results', 0]],
+      });
+    }
+    // each result will be structured as tuple with name/season/year for display then id for fetching data
+    // get results by matching trips whose name includes the query (not case-sensitive)
+    if (search.length >= 3) {
+      const results = this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
+      if (results.length === 0) { this.setState({ queryResults: [['Sorry no results', 0]] }); }
+      const updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
+      this.setState({
+        queryResults: updatedTrips,
+      });
+    }
+  }
+
   toggleCustomers() {
     // shows customers contact #
     this.setState({
@@ -73,6 +104,7 @@ export default class SearchBar extends React.Component {
   }
 
   componentDidMount() {
+    // when the page first renders, get all trips' info and also pick a random trip to display its info
     this.getAllTrips();
     this.getOneTrip(Math.floor(Math.random() * 100) + 1);
   }
@@ -95,7 +127,7 @@ export default class SearchBar extends React.Component {
                   <td>
                     <span>
                       {' '}
-                      <Search />
+                      <Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} />
                       {' '}
                     </span>
                   </td>
