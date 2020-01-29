@@ -3,7 +3,6 @@
 const express = require('express');
 
 const app = express();
-const port = 3003;
 
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -23,4 +22,4 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../client/dist')));
 app.use('/api', router);
 
-app.listen(port, () => console.log(`listening on port ${port}!`));
+module.exports = app;
