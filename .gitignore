@@ -1,10 +1,10 @@
 ## MAC files ##
 .DS_Store
 
-##API Keys##
+## AWS keys ##
 db/aws-config.js
 
-## images ##
+## photos ##
 photos
 
 ## NPM ##
