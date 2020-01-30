@@ -126,7 +126,7 @@ export default class SearchBar extends React.Component {
                   <td>
                     <span>
                       {' '}
-                      <Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} />
+                      <Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} />
                       {' '}
                     </span>
                   </td>

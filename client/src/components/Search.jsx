@@ -37,7 +37,7 @@ const Search = (props) => {
             </td>
             <td><img id="magnifyingGlass" style={imgStyle} src="https://cdn1.iconfinder.com/data/icons/utility/100/SVG_Utility-07-512.png" alt="magnifying glass" /></td>
           </tr>
-          {props.searchResults.map((result) => <tr className="searchResults" style={resultsStyle} key={result[1]}>{result[0]}</tr>)}
+          {props.searchResults.map((result) => <tr className="searchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</tr>)}
         </tbody>
       </table>
     </div>
