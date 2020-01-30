@@ -52,6 +52,7 @@ export default class SearchBar extends React.Component {
     // and store the info in this.state as currentTrip
     // then will need to re-render the page accordingly with that data
     // also run this with a random id (between 1-100) when page first loads
+    if (id === 0) { return; }
     Axios.get(`/api/trips/${id}`)
       .then((trip) => this.setState({
         currentTrip: trip.data,
