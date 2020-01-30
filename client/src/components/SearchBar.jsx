@@ -79,7 +79,6 @@ export default class SearchBar extends React.Component {
     // get results by matching trips whose name includes the query (not case-sensitive)
     if (search.length >= 3) {
       const results = this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
-      if (results.length === 0) { this.setState({ queryResults: [['Sorry no results', 0]] }); }
       const updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
       this.setState({
         queryResults: updatedTrips,
@@ -123,7 +122,7 @@ export default class SearchBar extends React.Component {
             <table>
               <tbody>
                 <tr className="row1">
-                  <td><a href="#" id="Trafalgar"> Trafalgar </a></td>
+                  <span><a href="#" id="Trafalgar"> Trafalgar </a></span>
                   <td>
                     <span>
                       {' '}
