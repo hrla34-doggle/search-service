@@ -79,7 +79,10 @@ export default class SearchBar extends React.Component {
     // get results by matching trips whose name includes the query (not case-sensitive)
     if (search.length >= 3) {
       const results = this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
-      const updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
+      let updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
+      if (updatedTrips.length === 0) {
+        updatedTrips = [['Sorry, no results found', 0]];
+      }
       this.setState({
         queryResults: updatedTrips,
       });
