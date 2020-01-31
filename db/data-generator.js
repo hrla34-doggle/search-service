@@ -24,8 +24,9 @@ const data = {
 
   cities: (country) => {
     const allCities = options.cities[country];
-    // pick a random number of cities based on how many are in that country
+    // pick a random number of cities (at least 2) based on how many are in that country
     let numberOfCities = Math.floor(Math.random() * allCities.length + 1);
+    if (numberOfCities === 1) { numberOfCities = 2; }
     // for the number of cities to add, pick a random city
     // and if it isn't already in the citiesToAdd, add it
     const citiesToAdd = [];
@@ -43,7 +44,7 @@ const data = {
     // generates a random city generated from the previous function
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     // creates the corresponding Object Url in S3
-    const imageUrl = `https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/${randomCity}.jpg`
+    const imageUrl = `${randomCity}.jpg`;
     return imageUrl;
   },
 

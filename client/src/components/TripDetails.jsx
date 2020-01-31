@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
@@ -71,37 +72,22 @@ Country
         </div>
 
         <span style={daysCountriesCitiesSpan} className="cities">pointer</span>
-        {props.trip.cities.length > 1
-          ? (
-            <span>
-              <span style={daysCountriesCitiesSpan} className="cities">
-                <strong>
-                  {' '}
-                  {props.trip.cities.length}
-                </strong>
-                {' '}
+        <span style={daysCountriesCitiesSpan} className="cities">
+          <strong>
+            {' '}
+            {props.trip.cities.length}
+          </strong>
+          {' '}
 Cities
-              </span>
-              <div className="countryDropdown">
-                {props.trip.cities}
-              </div>
+        </span>
+        <div className="citiesDropdown">
+          {props.trip.cities.map((city, index) => (
+            <span key={index}>
+              {city}
+              <br />
             </span>
-          )
-          : (
-            <span>
-              <span style={daysCountriesCitiesSpan} className="cities">
-                <strong>
-                  {' '}
-                1
-                </strong>
-                {' '}
-City
-              </span>
-              <div className="countryDropdown">
-                {props.trip.cities[0]}
-              </div>
-            </span>
-          )}
+          ))}
+        </div>
       </div>
     </section>
   );
