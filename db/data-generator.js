@@ -58,18 +58,18 @@ const data = {
   descriptions: () => {
     // randomly generate first and second descriptions from lorem ipsum text
     const firstDescription = [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.',
-      'Non blandit massa enim nec dui nunc mattis enim ut. In tellus integer feugiat scelerisque, accumsan lacus vel facilisis volutpat est velit egestas dui id.',
-      'Suspendisse potenti nullam ac tortor vitae purus faucibus, egestas quis ipsum suspendisse ultrices. A pellentesque sit amet porttitor eget dolor.',
-      'Laoreet id donec ultrices tincidunt arcu non. Est sit amet facilisis magna etiam tempor orci eu lobortis. Mauris pellentesque pulvinar pellentesque habitant morbi.',
-      'Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Etiam dignissim diam quis enim lobortis, sapien eget mi proin sed libero.',
-    ];
-    const secondDescription = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Diam donec adipiscing tristique risus nec feugiat, in ornare quam viverra orci sagittis eu volutpat.',
       'Nullam non nisi est sit, velit ut tortor pretium viverra suspendisse potenti nullam, pulvinar proin gravida hendrerit lectus a.',
       'Eu non diam phasellus vestibulum lorem sed, vivamus at augue eget arcu dictum varius, maecenas ultricies mi eget mauris pharetra et ultrices neque ornare.',
       'Vivamus at augue eget arcu dictum varius duis, diam donec adipiscing tristique risus, venenatis urna cursus eget nunc scelerisque.',
+    ];
+    const secondDescription = [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.',
+      'Non blandit massa enim nec dui nunc mattis enim ut. In tellus integer feugiat scelerisque, accumsan lacus vel facilisis volutpat est velit egestas dui id.',
+      'Suspendisse potenti nullam ac tortor vitae purus faucibus, egestas quis ipsum suspendisse ultrices. A pellentesque sit amet porttitor eget dolor.',
+      'Laoreet id donec ultrices tincidunt arcu non. Est sit amet facilisis magna etiam tempor orci eu lobortis. Mauris pellentesque pulvinar pellentesque habitant morbi.',
+      'Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Etiam dignissim diam quis enim lobortis, sapien eget mi proin sed libero.',
     ];
     const first = firstDescription[Math.floor(Math.random() * firstDescription.length)];
     const second = secondDescription[Math.floor(Math.random() * secondDescription.length)];
