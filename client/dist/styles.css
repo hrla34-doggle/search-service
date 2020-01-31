@@ -5,7 +5,7 @@ header {
     line-height: 28px;
     width: 100%;
     height: auto;
-    position: relative;
+    position: absolute;
     margin-top: -10px;
     margin-bottom: 10px;
     font-weight: 400;
@@ -33,7 +33,7 @@ header {
     max-width: 100%;
     width: 150px;
     height: 30px;
-    margin: 0 20px 0 0px;
+    margin: 50px 20px 0px 0px;
     padding: 5px;
     text-align: center;
     text-decoration: none;
@@ -57,6 +57,7 @@ header {
 
 /* phone receiver img next to customers and agents */
 #phoneReceiver {
+    position: fixed;
     height: 20px;
     width: 20px
 }
@@ -68,16 +69,18 @@ header {
     letter-spacing: 1px;
     font: 12px/22px;
     font-variant-ligatures: no-common-ligatures;
-    position: relative;
+    position: absolute;
     padding: 0px 30px 0 10px;
-    margin: 10px 15px 0 30px;
+    margin: 50px 15px 0 30px;
 }
 
 /*Destinations/Deals/About Us/Make A Difference */
 .row2part1 {
+    table-layout: fixed;
     width: 10%;
     font-weight: bold;
     cursor: pointer;
+    padding-left: 30px;
 }
 
 /*down arrows next to Destinations/Deals/About Us/Make A Difference */
@@ -116,8 +119,8 @@ header {
     width:500px;
     border: 1px solid black;
     position: absolute;
-    top: 59px;
-    left: -180px;
+    top: 45px;
+    left: -55px;
 }
 
 /*destinations dropdown table cell settings */
@@ -148,8 +151,8 @@ header {
     width:1000px;
     border: 1px solid black;
     position: absolute;
-    top: 60px;
-    left: -115px;
+    top: 45px;
+    left: -55px;
 }
 
 /*deals dropdown table cell settings */
@@ -182,8 +185,8 @@ header {
     width:1000px;
     border: 1px solid black;
     position: absolute;
-    top: 60px;
-    left: -145px;
+    top: 45px;
+    left: -55px;
 }
 
 /*aboutus dropdown table cells */
@@ -214,7 +217,7 @@ header {
     border: 1px solid black;
     position: absolute;
     top: 32px;
-    left: -65px;
+    left: -55px;
 }
 
 /*makeadifference dropdown table cells */
@@ -227,6 +230,7 @@ header {
 .row2part2 {
     font-size: 12px;
     cursor: pointer;
+    padding-left: 70px;
 }
 
 /*Drowndown for Brands*/
@@ -240,19 +244,21 @@ header {
 }
 
 .brandsDropdown table {
-    width:1000px;
+    width: 100px;
     column-width: 20px;
     border: 1px solid black;
     position: absolute;
     top: 32px;
-    left: -550px;
+    left: -200px;
 }
 
 /*images from Brands dropdown*/
 .brandsDropdownImg {
-    box-sizing: border-box;
-    height: 20%;
-    width: 20%
+    float:  right;
+    width:  200px;
+    height: 150px;
+    margin-right: 50px;
+    background-size: cover;
 }
 
 /*Show Brands drowndown when hovering over brands*/
@@ -381,4 +387,13 @@ header {
     font-size: 20px;
 }
 
+/* change search bar magnifying glass background to gray when hovered*/
+#magnifyingGlass:hover {
+    background-color: gray
+}
 
+/* change trip results when user hovers over one */
+.searchResults:hover {
+    background-color: gray;
+    cursor: pointer;
+}
