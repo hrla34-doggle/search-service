@@ -43,7 +43,7 @@ const options = {
     'Costa Rica': ['San Jose', 'Monteverde', 'Liberia', 'Tortuguero'],
     Mexico: ['Mexico City', 'Cancun', 'Tulum', 'Chichen Itza', 'Cozumel', 'Puerto Vallarta'],
     Canada: ['Montreal', 'Quebec City', 'Ottawa', 'Toronto', 'Vancouver', 'Banff'],
-    Brazil: ['Rio de Janeiro', 'Sao_Paulo', 'Brasilia', 'Salvador'],
+    Brazil: ['Rio de Janeiro', 'Sao Paulo', 'Brasilia', 'Salvador'],
     Peru: ['Cuzco', 'Lima', 'Puno'],
     Australia: ['Melbourne', 'Sydney', 'Canberra', 'Adelaide'],
     'New Zealand': ['Auckland', 'Christchurch', 'Picton', 'Wellington'],

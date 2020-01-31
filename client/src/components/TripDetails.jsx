@@ -2,7 +2,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
-// import Lima from '../../dist/photos/Giza.jpg';
 
 
 const TripDetails = (props) => {
@@ -31,6 +30,7 @@ const TripDetails = (props) => {
     marginLeft: '10px',
     lineHeight: '22px',
     color: '#4c4c4c',
+    cursor: 'pointer',
   };
 
   const daysCountriesCitiesSpan = {
@@ -41,9 +41,7 @@ const TripDetails = (props) => {
   return (
     <section>
       <div>
-        <img src="" alt="trip name" />
-        {/* <img src={Lima} alt="goaway" /> */}
-        {/* <img src={require(`../../dist/photos/${props.trip.imageUrl}`)} style={tripImg} /> */}
+        <img src={require(`../../dist/photos/${props.trip.imageUrl}`)} alt={props.trip.imageUrl.slice(0, -4)} />
         <h1 style={tripName}>{props.trip.name}</h1>
       </div>
 
@@ -58,36 +56,40 @@ const TripDetails = (props) => {
 Days
         </span>
 
-        <span style={daysCountriesCitiesSpan} className="country">flag</span>
         <span style={daysCountriesCitiesSpan} className="country">
-          <strong>
-            {' '}
+flag
+          <span style={daysCountriesCitiesSpan} className="country">
+            <strong>
+              {' '}
             1
-          </strong>
-          {' '}
-Country
-        </span>
-        <div className="countryDropdown">
-          {props.trip.country}
-        </div>
-
-        <span style={daysCountriesCitiesSpan} className="cities">pointer</span>
-        <span style={daysCountriesCitiesSpan} className="cities">
-          <strong>
+            </strong>
             {' '}
-            {props.trip.cities.length}
-          </strong>
-          {' '}
-Cities
+Country
+            <div className="countryDropdown">
+              {props.trip.country}
+            </div>
+          </span>
         </span>
-        <div className="citiesDropdown">
-          {props.trip.cities.map((city, index) => (
-            <span key={index}>
-              {city}
-              <br />
-            </span>
-          ))}
-        </div>
+
+        <span style={daysCountriesCitiesSpan} className="cities">
+pointer
+          <span style={daysCountriesCitiesSpan} className="cities">
+            <strong>
+              {' '}
+              {props.trip.cities.length}
+            </strong>
+            {' '}
+Cities
+            <div className="citiesDropdown">
+              {props.trip.cities.map((city, index) => (
+                <span key={index}>
+                  {city}
+                  <br />
+                </span>
+              ))}
+            </div>
+          </span>
+        </span>
       </div>
     </section>
   );

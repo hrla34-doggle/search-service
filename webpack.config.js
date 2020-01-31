@@ -26,6 +26,9 @@ module.exports = {
       {
         loader: 'file-loader',
         test: /\.(png|jpe?g|gif)$/i,
+        options: {
+          esModule: false,
+        },
       },
     ],
   },

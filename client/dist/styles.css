@@ -393,12 +393,14 @@ header {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
     cursor: pointer; 
+    padding: 5px;
 }
 
 /* show the country dropdown when user hovers over country header */
 
 .country:hover .countryDropdown {
-    display: block
+    display: block;
+    margin-left: 200px;
 }
 
 /* cities dropdown */
@@ -410,11 +412,13 @@ header {
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
-    cursor: pointer; 
+    cursor: pointer;
+    padding: 5px;
 }
 
 /* show the cities dropdown when user hovers over country header */
 
 .cities:hover .citiesDropdown {
-    display: block
+    display: block;
+    margin-left: 350px
 }
