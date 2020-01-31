@@ -4,9 +4,6 @@
 ## AWS keys ##
 db/aws-config.js
 
-## photos ##
-photos
-
 ## NPM ##
 npm
 npm-debug.log
