@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
-const Trip = require('../db/index.js');
+const Trip = require('../db/schema.js');
+const db = require('../db/index.js');
 
 const controllers = {
   // for initial page load, we get all trips' name/season/year for displaying in search bar, and id for if a trip is selected by user
