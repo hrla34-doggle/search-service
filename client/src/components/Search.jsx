@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable max-len */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
@@ -21,25 +23,18 @@ const Search = (props) => {
     height: '44px',
     width: '44px',
     border: '1px solid gray',
-    display: 'inline-block',
+    display: 'inline',
   };
   const resultsStyle = {
-    border: '1px solid black',
+    border: '1px',
   };
   return (
     <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              {' '}
-              <input id="searchBar" style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
-            </td>
-            <td><img id="magnifyingGlass" style={imgStyle} src="https://cdn1.iconfinder.com/data/icons/utility/100/SVG_Utility-07-512.png" alt="magnifying glass" /></td>
-          </tr>
-          {props.searchResults.map((result) => <tr className="searchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</tr>)}
-        </tbody>
-      </table>
+      <div style={{ display: 'flex' }}>
+        <input id="searchBar" style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
+        <img id="magnifyingGlass" style={imgStyle} src="https://cdn1.iconfinder.com/data/icons/utility/100/SVG_Utility-07-512.png" alt="magnifying glass" />
+      </div>
+      {props.searchResults.map((result) => <div className="searchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div>)}
     </div>
   );
 };
