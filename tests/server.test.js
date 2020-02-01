@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
 // const mongodb = require('mongoose');
 const supertest = require('supertest');
-const chai = require('chai');
+// const chai = require('chai');
 
-const { expect } = chai;
+// const { expect } = chai;
 
 const app = require('../server/index.js');
 // const Trip = require('../db/schema.js');
@@ -58,16 +58,17 @@ const request = supertest(app);
 // });
 
 describe('server api', () => {
-  it('gets all the trips in the database', (done) => {
-    request
-      .get('/api/trips')
-      .expect(200);
+  it('gets all 100 trips in the database', async (done) => {
+    const response = await request.get('/api/trips');
+    expect(response.statusCode).toBe(200);
+    expect(response.body.length).toBe(100);
     done();
   });
-  it('gets a trip when passed a numerical id as a parameter', (done) => {
-    request
-      .get('/api/trips/5')
-      .expect(200);
+  it('gets a trip with a given id when passed that number as a parameter', async (done) => {
+    const response = await request.get('/api/trips/5');
+    expect(response.statusCode).toBe(200);
+    expect(response.body.length).toBe(1);
+    expect(response.body[0].id).toBe(5);
     done();
   });
 });
