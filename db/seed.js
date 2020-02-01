@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
 const data = require('./data-generator.js');
 
-const db = require('./index.js');
-
-const Trip = require('./schema.js');
+const Trip = require('./index.js');
 
 
 // function to create a trip from random data
