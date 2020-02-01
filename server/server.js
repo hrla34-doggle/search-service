@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const app = require('./index.js');
 
 const port = 3003;

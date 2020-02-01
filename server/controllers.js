@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 const Trip = require('../db/schema.js');
 const db = require('../db/index.js');
