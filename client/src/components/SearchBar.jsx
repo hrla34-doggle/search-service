@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
@@ -121,361 +122,347 @@ export default class SearchBar extends React.Component {
     };
     return (
       <div>
-        <header>
-          <nav>
-            <table>
-              <tbody>
-                <tr className="row1">
-                  <span><a href="#" id="Trafalgar"> Trafalgar </a></span>
-                  <td>
-                    <span>
-                      {' '}
-                      <Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} />
-                      {' '}
-                    </span>
-                  </td>
-                  <td id="customers_agents">
-                    {' '}
-                    <div><span style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</span></div>
-                    {' '}
-                    <div><span style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</span></div>
-                  </td>
-                  <td><img id="phoneReceiver" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png" alt="phone receiver" /></td>
-                  <td id="customersAgentsSwitch">
-                    {this.state.customersInfo ? (
-                      <div>
-                        <span style={{ fontWeight: 'bold' }}>866 513 1995</span>
-                        <br />
-                        {' '}
+        <div className="BPheader">
+          <div><a href="#" id="BPTrafalgar"> Trafalgar </a></div>
+          <div id="BPsearchbarlocation"><Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} /></div>
+          <div id="BPcustomers_agents">
+            <ul>
+              <li style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</li>
+              <li style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</li>
+            </ul>
+          </div>
+          <img id="BPphone_Receiver" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png" alt="phone receiver" />
+          <div id="BPcustomers_Agents_Switch">
+            {this.state.customersInfo ? (
+              <div>
+                <span style={{ fontWeight: 'bold' }}>866 513 1995</span>
+                <br />
+                {' '}
                         Can we help you?
-                      </div>
-                    ) : (
-                      <div>
-                        <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
-                        <br />
-                        {' '}
+              </div>
+            ) : (
+              <div>
+                <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
+                <br />
+                {' '}
                           or call your travel agent
-                      </div>
-                    )}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              </div>
+            )}
+          </div>
+        </div>
 
-            <table>
-              <tbody>
-                <tr>
-                  <td className="row2part1" id="destinations">
-                    {' '}
-                    <span>DESTINATIONS</span>
-                    <i className="downArrow" />
-                    <div className="destinationsDropdown">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td style={{ border: 'none' }}>
-                              <span className="tableHead">EUROPE</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">LATIN AMERICA</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">USA, CANADA, AND MEXICO</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">AFRICA AND MIDDLE EAST</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">ASIA</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">AUSTRALIA AND NEW ZEALAND</span>
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
+        <table>
+          <tbody>
+            <tr>
+              <div className="row2part1" id="destinations">
+                {' '}
+                <span>DESTINATIONS</span>
+                <i className="downArrow" />
+                <div className="destinationsDropdown">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td style={{ border: 'none' }}>
+                          <span className="tableHead">EUROPE</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">LATIN AMERICA</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">USA, CANADA, AND MEXICO</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">AFRICA AND MIDDLE EAST</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">ASIA</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">AUSTRALIA AND NEW ZEALAND</span>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
-                  <td className="row2part1" id="deals">
-                    {' '}
-                    <span>DEALS</span>
-                    <i className="downArrow" />
-                    <div className="dealsDropdown">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <span className="tableHead">DEALS</span>
-                            <br />
+              <td className="row2part1" id="deals">
+                {' '}
+                <span>DEALS</span>
+                <i className="downArrow" />
+                <div className="dealsDropdown">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <span className="tableHead">DEALS</span>
+                        <br />
                             Our latest offers, making travel more affordable
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">EARLY PAYMENT DISCOUNTS</span>
-                              {' '}
-                              <br />
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">EARLY PAYMENT DISCOUNTS</span>
+                          {' '}
+                          <br />
                               Book early and save 7.5%* on select trips
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">EUROPE 2020</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">EUROPE 2020</span>
+                          {' '}
+                          <br />
                               SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">YEAR ROUND SAVINGS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">YEAR ROUND SAVINGS</span>
+                          {' '}
+                          <br />
                               Savings for groups, multi trip bookings and more
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">LAST MINUTE DEALS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">LAST MINUTE DEALS</span>
+                          {' '}
+                          <br />
                               Save on soon to depart trips
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">SOLO TRAVELER DEALS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">SOLO TRAVELER DEALS</span>
+                          {' '}
+                          <br />
                               Savings for solo travelers
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">TODAY'S BEST OFFERS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">TODAY'S BEST OFFERS</span>
+                          {' '}
+                          <br />
                               Worldwide travel deals. Here today. Gone tomorrow.
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">PAST GUEST EXCLUSIVE OFFERS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">PAST GUEST EXCLUSIVE OFFERS</span>
+                          {' '}
+                          <br />
                               Savings for our Very Important Travelers
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
 
-                  <td className="row2part1" id="aboutus">
-                    {' '}
-                    <span>ABOUT US</span>
-                    <i className="downArrow" />
-                    <div className="aboutusDropdown">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <span className="tableHead">ABOUT US</span>
-                            <br />
+              <td className="row2part1" id="aboutus">
+                {' '}
+                <span>ABOUT US</span>
+                <i className="downArrow" />
+                <div className="aboutusDropdown">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <span className="tableHead">ABOUT US</span>
+                        <br />
                             For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">EXPLORE MORE</span>
-                              {' '}
-                              <br />
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">EXPLORE MORE</span>
+                          {' '}
+                          <br />
                               About Be My Guest
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">WHO WE ARE</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">WHO WE ARE</span>
+                          {' '}
+                          <br />
                               We are the world's leading and most awarded travel brand
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">MAKE A DIFFERENCE</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">MAKE A DIFFERENCE</span>
+                          {' '}
+                          <br />
                               Travel today, sustain tomorrow
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">TRAFALGAR HIGHLIGHTS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">TRAFALGAR HIGHLIGHTS</span>
+                          {' '}
+                          <br />
                               Our unique experiences that connect you to the world
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">WHAT OUR GUESTS SAY</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">WHAT OUR GUESTS SAY</span>
+                          {' '}
+                          <br />
                               Our live, unedited reviews
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">BROCHURES</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">BROCHURES</span>
+                          {' '}
+                          <br />
                               Request a brochure and start dreaming
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">MOMENTS</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">MOMENTS</span>
+                          {' '}
+                          <br />
                               7 continents. 302 trips. Magic moments on every one.
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">TRAFALGAR LIVE</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">TRAFALGAR LIVE</span>
+                          {' '}
+                          <br />
                               Share your moments with #SimplyTrafalgar
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">5 REASONS TO BOOK NOW</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">5 REASONS TO BOOK NOW</span>
+                          {' '}
+                          <br />
                               Be confident
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
 
-                  <td className="row2part1" id="makeadifference">
-                    {' '}
-                    <span>MAKE A DIFFERENCE</span>
-                    <i className="downArrow" />
-                    <div className="makeadifferenceDropdown">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <span className="tableHead">JoinTrafalgar</span>
-                            <br />
+              <td className="row2part1" id="makeadifference">
+                {' '}
+                <span>MAKE A DIFFERENCE</span>
+                <i className="downArrow" />
+                <div className="makeadifferenceDropdown">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <span className="tableHead">JoinTrafalgar</span>
+                        <br />
                             72 countries. 7 continents.
-                            {' '}
-                            <br />
+                        {' '}
+                        <br />
                             Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">OUR STORY</span>
-                              {' '}
-                              <br />
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">OUR STORY</span>
+                          {' '}
+                          <br />
                               A decade of positive impact
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">WHAT WE DO</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">WHAT WE DO</span>
+                          {' '}
+                          <br />
                               We do our part wherever we can
-                              <i className="rightArrow" />
-                            </td>
-                            <td>
-                              <span className="tableHead">OUR PLEDGE</span>
-                              {' '}
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                        <td>
+                          <span className="tableHead">OUR PLEDGE</span>
+                          {' '}
+                          <br />
                               Make travel matter to people, places and wildlife
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <span className="tableHead">TREADRIGHT</span>
-                              <br />
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span className="tableHead">TREADRIGHT</span>
+                          <br />
                               Supporting over 50 sustainable travel projects
-                              <i className="rightArrow" />
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
+                          <i className="rightArrow" />
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
 
-                  <td className="row2part2">
-                    {' '}
-                    <span>Get a Quote</span>
-                  </td>
+              <td className="row2part2">
+                {' '}
+                <span>Get a Quote</span>
+              </td>
 
-                  <td className="row2part2" id="brands">
-                    {' '}
-                    <span>Brands</span>
-                    <i className="downArrow" />
-                    <div className="brandsDropdown">
-                      <table>
-                        <tbody>
-                          <tr>
-                            <td><img className="brandsDropdownImg" src="https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png" alt="Brendan Vacations" /></td>
-                            <td><img className="brandsDrowdownImg" src="https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png" alt="Costsaver" /></td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </td>
+              <td className="row2part2" id="brands">
+                {' '}
+                <span>Brands</span>
+                <i className="downArrow" />
+                <div className="brandsDropdown">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td><img className="brandsDropdownImg" src="https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png" alt="Brendan Vacations" /></td>
+                        <td><img className="brandsDrowdownImg" src="https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png" alt="Costsaver" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </td>
 
-                  <td className="row2part2">
-                    {' '}
-                    <span>Agents Login</span>
-                  </td>
+              <td className="row2part2">
+                {' '}
+                <span>Agents Login</span>
+              </td>
 
-                  <td className="row2part2img">
-                    {' '}
-                    <img id="userAvatar" src="https://huntpng.com/images250/avatar-pic-circle-png-10.png" alt="User Avatar" />
-                    <span>
+              <td className="row2part2img">
+                {' '}
+                <img id="userAvatar" src="https://huntpng.com/images250/avatar-pic-circle-png-10.png" alt="User Avatar" />
+                <span>
                       My Trafalgar
-                      <i className="downArrow" />
-                    </span>
-                    <div style={{ marginTop: '35px' }} className="myTrafalgarDropdown">
-                      <a href="#">
+                  <i className="downArrow" />
+                </span>
+                <div style={{ marginTop: '35px' }} className="myTrafalgarDropdown">
+                  <a href="#">
                         Log in
-                        <i className="rightArrow" />
-                      </a>
-                      <a href="#">
+                    <i className="rightArrow" />
+                  </a>
+                  <a href="#">
                         Sign up
-                        <i className="rightArrow" />
-                      </a>
-                      <a href="#">
+                    <i className="rightArrow" />
+                  </a>
+                  <a href="#">
                         Manage My Booking
-                        <i className="rightArrow" />
-                      </a>
-                    </div>
-                  </td>
-                </tr>
+                    <i className="rightArrow" />
+                  </a>
+                </div>
+              </td>
+            </tr>
 
-              </tbody>
-            </table>
-          </nav>
-        </header>
+          </tbody>
+        </table>
       </div>
     );
   }

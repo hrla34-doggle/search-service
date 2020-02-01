@@ -1,30 +1,24 @@
-/* all header content */
-header {
-    border-bottom: 1px solid black;
+/* top row of content */
+.BPheader {
     display: flex;
-    line-height: 28px;
+    align-items: center;
+    line-height: 32px;
     width: 100%;
     height: auto;
-    position: absolute;
-    margin-top: -10px;
+    position: relative;
+    margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 10px;
     font-weight: 400;
     font-size: 16px;
     font-variant-ligatures: none;
     font-feature-settings: "liga" 0;
     font-family: FuturaNext-DemiBold,sans-serif;
     color: #4c4c4c;
-    box-sizing: inherit; 
-}
-
-/*top row of header*/
-
-.row1 td {
-    padding-top: 30px;
 }
 
 /* Trafalgar logo in top left corner */
-#Trafalgar {
+#BPTrafalgar {
     color: white;
     background-color: red;
     text-transform: uppercase;
@@ -33,45 +27,52 @@ header {
     max-width: 100%;
     width: 150px;
     height: 30px;
-    margin: 50px 20px 0px 0px;
+    margin-right: 20px;
     padding: 5px;
     text-align: center;
     text-decoration: none;
 }
 
-/* Customers and Agents next to search bar */
-#customers_agents {
-    display: block;
-    text-decoration: none;
+/* Searchbar position within top row */
+
+#BPsearchbarlocation {
+    margin-right: 20px;
+    display: inline-block
+}
+
+/* Customers and Agents tabs next to search bar */
+#BPcustomers_agents {
+    display: inline-block;
     text-transform: uppercase;
     font-size: 12px;
     text-align: right;
     cursor: pointer;
     letter-spacing: 1px;
-    margin: 10px 15px 0 30px;
-    font: 12px/22px;
-    font-variant-ligatures: no-common-ligatures;
-    padding: 40px 30px 0 10px;
-    border-right: 1px solid #e6e6e6;
+    margin-right: 20px;
+    border-right: 1px dotted;
+    padding-right: 10px;
+    /* vertical-align: text-top; */
+}
+
+#BPcustomers_agents ul {
+    list-style-type: none;
+    display: inline-block;
 }
 
 /* phone receiver img next to customers and agents */
-#phoneReceiver {
-    position: fixed;
+#BPphone_Receiver {
     height: 20px;
-    width: 20px
+    width: 20px;
+    display: inline-block
 }
 
 /* the phone number/message next to the phone, toggled by customers/agents */
-#customersAgentsSwitch {
-    box-sizing: inherit;
+#BPcustomers_Agents_Switch {
     font-size: 12px;
     letter-spacing: 1px;
-    font: 12px/22px;
-    font-variant-ligatures: no-common-ligatures;
-    position: absolute;
-    padding: 0px 30px 0 10px;
-    margin: 50px 15px 0 30px;
+    position: inline-block;
+    margin: 0 20px 0 20px;
+    width: 150px
 }
 
 /*Destinations/Deals/About Us/Make A Difference */
