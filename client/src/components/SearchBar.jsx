@@ -14,6 +14,7 @@ import React from 'react';
 import ReactDom, { render } from 'react-dom';
 import Axios from 'axios';
 import Search from './Search';
+import MoreTripDetails from './MoreTripDetails';
 
 export default class SearchBar extends React.Component {
   constructor(props) {
@@ -468,12 +469,13 @@ export default class SearchBar extends React.Component {
                         Manage My Booking
                         <i className="rightArrow" />
                       </a>
+
                     </div>
                   </td>
                 </tr>
-
               </tbody>
             </table>
+            {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
           </nav>
         </header>
       </div>
