@@ -21,7 +21,7 @@
     color: white;
     background-color: red;
     text-transform: uppercase;
-    display: inline-block;
+    display: block;
     letter-spacing: 2px;
     max-width: 100%;
     width: 150px;
@@ -36,12 +36,12 @@
 
 #BPsearchbarlocation {
     margin-right: 20px;
-    display: inline-block
+    display: block
 }
 
 /* Customers and Agents tabs next to search bar */
 #BPcustomers_agents {
-    display: inline-block;
+    display: block;
     text-transform: uppercase;
     font-size: 12px;
     text-align: right;
@@ -54,21 +54,21 @@
 
 #BPcustomers_agents ul {
     list-style-type: none;
-    display: inline-block;
+    display: block;
 }
 
 /* phone receiver img next to customers and agents */
 #BPphone_Receiver {
     height: 20px;
     width: 20px;
-    display: inline-block
+    display: block
 }
 
 /* the phone number/message next to the phone, toggled by customers/agents */
 #BPcustomers_Agents_Switch {
     font-size: 12px;
     letter-spacing: 1px;
-    position: inline-block;
+    position: block;
     margin: 0 20px 0 20px;
     width: 150px
 }
@@ -94,9 +94,9 @@
 
 /*Destinations/Deals/About Us/Make A Difference */
 .BProw2part1 {
-    width: 10%;
     font-weight: bold;
     cursor: pointer;
+    margin-right: 30px;
 }
 
 /*down arrows next to Destinations/Deals/About Us/Make A Difference */
@@ -121,7 +121,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px
+    width: 500px;
 }
 
 /*show destinations dropdown when hovering over Destinations */
@@ -130,7 +130,6 @@
 }
 
 /* individual divs in the destinations dropdown menu */
-
 .BPdestinationsDropdown div {
     border-top: 1px solid black;
     width: fit-content;
@@ -147,12 +146,12 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px
+    width: 500px;
 }
 
 /*show dropdown menu when hovering over Deals */
 #BPdeals:hover .BPdealsDropdown {
-    display: inline;
+    display: block;
 }
 
 /* individual divs in the deals dropdown menu */
@@ -173,12 +172,12 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px
+    width: 500px;
 }
 
 /*show dropdown menu when hovering over About Us */
 #BPaboutus:hover .BPaboutusDropdown {
-    display: inline;
+    display: block;
 }
 
 /* individual divs in the aboutus dropdown menu */
@@ -198,11 +197,11 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px
+    width: 500px;
 }
 /*show dropdown menu when hovering over Make A Difference */
 #BPmakeadifference:hover .BPmakeadifferenceDropdown {
-    display: inline;
+    display: block;
 }
 
 /* individual divs in the makeadifference dropdown menu */
@@ -224,8 +223,8 @@
 .BPbrandsDropdown {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    width: 10%;
+    background-color:white;
+    width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
 }
@@ -252,12 +251,6 @@
     cursor: pointer;
 }
 
-/*the entire My Trafalgar/user avatar/drowndown menu div*/
-.row2part2img {
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: underline;
-}
 /*dropdown menu for My Trafalgar*/
 .BPmyTrafalgarDropdown {
   display: none;
@@ -276,10 +269,9 @@
   display: block;
   text-align: left;
   border-bottom: 1px solid;
-  
 }
 /*display my trafalgar dropdown menu when hovering over the div */
-.BProw2part2img:hover .BPmyTrafalgarDropdown {
+.BProw2part2:hover .BPmyTrafalgarDropdown {
     display: block;
 }
 /*right pointing arrows in dropdown*/

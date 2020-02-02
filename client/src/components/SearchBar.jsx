@@ -189,14 +189,13 @@ AUSTRALIA AND NEW ZEALAND
             </div>
           </div>
 
-
           <div className="BProw2part1" id="BPdeals">
             {' '}
             <span>DEALS</span>
             <i className="BPdownArrow" />
             <div className="BPdealsDropdown">
 
-              <div>
+              <div style={{ border: 'none' }}>
 DEALS
                 <br />
                             Our latest offers, making travel more affordable
@@ -207,8 +206,8 @@ EARLY PAYMENT DISCOUNTS
                 <br />
                               Book early and save 7.5%* on select trips
                 <i className="BPrightArrow" />
-              </div>
 
+              </div>
               <div>
 EUROPE 2020
                 {' '}
@@ -224,7 +223,6 @@ YEAR ROUND SAVINGS
                               Savings for groups, multi trip bookings and more
                 <i className="BPrightArrow" />
               </div>
-
               <div>
 LAST MINUTE DEALS
                 {' '}
@@ -262,7 +260,7 @@ PAST GUEST EXCLUSIVE OFFERS
             {' '}
             <span>ABOUT US</span>
             <i className="BPdownArrow" />
-            <div className="BPaboutusDropdown">
+            <div style={{ border: 'none' }} className="BPaboutusDropdown">
               <div>
 ABOUT US
                 <br />
@@ -339,15 +337,12 @@ TRAFALGAR LIVE
             {' '}
             <span>MAKE A DIFFERENCE</span>
             <i className="BPdownArrow" />
-            <div className="BPmakeadifferenceDropdown">
+            <div style={{ border: 'none' }} className="BPmakeadifferenceDropdown">
 
               <div>
 JoinTrafalgar
                 <br />
-                            72 countries. 7 continents.
-                {' '}
-                <br />
-                            Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
+                            72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
               </div>
               <div>
 OUR STORY
@@ -399,14 +394,14 @@ TREADRIGHT
             <span>Agents Login</span>
           </div>
 
-          <div className="BProw2part2img">
+          <div className="BProw2part2">
             {' '}
             <img id="BPuserAvatar" src="https://huntpng.com/images250/avatar-pic-circle-png-10.png" alt="User Avatar" />
             <span>
                       My Trafalgar
               <i className="BPdownArrow" />
             </span>
-            <div style={{ marginTop: '35px' }} className="BPmyTrafalgarDropdown">
+            <div className="BPmyTrafalgarDropdown">
               <a href="#">
                         Log in
                 <i className="BPrightArrow" />
