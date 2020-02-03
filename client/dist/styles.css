@@ -382,6 +382,7 @@
 .cities:hover .citiesDropdown {
     display: block;
     margin-left: 350px
+}
 /* change trip results when user hovers over one */
 .BPsearchResults:hover {
     background-color: red;

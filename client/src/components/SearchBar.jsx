@@ -418,9 +418,8 @@ TREADRIGHT
               </a>
             </div>
           </div>
-
-
         </div>
+        {this.state.currentTrip.length > 0 ? <TripDetails trip={this.state.currentTrip[0]} /> : null}
       </div>
     );
   }

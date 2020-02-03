@@ -66,7 +66,7 @@ const TripDetails = (props) => {
     lineHeight: '22px',
     fontHeight: '16px',
     marginBottom: '10px',
-    width: '500px'
+    width: '500px',
   };
 
   const secondDescription = {
@@ -75,14 +75,14 @@ const TripDetails = (props) => {
     fontSize: '14px',
     lineHeight: '26px',
     fontFamily: 'opensans, sans-serif',
-    width: '500px'
+    width: '500px',
   };
 
   return (
     <section>
 
       <div>
-        <img style={tripImg} src={require(`../../dist/photos/${props.trip.imageUrl}`)} alt={props.trip.imageUrl.slice(0, -4)} />
+        <img style={tripImg} src="" alt={props.trip.imageUrl.slice(0, -4)} />
         <h1 style={tripName}>{props.trip.name}</h1>
       </div>
 
@@ -144,5 +144,3 @@ Cities
 };
 
 export default TripDetails;
-
-
