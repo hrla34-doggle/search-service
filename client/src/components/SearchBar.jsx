@@ -198,12 +198,12 @@ AUSTRALIA AND NEW ZEALAND
             <div className="BPdealsDropdown">
 
               <div style={{ border: 'none' }}>
-DEALS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>DEALS</span>
                 <br />
                             Our latest offers, making travel more affordable
               </div>
               <div>
-EARLY PAYMENT DISCOUNTS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EARLY PAYMENT DISCOUNTS</span>
                 {' '}
                 <br />
                               Book early and save 7.5%* on select trips
@@ -211,7 +211,7 @@ EARLY PAYMENT DISCOUNTS
 
               </div>
               <div>
-EUROPE 2020
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EUROPE 2020</span>
                 {' '}
                 <br />
                               SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
@@ -219,14 +219,14 @@ EUROPE 2020
               </div>
 
               <div>
-YEAR ROUND SAVINGS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>YEAR ROUND SAVINGS</span>
                 {' '}
                 <br />
                               Savings for groups, multi trip bookings and more
                 <i className="BPrightArrow" />
               </div>
               <div>
-LAST MINUTE DEALS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>LAST MINUTE DEALS</span>
                 {' '}
                 <br />
                               Save on soon to depart trips
@@ -234,7 +234,7 @@ LAST MINUTE DEALS
               </div>
 
               <div>
-SOLO TRAVELER DEALS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SOLO TRAVELER DEALS</span>
                 {' '}
                 <br />
                               Savings for solo travelers
@@ -242,14 +242,14 @@ SOLO TRAVELER DEALS
               </div>
 
               <div>
-TODAY'S BEST OFFERS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TODAY'S BEST OFFERS</span>
                 {' '}
                 <br />
                               Worldwide travel deals. Here today. Gone tomorrow.
                 <i className="BPrightArrow" />
               </div>
               <div>
-PAST GUEST EXCLUSIVE OFFERS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>PAST GUEST EXCLUSIVE OFFERS</span>
                 {' '}
                 <br />
                               Savings for our Very Important Travelers
@@ -264,12 +264,12 @@ PAST GUEST EXCLUSIVE OFFERS
             <i className="BPdownArrow" />
             <div style={{ border: 'none' }} className="BPaboutusDropdown">
               <div>
-ABOUT US
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>ABOUT US</span>
                 <br />
                             For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
               </div>
               <div>
-EXPLORE MORE
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EXPLORE MORE</span>
                 {' '}
                 <br />
                               About Be My Guest
@@ -277,56 +277,56 @@ EXPLORE MORE
                 <i className="BPrightArrow" />
               </div>
               <div>
-WHO WE ARE
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHO WE ARE</span>
                 {' '}
                 <br />
                               We are the world's leading and most awarded travel brand
                 <i className="BPrightArrow" />
               </div>
               <div>
-MAKE A DIFFERENCE
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>MAKE A DIFFERENCE</span>
                 {' '}
                 <br />
                               Travel today, sustain tomorrow
                 <i className="BPrightArrow" />
               </div>
               <div>
-TRAFALGAR HIGHLIGHTS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TRAFALGAR HIGHLIGHTS</span>
                 {' '}
                 <br />
                               Our unique experiences that connect you to the world
                 <i className="BPrightArrow" />
               </div>
               <div>
-WHAT OUR GUESTS SAY
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHAT OUR GUESTS SAY</span>
                 {' '}
                 <br />
                               Our live, unedited reviews
                 <i className="BPrightArrow" />
               </div>
               <div>
-BROCHURES
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>BROCHURES</span>
                 {' '}
                 <br />
                               Request a brochure and start dreaming
                 <i className="BPrightArrow" />
               </div>
               <div>
-MOMENTS
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>MOMENTS</span>
                 {' '}
                 <br />
                               7 continents. 302 trips. Magic moments on every one.
                 <i className="BPrightArrow" />
               </div>
               <div>
-TRAFALGAR LIVE
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TRAFALGAR LIVE</span>
                 {' '}
                 <br />
                               Share your moments with #SimplyTrafalgar
                 <i className="BPrightArrow" />
               </div>
               <div>
-5 REASONS TO BOOK NOW
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>5 REASONS TO BOOK NOW</span>
                 {' '}
                 <br />
                               Be confident
@@ -342,33 +342,33 @@ TRAFALGAR LIVE
             <div style={{ border: 'none' }} className="BPmakeadifferenceDropdown">
 
               <div>
-JoinTrafalgar
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>JoinTrafalgar</span>
                 <br />
                             72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
               </div>
               <div>
-OUR STORY
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>OUR STORY</span>
                 {' '}
                 <br />
                               A decade of positive impact
                 <i className="BPrightArrow" />
               </div>
               <div>
-WHAT WE DO
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHAT WE DO</span>
                 {' '}
                 <br />
                               We do our part wherever we can
                 <i className="BPrightArrow" />
               </div>
               <div>
-OUR PLEDGE
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>OUR PLEDGE</span>
                 {' '}
                 <br />
                               Make travel matter to people, places and wildlife
                 <i className="BPrightArrow" />
               </div>
               <div>
-TREADRIGHT
+                <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TREADRIGHT</span>
                 <br />
                               Supporting over 50 sustainable travel projects
                 <i className="BPrightArrow" />
