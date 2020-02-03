@@ -1,3 +1,5 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/destructuring-assignment */
@@ -26,7 +28,7 @@ class MoreTripDetails extends React.Component {
       borderTop: '1px dotted black',
       position: 'relative',
       width: '100%',
-      height: '250px',
+      height: '300px',
     };
 
     const ViewMore = {
@@ -45,6 +47,7 @@ class MoreTripDetails extends React.Component {
       padding: '12px 20px 10px',
       lineHeight: '22px',
       fontFamily: 'sans-serif',
+      zIndex: '2',
     };
 
     const airportTransfers = {
@@ -57,16 +60,33 @@ class MoreTripDetails extends React.Component {
       textTransform: 'uppercase',
       display: 'block',
       lineHeight: '22px',
+      width: '200px',
       fontStyle: 'normal',
       padding: '12px 20px 10px',
       border: '2px solid #c4082f',
       borderRadius: '25px',
       borderColor: '#9c1a00',
       backgroundColor: 'rgba(156,26,0,.2)',
-      margin: '0 auto',
       fontFamily: 'sans-serif',
     };
 
+    // dividing trafalgar difference into two columns
+    const difference = this.props.trip.the_trafalgar_difference;
+    const midpoint = Math.ceil(difference.length / 2);
+    const difference1 = difference.slice(0, midpoint);
+    const difference2 = difference.slice(midpoint, difference.length);
+
+    // dividing sightseeing highlights into two columns
+    const highlights = this.props.trip.sightseeing_highlights;
+    const midpoint2 = Math.ceil(highlights.length / 2);
+    const highlights1 = highlights.slice(0, midpoint);
+    const highlights2 = highlights.slice(midpoint, highlights.length);
+
+    // dividing travel highlights into two columns
+    const travels = this.props.trip.travel_highlights;
+    const midpoint3 = Math.ceil(travels.length / 2);
+    const travels1 = travels.slice(0, midpoint);
+    const travels2 = travels.slice(midpoint, travels.length);
 
     return (
       <section>
@@ -89,7 +109,7 @@ Trip details
           >
 What's included
           </h3>
-          <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blue_Moon.svg/920px-Blue_Moon.svg.png" alt="moon" />
+          <img style={{ height: '40px', width: '40px', margin: '0 auto' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blue_Moon.svg/920px-Blue_Moon.svg.png" alt="moon" />
 
           <div style={{ display: 'inline-block', marginRight: '100px' }}>
             <h4 style={{
@@ -102,7 +122,7 @@ What's included
 Nights
               {' '}
             </h4>
-            <p style={{ color: '#4c4c4c', marginTop: '-20px', fontWeight: '400' }}>Accomodation</p>
+            <p style={{ color: '#4c4c4c', marginTop: '-20px', fontWeight: '400' }}>Accommodation</p>
           </div>
 
           <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Cutlery.svg/410px-Cutlery.svg.png" alt="cutlery" />
@@ -151,18 +171,42 @@ On-Trip Transport
           <h3 style={{
             font: '19px sans-serif',
             fontWeight: '700',
-            display: 'inline-block',
+            display: 'block',
             marginRight: '200px',
             color: '#70005d',
           }}
           >
 The Trafalgar difference
           </h3>
-          <div style={{ display: 'inline-block', marginRight: '100px', height: 'fit-content' }}>
-            {this.props.trip.the_trafalgar_difference.map((difference, index) => (
-              <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+          <div style={{
+            display: 'inline-block', marginTop: 'auto', marginLeft: '350px', marginRight: '100px', height: '50px', width: 'fit-content',
+          }}
+          >
+            {difference1.map((diff, index) => (
+              <p
+                key={index}
+                style={{
+                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                }}
+              >
                 <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
-                {difference}
+                {diff}
+              </p>
+            ))}
+          </div>
+          <div style={{
+            display: 'inline-block', marginTop: 'auto', marginRight: '100px', height: '50px', width: 'fit-content',
+          }}
+          >
+            {difference2.map((diff, index) => (
+              <p
+                key={index}
+                style={{
+                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                }}
+              >
+                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
+                {diff}
               </p>
             ))}
           </div>
@@ -173,23 +217,47 @@ The Trafalgar difference
             font: '19px sans-serif',
             color: '#0d5e2f',
             fontWeight: '700',
-            display: 'inline-block',
+            display: 'block',
             position: 'relative',
             marginRight: '200px',
           }}
           >
 Sightseeing highlights
           </h3>
-          <div style={{ display: 'inline-block', marginRight: '100px', height: 'fit-content' }}>
-            {this.props.trip.sightseeing_highlights.map((highlight, index) => (
-              <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+          <div style={{
+            display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+          }}
+          >
+            {highlights1.map((highlight, index) => (
+              <p
+                key={index}
+                style={{
+                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                }}
+              >
+                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
+                {highlight}
+              </p>
+            ))}
+          </div>
+          <div style={{
+            display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+          }}
+          >
+            {highlights2.map((highlight, index) => (
+              <p
+                key={index}
+                style={{
+                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                }}
+              >
                 <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
                 {highlight}
               </p>
             ))}
           </div>
         </div>
-        <button style={ViewMore} onClick={this.showTravelDetails}>View More</button>
+        <button className="BPviewmore" style={ViewMore} onClick={this.showTravelDetails}>View More</button>
         {this.state.travelDetails
           ? (
             <div style={divStyle}>
@@ -197,7 +265,7 @@ Sightseeing highlights
                 font: '19px sans-serif',
                 color: '#9c1a00',
                 fontWeight: '700',
-                display: 'inline-block',
+                display: 'block',
                 marginRight: '200px',
               }}
               >
@@ -205,8 +273,22 @@ Travel highlights
                 <p style={{ color: '#4c4c4c', fontWeight: '400', fontSize: '18px' }}>Specific transfer information can be found here:</p>
                 <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
               </h3>
-              <div style={{ display: 'inline-block', marginRight: '100px', height: 'fit-content' }}>
-                {this.props.trip.travel_highlights.map((highlight, index) => (
+              <div style={{
+                display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+              }}
+              >
+                {travels1.map((highlight, index) => (
+                  <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+                    <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://www.jing.fm/clipimg/full/182-1828031_check-dark-red-svg-clip-arts-570-x.png" alt="checkmark" />
+                    {highlight}
+                  </p>
+                ))}
+              </div>
+              <div style={{
+                display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+              }}
+              >
+                {travels2.map((highlight, index) => (
                   <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
                     <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://www.jing.fm/clipimg/full/182-1828031_check-dark-red-svg-clip-arts-570-x.png" alt="checkmark" />
                     {highlight}

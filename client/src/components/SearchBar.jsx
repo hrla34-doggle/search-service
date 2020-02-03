@@ -482,7 +482,7 @@ export default class SearchBar extends React.Component {
                 </tr>
               </tbody>
             </table>
-            {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]}/> : null}
+            {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
           </nav>
         </header>
       </div>
