@@ -6,6 +6,7 @@ import React from 'react';
 const TripDetails = (props) => {
   const tripImg = {
     width: '100%',
+    height: '500px',
     maxWidth: '100%',
     objectFit: 'cover',
     display: 'block',
@@ -82,13 +83,13 @@ const TripDetails = (props) => {
     <section>
 
       <div>
-        <img style={tripImg} src="" alt={props.trip.imageUrl.slice(0, -4)} />
+        <img style={tripImg} src={`./photos/${props.trip.imageUrl}`} alt={props.trip.imageUrl.slice(0, -4)} />
         <h1 style={tripName}>{props.trip.name}</h1>
       </div>
 
       <div style={daysCountriesCitiesDiv}>
         <span style={daysCountriesCitiesSpan}>
-          <img style={calendar} src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Breezeicons-actions-22-view-calendar.svg/1920px-Breezeicons-actions-22-view-calendar.svg.png" alt="calendar" />
+          <img style={calendar} src="./graphics/calendar.svg.png" alt="calendar" />
         </span>
         <span style={daysCountriesCitiesSpan}>
           <strong>
@@ -100,7 +101,7 @@ Days
         </span>
 
         <span style={daysCountriesCitiesSpan} className="country">
-          <img style={flag} src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/White_flag_icon.svg/500px-White_flag_icon.svg.png" alt="flag" />
+          <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
           <span style={daysCountriesCitiesSpan} className="country">
             <strong style={{ marginLeft: '15px' }}>
               {' '}
@@ -115,7 +116,7 @@ Country
         </span>
 
         <span style={daysCountriesCitiesSpan} className="cities">
-          <img style={pointer} src="https://www.vippng.com/png/detail/19-195136_cursor-svg-windows-cursor-graphic-png.png" alt="pointer" />
+          <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
           <span style={daysCountriesCitiesSpan} className="cities">
             <strong style={{ marginLeft: '15px' }}>
               {' '}

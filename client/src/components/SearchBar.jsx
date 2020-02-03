@@ -133,7 +133,7 @@ export default class SearchBar extends React.Component {
               <li style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</li>
             </ul>
           </div>
-          <img id="BPphone_Receiver" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Telephone_receiver.svg/1920px-Telephone_receiver.svg.png" alt="phone receiver" />
+          <img id="BPphone_Receiver" src="./graphics/phone.svg.png" alt="phone receiver" />
           <div id="BPcustomers_Agents_Switch">
             {this.state.customersInfo ? (
               <div>
@@ -386,8 +386,8 @@ TREADRIGHT
             <span>Brands</span>
             <i className="BPdownArrow" />
             <div className="BPbrandsDropdown">
-              <img className="BPbrandsDropdownImg" src="https://searchlogovector.com/wp-content/uploads/2018/12/brendan-vacations-logo-vector.png" alt="Brendan Vacations" />
-              <img className="BPbrandsDrowdownImg" src="https://www.costsavertour.com/-/media/Project/Costsaver/costsaver-logo.png" alt="Costsaver" />
+              <img className="BPbrandsDropdownImg" src="./graphics/BrendanVacations.png" alt="Brendan Vacations" />
+              <img className="BPbrandsDrowdownImg" src="./graphics/Costsaver.webp" alt="Costsaver" />
             </div>
           </div>
 
@@ -398,7 +398,7 @@ TREADRIGHT
 
           <div className="BProw2part2">
             {' '}
-            <img id="BPuserAvatar" src="https://huntpng.com/images250/avatar-pic-circle-png-10.png" alt="User Avatar" />
+            <img id="BPuserAvatar" src="./graphics/user.svg.png" alt="User Avatar" />
             <span>
                       My Trafalgar
               <i className="BPdownArrow" />
