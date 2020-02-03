@@ -346,7 +346,7 @@
 
 /* country dropdown*/
 
-.countryDropdown {
+.BPcountryDropdown {
     font-size: 12px;
     display: none;
     position: absolute;
@@ -359,14 +359,14 @@
 
 /* show the country dropdown when user hovers over country header */
 
-.country:hover .countryDropdown {
+.BPcountry:hover .BPcountryDropdown {
     display: block;
     margin-left: 200px;
 }
 
 /* cities dropdown */
 
-.citiesDropdown {
+.BPcitiesDropdown {
     font-size: 12px;
     display: none;
     position: absolute;
@@ -379,7 +379,7 @@
 
 /* show the cities dropdown when user hovers over country header */
 
-.cities:hover .citiesDropdown {
+.BPcities:hover .BPcitiesDropdown {
     display: block;
     margin-left: 350px
 }

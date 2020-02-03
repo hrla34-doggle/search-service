@@ -100,31 +100,31 @@ const TripDetails = (props) => {
 Days
         </span>
 
-        <span style={daysCountriesCitiesSpan} className="country">
+        <span style={daysCountriesCitiesSpan} className="BPcountry">
           <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
-          <span style={daysCountriesCitiesSpan} className="country">
+          <span style={daysCountriesCitiesSpan} className="BPcountry">
             <strong style={{ marginLeft: '15px' }}>
               {' '}
             1
             </strong>
             {' '}
 Country
-            <div className="countryDropdown">
+            <div className="BPcountryDropdown">
               {props.trip.country}
             </div>
           </span>
         </span>
 
-        <span style={daysCountriesCitiesSpan} className="cities">
+        <span style={daysCountriesCitiesSpan} className="BPcities">
           <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
-          <span style={daysCountriesCitiesSpan} className="cities">
+          <span style={daysCountriesCitiesSpan} className="BPcities">
             <strong style={{ marginLeft: '15px' }}>
               {' '}
               {props.trip.cities.length}
             </strong>
             {' '}
 Cities
-            <div className="citiesDropdown">
+            <div className="BPcitiesDropdown">
               {props.trip.cities.map((city, index) => (
                 <span key={index}>
                   {city}
