@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable max-len */
@@ -14,6 +15,7 @@
 import React from 'react';
 import ReactDom, { render } from 'react-dom';
 import Axios from 'axios';
+import TripDetails from './TripDetails';
 import Search from './Search';
 
 export default class SearchBar extends React.Component {
