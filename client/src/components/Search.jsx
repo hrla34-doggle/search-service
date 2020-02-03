@@ -39,7 +39,7 @@ const Search = (props) => {
   return (
     <div>
       <div style={{ display: 'flex' }}>
-        <input style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
+       <form id='BPsearchfield'> <input style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} /></form>
         <img id="BPmagnifyingGlass" style={imgStyle} src="./graphics/magnifyingglass.svg.png" alt="magnifying glass" />
       </div>
       <div style={resultsArrayStyle}>

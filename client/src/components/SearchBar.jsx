@@ -28,11 +28,14 @@ export default class SearchBar extends React.Component {
       queryResults: [],
       customersInfo: true,
       agentsInfo: false,
+      showtripdetails: true,
     };
     this.getAllTrips = this.getAllTrips.bind(this);
     this.getOneTrip = this.getOneTrip.bind(this);
     this.toggleCustomers = this.toggleCustomers.bind(this);
     this.toggleAgents = this.toggleAgents.bind(this);
+    this.hidetripdetails = this.hidetripdetails.bind(this);
+    this.showtripdetails = this.showtripdetails.bind(this);
     this.updateQuery = this.updateQuery.bind(this);
     this.updateSearchResults = this.updateSearchResults.bind(this);
   }
@@ -54,13 +57,16 @@ export default class SearchBar extends React.Component {
     // when user selects a trip, use its id to get all the info from that trip
     // and store the info in this.state as currentTrip
     // then will need to re-render the page accordingly with that data
+    // plus reset search results to empty and search form to its original state
     // also run this with a random id (between 1-100) when page first loads
     if (id === 0) { return; }
     Axios.get(`/api/trips/${id}`)
       .then((trip) => this.setState({
         currentTrip: trip.data,
+        queryResults: [],
       }, () => console.log(this.state.currentTrip)))
       .catch((err) => console.error(err));
+    document.getElementById('BPsearchfield').reset();
   }
 
   updateQuery(e) {
@@ -109,6 +115,20 @@ export default class SearchBar extends React.Component {
     });
   }
 
+  hidetripdetails() {
+    // hide the lower sections when user hovers over header dropdowns
+    this.setState({
+      showtripdetails: false,
+    });
+  }
+
+  showtripdetails() {
+    // show the lower sections when user leaves header dropdowns
+    this.setState({
+      showtripdetails: true,
+    });
+  }
+
   componentDidMount() {
     // when the page first renders, get all trips' info and also pick a random trip to display its info
     this.getAllTrips();
@@ -122,6 +142,10 @@ export default class SearchBar extends React.Component {
     const agentsInfoStyle = {
       fontWeight: this.state.agentsInfo ? 'bold' : 'normal',
     };
+    const tripdetailsplacement = {
+      opacity: this.state.showtripdetails ? 1 : 0.3,
+    };
+
     return (
       <div>
         <div className="BPheader">
@@ -154,7 +178,7 @@ export default class SearchBar extends React.Component {
         </div>
 
         <div className="BPheader2">
-          <div className="BProw2part1" id="BPdestinations">
+          <div className="BProw2part1" id="BPdestinations" onMouseEnter={this.hidetripdetails} onMouseLeave={this.showtripdetails}>
             {' '}
             <span>DESTINATIONS</span>
             <i className="BPdownArrow" />
@@ -191,7 +215,7 @@ AUSTRALIA AND NEW ZEALAND
             </div>
           </div>
 
-          <div className="BProw2part1" id="BPdeals">
+          <div className="BProw2part1" id="BPdeals" onMouseEnter={this.hidetripdetails} onMouseLeave={this.showtripdetails}>
             {' '}
             <span>DEALS</span>
             <i className="BPdownArrow" />
@@ -262,7 +286,7 @@ AUSTRALIA AND NEW ZEALAND
             </div>
           </div>
 
-          <div className="BProw2part1" id="BPaboutus">
+          <div className="BProw2part1" id="BPaboutus" onMouseEnter={this.hidetripdetails} onMouseLeave={this.showtripdetails}>
             {' '}
             <span>ABOUT US</span>
             <i className="BPdownArrow" />
@@ -345,7 +369,7 @@ AUSTRALIA AND NEW ZEALAND
             </div>
           </div>
 
-          <div className="BProw2part1" id="BPmakeadifference">
+          <div className="BProw2part1" id="BPmakeadifference" onMouseEnter={this.hidetripdetails} onMouseLeave={this.showtripdetails}>
             {' '}
             <span>MAKE A DIFFERENCE</span>
             <i className="BPdownArrow" />
@@ -431,7 +455,9 @@ AUSTRALIA AND NEW ZEALAND
             </div>
           </div>
         </div>
-        {this.state.currentTrip.length > 0 ? <TripDetails trip={this.state.currentTrip[0]} /> : null}
+        <div style={tripdetailsplacement}>
+          {this.state.currentTrip.length > 0 ? <TripDetails trip={this.state.currentTrip[0]} /> : null}
+        </div>
       </div>
     );
   }
