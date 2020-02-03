@@ -345,6 +345,13 @@
     cursor: pointer
 }
 
+/* the rows in deals/about us/make a difference dropdowns */
+
+.BPflexrow {
+    display: flex;
+    flex-direction: row;
+}
+
 /* TRIP DETAILS COMPONENT */
 
 /* country dropdown*/
@@ -386,6 +393,9 @@
     display: block;
     margin-left: 350px
 }
+
+/* SEARCH COMPONENT */
+
 /* change trip results when user hovers over one */
 .BPsearchResults:hover {
     background-color: red;
