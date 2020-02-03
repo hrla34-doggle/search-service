@@ -107,6 +107,13 @@ export default class SearchBar extends React.Component {
     });
   }
 
+  showTravelDetails() {
+    // shows travel details section toward bottom
+    this.setState({
+      travelDetails: true,
+    });
+  }
+
   componentDidMount() {
     // when the page first renders, get all trips' info and also pick a random trip to display its info
     this.getAllTrips();
@@ -475,7 +482,7 @@ export default class SearchBar extends React.Component {
                 </tr>
               </tbody>
             </table>
-            {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
+            {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]}/> : null}
           </nav>
         </header>
       </div>
