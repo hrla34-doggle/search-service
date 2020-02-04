@@ -1,6 +1,7 @@
 /* top row of content */
 .BPheader {
     display: flex;
+    flex-direction: row;
     align-items: center;
     line-height: 32px;
     width: 100%;
@@ -134,7 +135,6 @@
     height: auto;
     font-weight: 400;
     color: #4c4c4c;
-
 }
 
 /*dropdown menu under Deals */
@@ -164,7 +164,6 @@
 }
 
 /*dropdown menu under About Us */
-
 .BPaboutusDropdown {
     font-size: 12px;
     display: none;
@@ -173,7 +172,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px;
+    width: 1200px;
 }
 
 /*show dropdown menu when hovering over About Us */
@@ -199,7 +198,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px;
+    width: 1200px;    
 }
 /*show dropdown menu when hovering over Make A Difference */
 #BPmakeadifference:hover .BPmakeadifferenceDropdown {
@@ -212,7 +211,7 @@
     width: fit-content;
     height: auto;
     font-weight: 400;
-    color: #4c4c4c
+    color: #4c4c4c;
 }
 
 /*Get A Quote/Brands/Agents Login */
