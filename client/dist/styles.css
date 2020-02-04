@@ -1,6 +1,7 @@
 /* top row of content */
 .BPheader {
     display: flex;
+    flex-direction: row;
     align-items: center;
     line-height: 32px;
     width: 100%;
@@ -9,7 +10,6 @@
     margin-top: 20px;
     margin-bottom: 10px;
     margin-left: 10px;
-    font-weight: 400;
     font-size: 16px;
     font-feature-settings: "liga" 0;
     font-family: sans-serif;
@@ -85,7 +85,6 @@
     position: relative;
     margin-bottom: 10px;
     margin-left: 10px;
-    font-weight: 400;
     font-size: 16px;
     font-feature-settings: "liga" 0;
     font-family: sans-serif;
@@ -114,7 +113,7 @@
 
 /*dropdown menu under Destinations */
 .BPdestinationsDropdown {
-    font-size: 12px;
+    font-size: 16px;
     display: none;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -134,7 +133,8 @@
     border-top: 1px solid black;
     width: fit-content;
     height: auto;
-    font-size: 20px;
+    font-weight: 400;
+    color: #4c4c4c;
 }
 
 /*dropdown menu under Deals */
@@ -146,7 +146,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px;
+    width: 1200px;
 }
 
 /*show dropdown menu when hovering over Deals */
@@ -159,11 +159,11 @@
     border-top: 1px solid black;
     width: fit-content;
     height: auto;
-    font-size: 20px;
+    font-weight: 400;
+    color: #4c4c4c
 }
 
 /*dropdown menu under About Us */
-
 .BPaboutusDropdown {
     font-size: 12px;
     display: none;
@@ -172,7 +172,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px;
+    width: 1200px;
 }
 
 /*show dropdown menu when hovering over About Us */
@@ -185,7 +185,8 @@
     border-top: 1px solid black;
     width: fit-content;
     height: auto;
-    font-size: 20px;
+    font-weight: 400;
+    color: #4c4c4c
 }
 
 /*dropdown menu under Make A Difference */
@@ -197,7 +198,7 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 500px;
+    width: 1200px;    
 }
 /*show dropdown menu when hovering over Make A Difference */
 #BPmakeadifference:hover .BPmakeadifferenceDropdown {
@@ -209,7 +210,8 @@
     border-top: 1px solid black;
     width: fit-content;
     height: auto;
-    font-size: 20px;
+    font-weight: 400;
+    color: #4c4c4c;
 }
 
 /*Get A Quote/Brands/Agents Login */
@@ -342,6 +344,13 @@
     cursor: pointer
 }
 
+/* the rows in deals/about us/make a difference dropdowns */
+
+.BPflexrow {
+    display: flex;
+    flex-direction: row;
+}
+
 /* TRIP DETAILS COMPONENT */
 
 /* country dropdown*/
@@ -383,6 +392,9 @@
     display: block;
     margin-left: 350px
 }
+
+/* SEARCH COMPONENT */
+
 /* change trip results when user hovers over one */
 .BPsearchResults:hover {
     background-color: red;

@@ -44,7 +44,7 @@ const data = {
     // generates a random city generated from the previous function
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     // creates the corresponding Object Url in S3
-    const imageUrl = `${randomCity}.jpg`;
+    const imageUrl = `https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/${randomCity}.jpg`;
     return imageUrl;
   },
 

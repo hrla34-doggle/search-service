@@ -1,3 +1,7 @@
+/* eslint-disable no-redeclare */
+/* eslint-disable block-scoped-var */
+/* eslint-disable vars-on-top */
+/* eslint-disable no-var */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
@@ -79,11 +83,19 @@ const TripDetails = (props) => {
     width: '500px',
   };
 
+  // check if imageUrl has a space (in city name), and if so add an _ for AWS references
+
+  if (props.trip.imageUrl.includes(' ')) {
+    const index = props.trip.imageUrl.indexOf(' ');
+    var imageUrl = `${props.trip.imageUrl.slice(0, index)}_${props.trip.imageUrl.slice(index + 1, props.trip.imageUrl.length)}`;
+  } else {
+    var { imageUrl } = props.trip;
+  }
+
   return (
     <section>
-
       <div>
-        <img style={tripImg} src={`./photos/${props.trip.imageUrl}`} alt={props.trip.imageUrl.slice(0, -4)} />
+        <img style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
         <h1 style={tripName}>{props.trip.name}</h1>
       </div>
 
