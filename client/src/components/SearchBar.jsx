@@ -17,6 +17,7 @@ import ReactDom, { render } from 'react-dom';
 import Axios from 'axios';
 import TripDetails from './TripDetails';
 import Search from './Search';
+import MoreTripDetails from './MoreTripDetails';
 
 export default class SearchBar extends React.Component {
   constructor(props) {
