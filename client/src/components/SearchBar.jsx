@@ -459,6 +459,9 @@ AUSTRALIA AND NEW ZEALAND
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <TripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
+        <div style={tripdetailsplacement}>
+          {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
+        </div>
       </div>
     );
   }
