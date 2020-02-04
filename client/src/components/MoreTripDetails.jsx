@@ -114,7 +114,7 @@ What's included
               style={{
                 height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blue_Moon.svg/920px-Blue_Moon.svg.png"
+              src="./graphics/Moon.svg.png"
               alt="moon"
             />
 
@@ -136,7 +136,7 @@ Nights
               style={{
                 height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Cutlery.svg/410px-Cutlery.svg.png"
+              src="./graphics/Cutlery.svg.png"
               alt="cutlery"
             />
             <div style={{ marginRight: '100px' }}>
@@ -169,7 +169,7 @@ dinners
               style={{
                 height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
-              src="https://www.svgrepo.com/show/138529/route.svg"
+              src="./graphics/route.svg.png"
               alt="route"
             />
             <div style={{ marginRight: '10px' }}>
@@ -185,134 +185,152 @@ On-Trip Transport
           </div>
 
         </div>
-
         <div style={divStyle}>
-          <h3 style={{
-            font: '19px sans-serif',
-            fontWeight: '700',
-            display: 'block',
-            marginRight: '200px',
-            color: '#70005d',
-          }}
-          >
+          <div className="BPflexrow" style={{ width: '80%' }}>
+            <h3 style={{
+              font: '22px sans-serif',
+              fontWeight: '700',
+              display: 'block',
+              marginRight: '200px',
+              color: '#70005d',
+            }}
+            >
 The Trafalgar difference
-          </h3>
-          <div style={{
-            display: 'inline-block', marginTop: 'auto', marginLeft: '350px', marginRight: '100px', height: '50px', width: 'fit-content',
-          }}
-          >
-            {difference1.map((diff, index) => (
-              <p
-                key={index}
-                style={{
-                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
-                }}
-              >
-                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
-                {diff}
-              </p>
-            ))}
-          </div>
-          <div style={{
-            display: 'inline-block', marginTop: 'auto', marginRight: '100px', height: '50px', width: 'fit-content',
-          }}
-          >
-            {difference2.map((diff, index) => (
-              <p
-                key={index}
-                style={{
-                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
-                }}
-              >
-                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
-                {diff}
-              </p>
-            ))}
+            </h3>
+            <div style={{
+              display: 'inline-block', marginTop: 'auto', marginLeft: '350px', marginRight: '100px', height: '50px', width: 'fit-content',
+            }}
+            >
+              {difference1.map((diff, index) => (
+                <p
+                  key={index}
+                  style={{
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                  }}
+                >
+                  <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="./graphics/Map_pin.svg.png" alt="route" />
+                  {diff}
+                </p>
+              ))}
+            </div>
+            <div style={{
+              display: 'inline-block', marginTop: 'auto', marginRight: '100px', height: '50px', width: 'fit-content',
+            }}
+            >
+              {difference2.map((diff, index) => (
+                <p
+                  key={index}
+                  style={{
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                  }}
+                >
+                  <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="./graphics/Map_pin.svg.png" alt="route" />
+                  {diff}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
 
         <div style={divStyle}>
-          <h3 style={{
-            font: '19px sans-serif',
-            color: '#0d5e2f',
-            fontWeight: '700',
-            display: 'block',
-            position: 'relative',
-            marginRight: '200px',
-          }}
-          >
+          <div className="BPflexrow" style={{ width: '80%' }}>
+            <h3 style={{
+              font: '22px sans-serif',
+              color: '#0d5e2f',
+              fontWeight: '700',
+              display: 'block',
+              position: 'relative',
+              marginRight: '200px',
+            }}
+            >
 Sightseeing highlights
-          </h3>
-          <div style={{
-            display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-          }}
-          >
-            {highlights1.map((highlight, index) => (
-              <p
-                key={index}
-                style={{
-                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
-                }}
-              >
-                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
-                {highlight}
-              </p>
-            ))}
-          </div>
-          <div style={{
-            display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-          }}
-          >
-            {highlights2.map((highlight, index) => (
-              <p
-                key={index}
-                style={{
-                  color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
-                }}
-              >
-                <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Map_pin_icon_green.svg/188px-Map_pin_icon_green.svg.png" alt="route" />
-                {highlight}
-              </p>
-            ))}
+            </h3>
+            <div style={{
+              display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+            }}
+            >
+              {highlights1.map((highlight, index) => (
+                <p
+                  key={index}
+                  style={{
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                  }}
+                >
+                  <img
+                    style={{
+                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
+                    }}
+                    src="./graphics/Map_pin.svg.png"
+                    alt="route"
+                  />
+                  {highlight}
+                </p>
+              ))}
+            </div>
+            <div style={{
+              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+            }}
+            >
+              {highlights2.map((highlight, index) => (
+                <p
+                  key={index}
+                  style={{
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                  }}
+                >
+                  <img
+                    style={{
+                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
+                    }}
+                    src="./graphics/Map_pin.svg.png"
+                    alt="route"
+                  />
+                  {highlight}
+                </p>
+              ))}
+            </div>
           </div>
         </div>
+
         <button className="BPviewmore" style={ViewMore} onClick={this.showTravelDetails}>View More</button>
         {this.state.travelDetails
           ? (
             <div style={divStyle}>
-              <h3 style={{
-                font: '19px sans-serif',
-                color: '#9c1a00',
-                fontWeight: '700',
-                display: 'block',
-                marginRight: '200px',
-              }}
-              >
+              <div className="BPflexrow" style={{ width: '80%' }}>
+                <h3 style={{
+                  font: '22px sans-serif',
+                  color: '#9c1a00',
+                  fontWeight: '700',
+                  display: 'block',
+                  marginRight: '200px',
+                }}
+                >
 Travel highlights
-                <p style={{ color: '#4c4c4c', fontWeight: '400', fontSize: '18px' }}>Specific transfer information can be found here:</p>
-                <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
-              </h3>
-              <div style={{
-                display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-              }}
-              >
-                {travels1.map((highlight, index) => (
-                  <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
-                    <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://www.jing.fm/clipimg/full/182-1828031_check-dark-red-svg-clip-arts-570-x.png" alt="checkmark" />
-                    {highlight}
-                  </p>
-                ))}
-              </div>
-              <div style={{
-                display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-              }}
-              >
-                {travels2.map((highlight, index) => (
-                  <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
-                    <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://www.jing.fm/clipimg/full/182-1828031_check-dark-red-svg-clip-arts-570-x.png" alt="checkmark" />
-                    {highlight}
-                  </p>
-                ))}
+                  <p style={{ color: '#4c4c4c', fontWeight: '400', fontSize: '18px' }}>Specific transfer information can be found here:</p>
+                  <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
+                </h3>
+                <div style={{
+                  display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+                }}
+                >
+                  {travels1.map((highlight, index) => (
+                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
+                      {highlight}
+                    </p>
+                  ))}
+                </div>
+                <div style={{
+                  display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+                }}
+                >
+                  {travels2.map((highlight, index) => (
+                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
+                      {highlight}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           ) : null}
