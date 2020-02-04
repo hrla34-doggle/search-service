@@ -53,10 +53,11 @@ const TripDetails = (props) => {
     fontSize: '15px',
     marginTop: '20px',
     marginBottom: '20px',
-    marginLeft: '10px',
     lineHeight: '22px',
     color: '#4c4c4c',
     cursor: 'pointer',
+    display: 'flex',
+    flexDirection: 'row',
   };
 
   const daysCountriesCitiesSpan = {
@@ -67,7 +68,7 @@ const TripDetails = (props) => {
   const firstDescription = {
     color: '#767676',
     textTransform: 'uppercase',
-    fontWeight: '600px',
+    fontWeight: '800',
     lineHeight: '22px',
     fontHeight: '16px',
     marginBottom: '10px',

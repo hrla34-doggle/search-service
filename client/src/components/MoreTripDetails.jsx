@@ -89,7 +89,7 @@ class MoreTripDetails extends React.Component {
     const travels2 = travels.slice(midpoint, travels.length);
 
     return (
-      <section>
+      <section style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={divStyle}>
           <h2 style={{
             color: '#4c4c4c',
@@ -99,71 +99,90 @@ class MoreTripDetails extends React.Component {
           >
 Trip details
           </h2>
-          <h3 style={{
-            font: '19px sans-serif',
-            color: '#003b75',
-            fontWeight: '700',
-            display: 'inline-block',
-            marginRight: '200px',
-          }}
-          >
+          <div className="BPflexrow" style={{ width: '80%' }}>
+            <h3 style={{
+              font: '22px sans-serif',
+              color: '#003b75',
+              fontWeight: '800',
+              display: 'inline-block',
+              marginRight: '200px',
+            }}
+            >
 What's included
-          </h3>
-          <img style={{ height: '40px', width: '40px', margin: '0 auto' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blue_Moon.svg/920px-Blue_Moon.svg.png" alt="moon" />
+            </h3>
+            <img
+              style={{
+                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+              }}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Blue_Moon.svg/920px-Blue_Moon.svg.png"
+              alt="moon"
+            />
 
-          <div style={{ display: 'inline-block', marginRight: '100px' }}>
-            <h4 style={{
-              textTransform: 'uppercase', fontWeight: '600', marginTop: '0px', color: '#4c4c4c',
-            }}
-            >
-              {' '}
-              {this.props.trip.nights}
-              {' '}
+            <div style={{ marginRight: '100px' }}>
+              <h4 style={{
+                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+              }}
+              >
+                {' '}
+                {this.props.trip.nights}
+                {' '}
 Nights
-              {' '}
-            </h4>
-            <p style={{ color: '#4c4c4c', marginTop: '-20px', fontWeight: '400' }}>Accommodation</p>
-          </div>
+                {' '}
+              </h4>
+              <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>Accommodation</p>
+            </div>
 
-          <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Cutlery.svg/410px-Cutlery.svg.png" alt="cutlery" />
-          <div style={{ display: 'inline-block', marginRight: '100px' }}>
-            <h4 style={{
-              textTransform: 'uppercase', fontWeight: '600', marginTop: '6px', color: '#4c4c4c',
-            }}
-            >
-              {' '}
-              {this.props.trip.meals.breakfasts + this.props.trip.meals.lunches + this.props.trip.meals.dinners}
-              {' '}
+            <img
+              style={{
+                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+              }}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Cutlery.svg/410px-Cutlery.svg.png"
+              alt="cutlery"
+            />
+            <div style={{ marginRight: '100px' }}>
+              <h4 style={{
+                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+              }}
+              >
+                {' '}
+                {this.props.trip.meals.breakfasts + this.props.trip.meals.lunches + this.props.trip.meals.dinners}
+                {' '}
 Meals
-              {' '}
-            </h4>
-            <p style={{ color: '#4c4c4c', marginTop: '-20px', fontWeight: '400' }}>
-              {this.props.trip.meals.breakfasts}
-              {' '}
+                {' '}
+              </h4>
+              <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>
+                {this.props.trip.meals.breakfasts}
+                {' '}
 breakfasts,
-              {' '}
-              {this.props.trip.meals.lunches}
-              {' '}
+                {' '}
+                {this.props.trip.meals.lunches}
+                {' '}
 lunches,
-              {' '}
-              {this.props.trip.meals.dinners}
-              {' '}
+                {' '}
+                {this.props.trip.meals.dinners}
+                {' '}
 dinners
-            </p>
-          </div>
+              </p>
+            </div>
 
-          <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="https://www.svgrepo.com/show/138529/route.svg" alt="route" />
-          <div style={{ display: 'inline-block', marginRight: '10px' }}>
-            <h4 style={{
-              textTransform: 'uppercase', fontWeight: '600', marginTop: '6px', color: '#4c4c4c',
-            }}
-            >
-              {' '}
+            <img
+              style={{
+                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+              }}
+              src="https://www.svgrepo.com/show/138529/route.svg"
+              alt="route"
+            />
+            <div style={{ marginRight: '10px' }}>
+              <h4 style={{
+                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+              }}
+              >
+                {' '}
 On-Trip Transport
-            </h4>
-            <p style={{ color: '#4c4c4c', marginTop: '-20px', fontWeight: '400' }}>All transport shown</p>
+              </h4>
+              <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>All transport shown</p>
+            </div>
           </div>
-
 
         </div>
 

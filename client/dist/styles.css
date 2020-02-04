@@ -78,6 +78,7 @@
 .BPheader2 {
     border-bottom: 1px solid black;
     display: flex;
+    flex-direction: row;
     align-items: center;
     line-height: 32px;
     width: 100%;
@@ -231,6 +232,12 @@
     z-index: 1; 
 }
 
+/*Container for the brands dropdown images*/
+.BPbrandsimages {
+    display: flex;
+    flex-direction: row
+}
+
 /*images from Brands dropdown*/
 .BPbrandsDropdownImg {
     float:  right;
@@ -344,7 +351,7 @@
     cursor: pointer
 }
 
-/* the rows in deals/about us/make a difference dropdowns */
+/* the rows in deals/about us/make a difference dropdowns, and moretripdetails components */
 
 .BPflexrow {
     display: flex;
@@ -401,7 +408,9 @@
     cursor: pointer;
 }
 
-/*lighten viewmore button (in moretripdetails component) when user hovers over it*/
+/* MORE TRIP DETAILS COMPONENT */ 
+
+/*lighten viewmore button when user hovers over it*/
 .BPviewmore:hover {
   opacity: .5
 }

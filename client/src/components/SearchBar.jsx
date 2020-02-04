@@ -423,8 +423,10 @@ AUSTRALIA AND NEW ZEALAND
             <span>Brands</span>
             <i className="BPdownArrow" />
             <div className="BPbrandsDropdown">
-              <img className="BPbrandsDropdownImg" src="./graphics/BrendanVacations.png" alt="Brendan Vacations" />
-              <img className="BPbrandsDrowdownImg" src="./graphics/Costsaver.webp" alt="Costsaver" />
+              <section className="BPbrandsimages">
+                <img className="BPbrandsDropdownImg" src="./graphics/BrendanVacations.png" alt="Brendan Vacations" />
+                <img className="BPbrandsDrowdownImg" src="./graphics/Costsaver.webp" alt="Costsaver" />
+              </section>
             </div>
           </div>
 
