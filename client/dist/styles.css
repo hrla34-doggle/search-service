@@ -1,93 +1,107 @@
-/* all header content */
-header {
-    border-bottom: 1px solid black;
+/* top row of content */
+.BPheader {
     display: flex;
-    line-height: 28px;
+    align-items: center;
+    line-height: 32px;
     width: 100%;
     height: auto;
-    position: absolute;
-    margin-top: -10px;
+    position: relative;
+    margin-top: 20px;
     margin-bottom: 10px;
+    margin-left: 10px;
     font-weight: 400;
     font-size: 16px;
-    font-variant-ligatures: none;
     font-feature-settings: "liga" 0;
-    font-family: FuturaNext-DemiBold,sans-serif;
+    font-family: sans-serif;
     color: #4c4c4c;
-    box-sizing: inherit; 
-}
-
-/*top row of header*/
-
-.row1 td {
-    padding-top: 30px;
 }
 
 /* Trafalgar logo in top left corner */
-#Trafalgar {
+#BPTrafalgar {
     color: white;
     background-color: red;
     text-transform: uppercase;
-    display: inline-block;
+    display: block;
     letter-spacing: 2px;
     max-width: 100%;
     width: 150px;
     height: 30px;
-    margin: 50px 20px 0px 0px;
+    margin-right: 20px;
     padding: 5px;
     text-align: center;
     text-decoration: none;
 }
 
-/* Customers and Agents next to search bar */
-#customers_agents {
+/* Searchbar position within top row */
+
+#BPsearchbarlocation {
+    margin-right: 20px;
+    display: block
+}
+
+/* Customers and Agents tabs next to search bar */
+#BPcustomers_agents {
     display: block;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
     text-align: right;
     cursor: pointer;
     letter-spacing: 1px;
-    margin: 10px 15px 0 30px;
-    font: 12px/22px;
-    font-variant-ligatures: no-common-ligatures;
-    padding: 40px 30px 0 10px;
-    border-right: 1px solid #e6e6e6;
+    margin-right: 20px;
+    border-right: 1px dotted;
+    padding-right: 10px;
+}
+
+#BPcustomers_agents ul {
+    list-style-type: none;
+    display: block;
 }
 
 /* phone receiver img next to customers and agents */
-#phoneReceiver {
-    position: fixed;
+#BPphone_Receiver {
     height: 20px;
-    width: 20px
+    width: 20px;
+    display: block
 }
 
 /* the phone number/message next to the phone, toggled by customers/agents */
-#customersAgentsSwitch {
-    box-sizing: inherit;
+#BPcustomers_Agents_Switch {
     font-size: 12px;
     letter-spacing: 1px;
-    font: 12px/22px;
-    font-variant-ligatures: no-common-ligatures;
-    position: absolute;
-    padding: 0px 30px 0 10px;
-    margin: 50px 15px 0 30px;
+    position: block;
+    margin: 0 20px 0 20px;
+    width: 150px
+}
+
+/* second row of content */
+
+.BPheader2 {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    line-height: 32px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    font-feature-settings: "liga" 0;
+    font-family: sans-serif;
+    color: #4c4c4c;
 }
 
 /*Destinations/Deals/About Us/Make A Difference */
-.row2part1 {
-    table-layout: fixed;
-    width: 10%;
+.BProw2part1 {
     font-weight: bold;
     cursor: pointer;
-    padding-left: 30px;
+    margin-right: 30px;
 }
 
 /*down arrows next to Destinations/Deals/About Us/Make A Difference */
-.downArrow {
+.BPdownArrow {
     border: solid lightgray;
-    margin-top: -20px;
-    margin-right: 50px;
     margin-left: 5px;
     margin-bottom: 2px;
     border-width: 0 3px 3px 0;
@@ -99,161 +113,124 @@ header {
 }
 
 /*dropdown menu under Destinations */
-.destinationsDropdown {
+.BPdestinationsDropdown {
     font-size: 12px;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
     cursor: pointer; 
+    position: absolute;
+    width: 500px;
 }
 
 /*show destinations dropdown when hovering over Destinations */
-#destinations:hover .destinationsDropdown {
-    display: inline;
+#BPdestinations:hover .BPdestinationsDropdown {
+    display: block
 }
 
-/*destinations dropdown table settings */
-.destinationsDropdown table {
-    width:500px;
-    border: 1px solid black;
-    position: absolute;
-    top: 45px;
-    left: -55px;
-}
-
-/*destinations dropdown table cell settings */
-
-.destinationsDropdown td {
-    border-top: 1px solid;
-    padding-right: 10px;
+/* individual divs in the destinations dropdown menu */
+.BPdestinationsDropdown div {
+    border-top: 1px solid black;
+    width: fit-content;
+    height: auto;
+    font-size: 20px;
 }
 
 /*dropdown menu under Deals */
-.dealsDropdown {
+.BPdealsDropdown {
     font-size: 12px;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
     cursor: pointer; 
+    position: absolute;
+    width: 500px;
 }
 
 /*show dropdown menu when hovering over Deals */
-#deals:hover .dealsDropdown {
-    display: inline;
+#BPdeals:hover .BPdealsDropdown {
+    display: block;
 }
 
-/*deals dropdown table settings */
-.dealsDropdown table {
-    width:1000px;
-    border: 1px solid black;
-    position: absolute;
-    top: 45px;
-    left: -55px;
-}
-
-/*deals dropdown table cell settings */
-
-.dealsDropdown td {
-    border-top: 1px solid;
-    padding-right: 10px;
+/* individual divs in the deals dropdown menu */
+.BPdealsDropdown div {
+    border-top: 1px solid black;
+    width: fit-content;
+    height: auto;
+    font-size: 20px;
 }
 
 /*dropdown menu under About Us */
 
-.aboutusDropdown {
+.BPaboutusDropdown {
     font-size: 12px;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
-    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
     cursor: pointer; 
+    position: absolute;
+    width: 500px;
 }
 
 /*show dropdown menu when hovering over About Us */
-#aboutus:hover .aboutusDropdown {
-    display: inline;
+#BPaboutus:hover .BPaboutusDropdown {
+    display: block;
 }
 
-/* aboutus dropdown table settings */
-.aboutusDropdown table {
-    width:1000px;
-    border: 1px solid black;
-    position: absolute;
-    top: 45px;
-    left: -55px;
-}
-
-/*aboutus dropdown table cells */
-.aboutusDropdown td {
-    border-top: 1px solid;
-    padding-right: 10px;
+/* individual divs in the aboutus dropdown menu */
+.BPaboutusDropdown div {
+    border-top: 1px solid black;
+    width: fit-content;
+    height: auto;
+    font-size: 20px;
 }
 
 /*dropdown menu under Make A Difference */
-.makeadifferenceDropdown {
+.BPmakeadifferenceDropdown {
     font-size: 12px;
     display: none;
-    position: absolute;
     background-color: #f9f9f9;
-    width: 100%;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
-    cursor: pointer;
+    cursor: pointer; 
+    position: absolute;
+    width: 500px;
 }
 /*show dropdown menu when hovering over Make A Difference */
-#makeadifference:hover .makeadifferenceDropdown {
-    display: inline;
+#BPmakeadifference:hover .BPmakeadifferenceDropdown {
+    display: block;
 }
 
-/* makeadifference dropdown table settings */
-.makeadifferenceDropdown table {
-    width:1000px;
-    border: 1px solid black;
-    position: absolute;
-    top: 32px;
-    left: -55px;
-}
-
-/*makeadifference dropdown table cells */
-.makeadifferenceDropdown td {
-    border-top: 1px solid;
-    padding-right: 10px;
+/* individual divs in the makeadifference dropdown menu */
+.BPmakeadifferenceDropdown div {
+    border-top: 1px solid black;
+    width: fit-content;
+    height: auto;
+    font-size: 20px;
 }
 
 /*Get A Quote/Brands/Agents Login */
-.row2part2 {
+.BProw2part2 {
     font-size: 12px;
     cursor: pointer;
     padding-left: 70px;
 }
 
 /*Drowndown for Brands*/
-.brandsDropdown {
+.BPbrandsDropdown {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    width: 10%;
+    background-color:white;
+    width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
 }
 
-.brandsDropdown table {
-    width: 100px;
-    column-width: 20px;
-    border: 1px solid black;
-    position: absolute;
-    top: 32px;
-    left: -200px;
-}
-
 /*images from Brands dropdown*/
-.brandsDropdownImg {
+.BPbrandsDropdownImg {
     float:  right;
     width:  200px;
     height: 150px;
@@ -262,26 +239,20 @@ header {
 }
 
 /*Show Brands drowndown when hovering over brands*/
-#brands:hover .brandsDropdown {
+#BPbrands:hover .BPbrandsDropdown {
     display: block
 }
 
 /*user avatar next to My Trafalgar*/
-#userAvatar {
+#BPuserAvatar {
     height: 20px;
     width: 20px;
     padding-right: 5px;
     cursor: pointer;
 }
 
-/*the entire My Trafalgar/user avatar/drowndown menu div*/
-.row2part2img {
-    font-size: 12px;
-    cursor: pointer;
-    text-decoration: underline;
-}
 /*dropdown menu for My Trafalgar*/
-.myTrafalgarDropdown {
+.BPmyTrafalgarDropdown {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -290,7 +261,7 @@ header {
   z-index: 1;
 }
 /*the individual links in my trafalgar drowndown menu*/
-.myTrafalgarDropdown a {
+.BPmyTrafalgarDropdown a {
   height: 40px;
   color: black;
   padding: 0px 16px;
@@ -298,14 +269,13 @@ header {
   display: block;
   text-align: left;
   border-bottom: 1px solid;
-  
 }
 /*display my trafalgar dropdown menu when hovering over the div */
-.row2part2img:hover .myTrafalgarDropdown {
+.BProw2part2:hover .BPmyTrafalgarDropdown {
     display: block;
 }
 /*right pointing arrows in dropdown*/
-.rightArrow {
+.BPrightArrow {
     border: solid lightgray;
     margin-top: -20px;
     margin-right: 50px;
@@ -319,82 +289,103 @@ header {
     -webkit-transform: rotate(-45deg);
 }
 /*turn arrows red when hovering over links*/
-.myTrafalgarDropdown a:hover .rightArrow {
+.BPmyTrafalgarDropdown a:hover .BPrightArrow {
     border-color: red;
 }
 /*turn arrows red when hovering over the arrows themselves*/
-.myTrafalgarDropdown .rightArrow:hover {
+.BPmyTrafalgarDropdown .BPrightArrow:hover {
     border-color: red;
 }
 
 /*arrows for makeadifferenceDropdown*/
 
-.makeadifferenceDropdown td:hover .rightArrow {
+.BPmakeadifferenceDropdown div:hover .BPrightArrow {
     border-color: red;
 }
 
-.makeadifferenceDropdown .tableHead:hover {
-    color: red;
-}
-
-.makeadifferenceDropdown .rightArrow:hover .rightArrow {
+.BPmakeadifferenceDropdown .BPrightArrow:hover .BPrightArrow {
     border-color: red;
 }
 
 /*arrows for aboutusDropdown*/
 
-.aboutusDropdown td:hover .rightArrow {
+.BPaboutusDropdown div:hover .BPrightArrow {
     border-color: red;
 }
 
-.aboutusDropdown .tableHead:hover {
-    color: red;
-}
-
-.aboutusDropdown .rightArrow:hover .rightArrow {
+.BPaboutusDropdown .BPrightArrow:hover .BPrightArrow {
     border-color: red;
 }
 
 /*arrows for dealsDropdown*/
 
-.dealsDropdown td:hover .rightArrow {
+.BPdealsDropdown div:hover .BPrightArrow {
     border-color: red;
 }
 
-.dealsDropdown .tableHead:hover {
-    color: red;
-}
-
-.dealsDropdown .rightArrow:hover .rightArrow {
+.BPdealsDropdown .BPrightArrow:hover .BPrightArrow {
     border-color: red;
 }
 
 /*arrows for destinationsDropdown */
-.destinationsDropdown td:hover .rightArrow {
+.BPdestinationsDropdown div:hover .BPrightArrow {
     border-color: red;
 }
 
-.destinationsDropdown .tableHead:hover {
-    color: red;
-}
-
-.destinationsDropdown .rightArrow:hover .rightArrow {
+.BPdestinationsDropdown .BPrightArrow:hover .BPrightArrow {
     border-color: red;
-}
-
-/*all table headers are bigger font */
-.tableHead {
-    font-size: 20px;
 }
 
 /* change search bar magnifying glass background to gray when hovered*/
-#magnifyingGlass:hover {
-    background-color: gray
+#BPmagnifyingGlass:hover {
+    background-color: gray;
+    cursor: pointer
 }
 
+/* TRIP DETAILS COMPONENT */
+
+/* country dropdown*/
+
+.BPcountryDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer; 
+    padding: 10px;
+}
+
+/* show the country dropdown when user hovers over country header */
+
+.BPcountry:hover .BPcountryDropdown {
+    display: block;
+    margin-left: 200px;
+}
+
+/* cities dropdown */
+
+.BPcitiesDropdown {
+    font-size: 12px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; 
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* show the cities dropdown when user hovers over country header */
+
+.BPcities:hover .BPcitiesDropdown {
+    display: block;
+    margin-left: 350px
+}
 /* change trip results when user hovers over one */
-.searchResults:hover {
-    background-color: gray;
+.BPsearchResults:hover {
+    background-color: red;
     cursor: pointer;
 }
 

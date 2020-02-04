@@ -24,8 +24,9 @@ const data = {
 
   cities: (country) => {
     const allCities = options.cities[country];
-    // pick a random number of cities based on how many are in that country
+    // pick a random number of cities (at least 2) based on how many are in that country
     let numberOfCities = Math.floor(Math.random() * allCities.length + 1);
+    if (numberOfCities === 1) { numberOfCities = 2; }
     // for the number of cities to add, pick a random city
     // and if it isn't already in the citiesToAdd, add it
     const citiesToAdd = [];
@@ -43,7 +44,7 @@ const data = {
     // generates a random city generated from the previous function
     const randomCity = cities[Math.floor(Math.random() * cities.length)];
     // creates the corresponding Object Url in S3
-    const imageUrl = `https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/${randomCity}.jpg`
+    const imageUrl = `${randomCity}.jpg`;
     return imageUrl;
   },
 
@@ -57,18 +58,18 @@ const data = {
   descriptions: () => {
     // randomly generate first and second descriptions from lorem ipsum text
     const firstDescription = [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.',
-      'Non blandit massa enim nec dui nunc mattis enim ut. In tellus integer feugiat scelerisque, accumsan lacus vel facilisis volutpat est velit egestas dui id.',
-      'Suspendisse potenti nullam ac tortor vitae purus faucibus, egestas quis ipsum suspendisse ultrices. A pellentesque sit amet porttitor eget dolor.',
-      'Laoreet id donec ultrices tincidunt arcu non. Est sit amet facilisis magna etiam tempor orci eu lobortis. Mauris pellentesque pulvinar pellentesque habitant morbi.',
-      'Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Etiam dignissim diam quis enim lobortis, sapien eget mi proin sed libero.',
-    ];
-    const secondDescription = [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Diam donec adipiscing tristique risus nec feugiat, in ornare quam viverra orci sagittis eu volutpat.',
       'Nullam non nisi est sit, velit ut tortor pretium viverra suspendisse potenti nullam, pulvinar proin gravida hendrerit lectus a.',
       'Eu non diam phasellus vestibulum lorem sed, vivamus at augue eget arcu dictum varius, maecenas ultricies mi eget mauris pharetra et ultrices neque ornare.',
       'Vivamus at augue eget arcu dictum varius duis, diam donec adipiscing tristique risus, venenatis urna cursus eget nunc scelerisque.',
+    ];
+    const secondDescription = [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Senectus et netus et malesuada fames ac turpis.',
+      'Non blandit massa enim nec dui nunc mattis enim ut. In tellus integer feugiat scelerisque, accumsan lacus vel facilisis volutpat est velit egestas dui id.',
+      'Suspendisse potenti nullam ac tortor vitae purus faucibus, egestas quis ipsum suspendisse ultrices. A pellentesque sit amet porttitor eget dolor.',
+      'Laoreet id donec ultrices tincidunt arcu non. Est sit amet facilisis magna etiam tempor orci eu lobortis. Mauris pellentesque pulvinar pellentesque habitant morbi.',
+      'Eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Etiam dignissim diam quis enim lobortis, sapien eget mi proin sed libero.',
     ];
     const first = firstDescription[Math.floor(Math.random() * firstDescription.length)];
     const second = secondDescription[Math.floor(Math.random() * secondDescription.length)];
