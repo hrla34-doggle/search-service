@@ -1,3 +1,7 @@
+/* eslint-disable vars-on-top */
+/* eslint-disable no-redeclare */
+/* eslint-disable block-scoped-var */
+/* eslint-disable no-var */
 /* eslint-disable max-len */
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/anchor-is-valid */
@@ -70,11 +74,24 @@ class MoreTripDetails extends React.Component {
       fontFamily: 'sans-serif',
     };
 
-    // dividing trafalgar difference into two columns
+    // converting each trafalgar difference item into a tuple that also contains the appropriate image reference
     const difference = this.props.trip.the_trafalgar_difference;
-    const midpoint = Math.ceil(difference.length / 2);
-    const difference1 = difference.slice(0, midpoint);
-    const difference2 = difference.slice(midpoint, difference.length);
+    const diff = difference.map((item) => {
+      if (item.includes('CONNECT WITH LOCALS') || item.includes('DIVE INTO CULTURE')) {
+        var image = './graphics/Handshake.svg.png';
+      } else if (item.includes('LOCAL SPECIALISTS')) {
+        var image = './graphics/Key.svg.png';
+      } else if (item.includes('STAYS WITH STORIES')) {
+        var image = './graphics/Home.svg.png';
+      } else if (item.includes('MAKE A DIFFERENCE')) {
+        var image = './graphics/flower.svg.png';
+      }
+      return [item, image];
+    });
+    // dividing trafalgar difference into two columns
+    const midpoint = Math.ceil(diff.length / 2);
+    const difference1 = diff.slice(0, midpoint);
+    const difference2 = diff.slice(midpoint, diff.length);
 
     // dividing sightseeing highlights into two columns
     const highlights = this.props.trip.sightseeing_highlights;
@@ -88,6 +105,8 @@ class MoreTripDetails extends React.Component {
     const travels1 = travels.slice(0, midpoint3);
     const travels2 = travels.slice(midpoint3, travels.length);
 
+    // assigning the appropriate image to each trafalgar difference
+
     return (
       <section style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={divStyle}>
@@ -99,7 +118,7 @@ class MoreTripDetails extends React.Component {
           >
 Trip details
           </h2>
-          <div className="BPflexrow" style={{ width: '90%'}}>
+          <div className="BPflexrow" style={{ width: '90%' }}>
             <h3 style={{
               font: '22px sans-serif',
               color: '#003b75',
@@ -212,10 +231,10 @@ The Trafalgar difference
                     style={{
                       height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
                     }}
-                    src="./graphics/Map_pin.svg.png"
-                    alt="route"
+                    src={diff[1]}
+                    alt={diff[1].slice(-8)}
                   />
-                  {diff}
+                  {diff[0]}
                 </p>
               ))}
             </div>
@@ -234,10 +253,10 @@ The Trafalgar difference
                     style={{
                       height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
                     }}
-                    src="./graphics/Map_pin.svg.png"
-                    alt="route"
+                    src={diff[1]}
+                    alt={diff[1].slice(-8)}
                   />
-                  {diff}
+                  {diff[0]}
                 </p>
               ))}
             </div>
@@ -325,11 +344,12 @@ Specific transfer information can be found here:
                   </p>
                   <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
                 </h3>
-                {/* <div style={{
-                  display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-                }} */}
 
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
+
+                <div style={{
+                  display: 'flex', flexDirection: 'column', width: 'fit-content', marginRight: '50px',
+                }}
+                >
                   {travels1.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
@@ -337,21 +357,14 @@ Specific transfer information can be found here:
                     </p>
                   ))}
                 </div>
-                {/* </div> */}
-                {/* <div style={{
-                  display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-                }}
-                > */}
-                {' '}
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
 
+                <div style={{ display: 'flex', flexDirection: 'column', width: 'fit-content' }}>
                   {travels2.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
                   ))}
-                  {/* </div> */}
                 </div>
               </div>
             </div>

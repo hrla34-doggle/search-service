@@ -112,9 +112,9 @@ const TripDetails = (props) => {
           {' '}
 Days
         </span>
-
         <span style={daysCountriesCitiesSpan} className="BPcountry">
           <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
+
           <span style={daysCountriesCitiesSpan} className="BPcountry">
             <strong style={{ marginLeft: '15px' }}>
               {' '}
@@ -127,7 +127,6 @@ Country
             </div>
           </span>
         </span>
-
         <span style={daysCountriesCitiesSpan} className="BPcities">
           <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
           <span style={daysCountriesCitiesSpan} className="BPcities">
