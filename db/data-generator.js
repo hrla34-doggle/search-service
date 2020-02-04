@@ -58,7 +58,7 @@ const data = {
   descriptions: () => {
     // randomly generate first and second descriptions from lorem ipsum text
     const firstDescription = [
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Suscipit tellus mauris a diam maecenas, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Diam donec adipiscing tristique risus nec feugiat, in ornare quam viverra orci sagittis eu volutpat.',
       'Nullam non nisi est sit, velit ut tortor pretium viverra suspendisse potenti nullam, pulvinar proin gravida hendrerit lectus a.',
       'Eu non diam phasellus vestibulum lorem sed, vivamus at augue eget arcu dictum varius, maecenas ultricies mi eget mauris pharetra et ultrices neque ornare.',

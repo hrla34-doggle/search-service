@@ -109,17 +109,18 @@ class MoreTripDetails extends React.Component {
     // assigning the appropriate image to each trafalgar difference
 
     return (
-      <section style={{ display: 'flex', flexDirection: 'column' }}>
+      <section style={{ display: 'flex', flexDirection: 'column', width: '90%', margin: 'auto' }}>
         <div style={divStyle}>
           <h2 style={{
             color: '#4c4c4c',
             font: '28px sans-serif',
             fontWeight: '700',
+            marginLeft: '75px'
           }}
           >
 Trip details
           </h2>
-          <div className="BPflexrow" style={{ width: '90%' }}>
+          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
             <h3 style={{
               font: '22px sans-serif',
               color: '#003b75',
@@ -132,7 +133,7 @@ What's included
             </h3>
             <img
               style={{
-                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+                height: '40px', width: '40px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
               src="./graphics/Moon.svg.png"
               alt="moon"
@@ -206,7 +207,7 @@ On-Trip Transport
 
         </div>
         <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '90%' }}>
+          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
             <h3 style={{
               font: '22px sans-serif',
               fontWeight: '700',
@@ -218,14 +219,14 @@ On-Trip Transport
 The Trafalgar difference
             </h3>
             <div style={{
-              display: 'inline-block', marginLeft: '50px', marginRight: '100px', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginLeft: '50px', marginRight: '100px', height: '50px',
             }}
             >
               {difference1.map((diff, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
                   }}
                 >
                   <img
@@ -240,14 +241,14 @@ The Trafalgar difference
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginRight: '100px', height: '50px'
             }}
             >
               {difference2.map((diff, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
                   }}
                 >
                   <img
@@ -265,7 +266,7 @@ The Trafalgar difference
         </div>
 
         <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '90%' }}>
+          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
             <h3 style={{
               font: '22px sans-serif',
               color: '#0d5e2f',
@@ -277,14 +278,14 @@ The Trafalgar difference
 Sightseeing highlights
             </h3>
             <div style={{
-              display: 'inline-block', marginLeft: '200px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginLeft: '200px', marginRight: '100px', marginTop: 'auto', height: '50px'
             }}
             >
               {highlights1.map((highlight, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
                   }}
                 >
                   <img
@@ -299,14 +300,14 @@ Sightseeing highlights
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px'
             }}
             >
               {highlights2.map((highlight, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
                   }}
                 >
                   <img
@@ -327,13 +328,13 @@ Sightseeing highlights
         {this.state.travelDetails
           ? (
             <div style={divStyle}>
-              <div className="BPflexrow" style={{ width: '90%' }}>
+              <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
                 <h3 style={{
                   font: '22px sans-serif',
                   color: '#9c1a00',
                   fontWeight: '700',
                   display: 'block',
-                  marginRight: '200px',
+                  marginRight: '50px',
                 }}
                 >
 Travel highlights
@@ -352,7 +353,7 @@ Specific transfer information can be found here:
                 }}
                 >
                   {travels1.map((highlight, index) => (
-                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
@@ -361,7 +362,7 @@ Specific transfer information can be found here:
 
                 <div style={{ display: 'flex', flexDirection: 'column', width: 'fit-content' }}>
                   {travels2.map((highlight, index) => (
-                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
+                    <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
