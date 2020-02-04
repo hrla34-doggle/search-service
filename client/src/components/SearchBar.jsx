@@ -212,7 +212,6 @@ ASIA
 AUSTRALIA AND NEW ZEALAND
                 <i className="BPrightArrow" />
               </div>
-
             </div>
           </div>
 
@@ -220,9 +219,8 @@ AUSTRALIA AND NEW ZEALAND
             {' '}
             <span>DEALS</span>
             <i className="BPdownArrow" />
-            <div className="BPdealsDropdown">
-
-              <div style={{ border: 'none' }}>
+            <div className="BPdealsDropdown" style={{ border: 'none' }}>
+              <div>
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>DEALS</span>
                 <br />
                             Our latest offers, making travel more affordable

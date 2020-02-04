@@ -79,27 +79,27 @@ class MoreTripDetails extends React.Component {
     // dividing sightseeing highlights into two columns
     const highlights = this.props.trip.sightseeing_highlights;
     const midpoint2 = Math.ceil(highlights.length / 2);
-    const highlights1 = highlights.slice(0, midpoint);
-    const highlights2 = highlights.slice(midpoint, highlights.length);
+    const highlights1 = highlights.slice(0, midpoint2);
+    const highlights2 = highlights.slice(midpoint2, highlights.length);
 
     // dividing travel highlights into two columns
     const travels = this.props.trip.travel_highlights;
     const midpoint3 = Math.ceil(travels.length / 2);
-    const travels1 = travels.slice(0, midpoint);
-    const travels2 = travels.slice(midpoint, travels.length);
+    const travels1 = travels.slice(0, midpoint3);
+    const travels2 = travels.slice(midpoint3, travels.length);
 
     return (
       <section style={{ display: 'flex', flexDirection: 'column' }}>
         <div style={divStyle}>
           <h2 style={{
             color: '#4c4c4c',
-            font: '24px sans-serif',
+            font: '28px sans-serif',
             fontWeight: '700',
           }}
           >
 Trip details
           </h2>
-          <div className="BPflexrow" style={{ width: '80%' }}>
+          <div className="BPflexrow" style={{ width: '90%'}}>
             <h3 style={{
               font: '22px sans-serif',
               color: '#003b75',
@@ -186,7 +186,7 @@ On-Trip Transport
 
         </div>
         <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '80%' }}>
+          <div className="BPflexrow" style={{ width: '90%' }}>
             <h3 style={{
               font: '22px sans-serif',
               fontWeight: '700',
@@ -198,33 +198,45 @@ On-Trip Transport
 The Trafalgar difference
             </h3>
             <div style={{
-              display: 'inline-block', marginTop: 'auto', marginLeft: '350px', marginRight: '100px', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginLeft: '50px', marginRight: '100px', height: '50px', width: 'fit-content',
             }}
             >
               {difference1.map((diff, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
                   }}
                 >
-                  <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="./graphics/Map_pin.svg.png" alt="route" />
+                  <img
+                    style={{
+                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
+                    }}
+                    src="./graphics/Map_pin.svg.png"
+                    alt="route"
+                  />
                   {diff}
                 </p>
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginTop: 'auto', marginRight: '100px', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginRight: '100px', height: '50px', width: 'fit-content',
             }}
             >
               {difference2.map((diff, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
                   }}
                 >
-                  <img style={{ height: '40px', width: '40px', marginRight: '10px' }} src="./graphics/Map_pin.svg.png" alt="route" />
+                  <img
+                    style={{
+                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
+                    }}
+                    src="./graphics/Map_pin.svg.png"
+                    alt="route"
+                  />
                   {diff}
                 </p>
               ))}
@@ -233,27 +245,26 @@ The Trafalgar difference
         </div>
 
         <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '80%' }}>
+          <div className="BPflexrow" style={{ width: '90%' }}>
             <h3 style={{
               font: '22px sans-serif',
               color: '#0d5e2f',
               fontWeight: '700',
               display: 'block',
-              position: 'relative',
               marginRight: '200px',
             }}
             >
 Sightseeing highlights
             </h3>
             <div style={{
-              display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
+              display: 'inline-block', marginLeft: '200px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
             }}
             >
               {highlights1.map((highlight, index) => (
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
                   }}
                 >
                   <img
@@ -275,7 +286,7 @@ Sightseeing highlights
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexWrap: 'wrap',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
                   }}
                 >
                   <img
@@ -296,7 +307,7 @@ Sightseeing highlights
         {this.state.travelDetails
           ? (
             <div style={divStyle}>
-              <div className="BPflexrow" style={{ width: '80%' }}>
+              <div className="BPflexrow" style={{ width: '90%' }}>
                 <h3 style={{
                   font: '22px sans-serif',
                   color: '#9c1a00',
@@ -306,13 +317,19 @@ Sightseeing highlights
                 }}
                 >
 Travel highlights
-                  <p style={{ color: '#4c4c4c', fontWeight: '400', fontSize: '18px' }}>Specific transfer information can be found here:</p>
+                  <p style={{
+                    color: '#4c4c4c', fontWeight: '400', fontSize: '18px', width: '400px',
+                  }}
+                  >
+Specific transfer information can be found here:
+                  </p>
                   <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
                 </h3>
-                <div style={{
+                {/* <div style={{
                   display: 'inline-block', marginLeft: '350px', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
-                }}
-                >
+                }} */}
+
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
                   {travels1.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
@@ -320,16 +337,21 @@ Travel highlights
                     </p>
                   ))}
                 </div>
-                <div style={{
+                {/* </div> */}
+                {/* <div style={{
                   display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px', width: 'fit-content',
                 }}
-                >
+                > */}
+                {' '}
+                <div style={{ display: 'flex', flexDirection: 'column' }}>
+
                   {travels2.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400' }}>
                       <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
                   ))}
+                  {/* </div> */}
                 </div>
               </div>
             </div>
