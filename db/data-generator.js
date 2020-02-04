@@ -93,8 +93,11 @@ const data = {
     while (numberOfSentences > 0) {
       const first = firstWord[Math.floor(Math.random() * firstWord.length)].toUpperCase();
       const rest = restOfSentence[Math.floor(Math.random() * restOfSentence.length)];
-      sentences.push(`${first} ${rest}`);
-      numberOfSentences -= 1;
+      // check there are no repeats of the first part
+      if (sentences.filter((sentence) => sentence.includes(first)).length === 0) {
+        sentences.push(`${first} ${rest}`);
+        numberOfSentences -= 1;
+      }
     }
     return sentences;
   },
@@ -117,8 +120,11 @@ const data = {
     while (numberOfSentences > 0) {
       const first = firstWord[Math.floor(Math.random() * firstWord.length)].toUpperCase();
       const rest = restOfSentence[Math.floor(Math.random() * restOfSentence.length)];
-      sentences.push(`${first} ${rest}`);
-      numberOfSentences -= 1;
+      // check there are no repeats of the first part
+      if (sentences.filter((sentence) => sentence.includes(first)).length === 0) {
+        sentences.push(`${first} ${rest}`);
+        numberOfSentences -= 1;
+      }
     }
     return sentences;
   },

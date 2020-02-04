@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable vars-on-top */
 /* eslint-disable no-redeclare */
 /* eslint-disable block-scoped-var */
