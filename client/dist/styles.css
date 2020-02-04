@@ -388,3 +388,8 @@
     background-color: red;
     cursor: pointer;
 }
+
+/*lighten viewmore button (in moretripdetails component) when user hovers over it*/
+.BPviewmore:hover {
+  opacity: .5
+}
