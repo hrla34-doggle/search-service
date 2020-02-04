@@ -109,13 +109,16 @@ class MoreTripDetails extends React.Component {
     // assigning the appropriate image to each trafalgar difference
 
     return (
-      <section style={{ display: 'flex', flexDirection: 'column', width: '90%', margin: 'auto' }}>
+      <section style={{
+        display: 'flex', flexDirection: 'column', width: '90%', margin: 'auto',
+      }}
+      >
         <div style={divStyle}>
           <h2 style={{
             color: '#4c4c4c',
             font: '28px sans-serif',
             fontWeight: '700',
-            marginLeft: '75px'
+            marginLeft: '75px',
           }}
           >
 Trip details
@@ -133,7 +136,7 @@ What's included
             </h3>
             <img
               style={{
-                height: '40px', width: '40px', borderRadius: '50%', backgroundColor: '#add8e6',
+                height: '40px', width: '40px', borderRadius: '50%', marginRight: '10px', backgroundColor: '#add8e6',
               }}
               src="./graphics/Moon.svg.png"
               alt="moon"
@@ -219,7 +222,7 @@ On-Trip Transport
 The Trafalgar difference
             </h3>
             <div style={{
-              display: 'inline-block', marginLeft: '50px', marginRight: '100px', height: '50px',
+              display: 'inline-block', height: '50px',
             }}
             >
               {difference1.map((diff, index) => (
@@ -241,7 +244,7 @@ The Trafalgar difference
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', height: '50px'
+              display: 'inline-block', marginRight: '100px', height: '50px',
             }}
             >
               {difference2.map((diff, index) => (
@@ -278,7 +281,7 @@ The Trafalgar difference
 Sightseeing highlights
             </h3>
             <div style={{
-              display: 'inline-block', marginLeft: '200px', marginRight: '100px', marginTop: 'auto', height: '50px'
+              display: 'inline-block', marginTop: 'auto', height: '50px',
             }}
             >
               {highlights1.map((highlight, index) => (
@@ -300,7 +303,7 @@ Sightseeing highlights
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px'
+              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px',
             }}
             >
               {highlights2.map((highlight, index) => (
@@ -349,7 +352,7 @@ Specific transfer information can be found here:
 
 
                 <div style={{
-                  display: 'flex', flexDirection: 'column', width: 'fit-content', marginRight: '50px',
+                  display: 'flex', flexDirection: 'column', width: 'fit-content',
                 }}
                 >
                   {travels1.map((highlight, index) => (

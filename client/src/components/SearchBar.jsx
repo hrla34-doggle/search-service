@@ -89,7 +89,39 @@ export default class SearchBar extends React.Component {
     // each result will be structured as tuple with name/season/year for display then id for fetching data
     // get results by matching trips whose name includes the query (not case-sensitive)
     if (search.length >= 3) {
-      const results = this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
+      const results = [];
+      for (let h = 0; h < this.state.allTrips.length; h += 1) {
+        if ((this.state.allTrips[h][1].toUpperCase()).includes(search.toUpperCase())) {
+          results.push(this.state.allTrips[h]);
+        }
+      }
+      // this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
+      // console.log(results)
+      // and also check if any cities in the trip include the query (not case-sensitive)
+      const cityResults = [];
+      const { allTrips } = this.state;
+      for (let i = 0; i < allTrips.length; i += 1) {
+        const cities = allTrips[i][4];
+        for (let j = 0; j < cities.length; j += 1) {
+          if (cities[j].toUpperCase().includes(search.toUpperCase())) {
+            cityResults.push(allTrips[i]);
+          }
+        }
+      }
+
+      // then if trip not already in the results array, add it
+      for (let q = 0; q < cityResults.length; q += 1) {
+        const tripName = cityResults[q][1];
+        let repeated = false;
+        for (let r = 0; r < results.length; r += 1) {
+          if (results[r][1] === tripName) {
+            repeated = true;
+          }
+        }
+        if (!repeated) {
+          results.push(cityResults[q]);
+        }
+      }
       let updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
       if (updatedTrips.length === 0) {
         updatedTrips = [['Sorry, no results found', 0]];
