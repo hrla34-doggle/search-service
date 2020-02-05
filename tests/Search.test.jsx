@@ -14,8 +14,19 @@ describe('<Search />', () => {
     ['Majestic Egypt Fall 2020', 50],
   ];
 
-  it('should render the Search component on the screen', () => {
-    const wrapper = shallow(<Search searchResults={fakeQueryResults} />);
+  it('should render the Search component, which has an input form and image', () => {
+    const wrapper = shallow(<Search searchResults={[]} />);
     expect(wrapper).toExist();
+    expect((wrapper).find('form')).toHaveLength(1);
+    expect(wrapper.find('img')).toHaveLength(1);
+  });
+
+  it('should render the correct search results', () => {
+    const wrapper = shallow(<Search searchResults={fakeQueryResults} />);
+    expect(wrapper.find('.BPsearchResults')).toHaveLength(3);
+    const results = wrapper.find('.BPsearchResults').map((node) => node.text());
+    expect(results[0]).toEqual('Wonders of Egypt Winter 2020');
+    expect(results[1]).toEqual('Adventures In Egypt Winter 2020');
+    expect(results[2]).toEqual('Majestic Egypt Fall 2020');
   });
 });

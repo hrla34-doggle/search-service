@@ -58,7 +58,7 @@ export default class SearchBar extends React.Component {
     // when user selects a trip, use its id to get all the info from that trip
     // and store the info in this.state as currentTrip
     // then will need to re-render the page accordingly with that data
-    // plus reset search results to empty and search form to its original state
+    // assuming this isn't original page load (user has typed text), reset search results to empty and search form to its original state
     // also run this with a random id (between 1-100) when page first loads
     if (id === 0) { return; }
     Axios.get(`/api/trips/${id}`)
