@@ -89,10 +89,24 @@ class MoreTripDetails extends React.Component {
       }
       return [item, image];
     });
+    // now for each tuple's first value (the text), divide that into a tuple with capitalized words and non-capitalized
+    const newDiff = diff.map((tuple) => {
+      const text = tuple[0];
+      const firstPart = [];
+      const secondPart = [];
+      text.split(' ').forEach((word) => {
+        if (word.toUpperCase() === word) {
+          firstPart.push(word);
+        } else {
+          secondPart.push(word);
+        }
+      });
+      return [[firstPart, secondPart], tuple[1]];
+    });
     // dividing trafalgar difference into two columns
-    const midpoint = Math.ceil(diff.length / 2);
-    const difference1 = diff.slice(0, midpoint);
-    const difference2 = diff.slice(midpoint, diff.length);
+    const midpoint = Math.ceil(newDiff.length / 2);
+    const difference1 = newDiff.slice(0, midpoint);
+    const difference2 = newDiff.slice(midpoint, newDiff.length);
 
     // dividing sightseeing highlights into two columns
     const highlights = this.props.trip.sightseeing_highlights;
@@ -118,7 +132,7 @@ class MoreTripDetails extends React.Component {
             color: '#4c4c4c',
             font: '28px sans-serif',
             fontWeight: '700',
-            marginLeft: '75px',
+            marginLeft: '60px',
           }}
           >
 Trip details
@@ -229,7 +243,7 @@ The Trafalgar difference
                 <p
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
+                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
                   }}
                 >
                   <img
@@ -239,7 +253,11 @@ The Trafalgar difference
                     src={diff[1]}
                     alt={diff[1].slice(-8)}
                   />
-                  {diff[0]}
+                  <p>
+                    <span style={{ fontWeight: 'bold' }}>{diff[0][0].join(' ')}</span>
+                    <br />
+                    {diff[0][1].join(' ')}
+                  </p>
                 </p>
               ))}
             </div>
@@ -261,7 +279,11 @@ The Trafalgar difference
                     src={diff[1]}
                     alt={diff[1].slice(-8)}
                   />
-                  {diff[0]}
+                  <p>
+                    <span style={{ fontWeight: 'bold' }}>{diff[0][0].join(' ')}</span>
+                    <br />
+                    <span>{diff[0][1].join(' ')}</span>
+                  </p>
                 </p>
               ))}
             </div>

@@ -373,6 +373,7 @@
     z-index: 1; 
     cursor: pointer; 
     padding: 10px;
+    left: 100px
 }
 
 /* show the country dropdown when user hovers over country header */
@@ -393,6 +394,7 @@
     z-index: 1; 
     cursor: pointer;
     padding: 10px;
+    left: 90px
 }
 
 /* show the cities dropdown when user hovers over country header */

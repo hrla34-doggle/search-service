@@ -40,7 +40,6 @@ const TripDetails = (props) => {
   const tripName = {
     textTransform: 'uppercase',
     marginTop: '60px',
-    marginLeft: '5px',
     color: 'rgb(76, 76, 76)',
     font: '24px FuturaNext-DemiBold, sans-serif',
     lineHeight: '30px',
@@ -53,6 +52,7 @@ const TripDetails = (props) => {
     fontSize: '15px',
     marginTop: '20px',
     marginBottom: '20px',
+    marginLeft: '-20px',
     lineHeight: '22px',
     color: '#4c4c4c',
     cursor: 'pointer',
@@ -94,65 +94,72 @@ const TripDetails = (props) => {
   }
 
   return (
-    <section>
-      <div>
-        <img style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
+    <div>
+      <img style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
+
+      <section style={{
+        display: 'flex', flexDirection: 'column', width: '82%', margin: 'auto',
+      }}
+      >
         <h1 style={tripName}>{props.trip.name}</h1>
-      </div>
-
-      <div style={daysCountriesCitiesDiv}>
-        <span style={daysCountriesCitiesSpan}>
-          <img style={calendar} src="./graphics/calendar.svg.png" alt="calendar" />
-        </span>
-        <span style={daysCountriesCitiesSpan}>
-          <strong>
+        <div style={daysCountriesCitiesDiv}>
+          <span style={daysCountriesCitiesSpan}>
+            <img style={calendar} src="./graphics/calendar.svg.png" alt="calendar" />
+          </span>
+          <span style={daysCountriesCitiesSpan}>
+            <strong>
+              {' '}
+              {props.trip.days}
+            </strong>
             {' '}
-            {props.trip.days}
-          </strong>
-          {' '}
 Days
-        </span>
-        <span style={daysCountriesCitiesSpan} className="BPcountry">
-          <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
-
+          </span>
           <span style={daysCountriesCitiesSpan} className="BPcountry">
-            <strong style={{ marginLeft: '15px' }}>
-              {' '}
-            1
-            </strong>
-            {' '}
-Country
-            <div className="BPcountryDropdown">
-              {props.trip.country}
-            </div>
-          </span>
-        </span>
-        <span style={daysCountriesCitiesSpan} className="BPcities">
-          <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
-          <span style={daysCountriesCitiesSpan} className="BPcities">
-            <strong style={{ marginLeft: '15px' }}>
-              {' '}
-              {props.trip.cities.length}
-            </strong>
-            {' '}
-Cities
-            <div className="BPcitiesDropdown">
-              {props.trip.cities.map((city, index) => (
-                <span key={index}>
-                  {city}
-                  <br />
-                </span>
-              ))}
-            </div>
-          </span>
-        </span>
-      </div>
+            <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
 
-      <div>
-        <p style={firstDescription}>{props.trip.descriptions[0]}</p>
-        <p style={secondDescription}>{props.trip.descriptions[1]}</p>
-      </div>
-    </section>
+            <span style={daysCountriesCitiesSpan} className="BPcountry">
+              <strong style={{ marginLeft: '15px' }}>
+                {' '}
+            1
+              </strong>
+              {' '}
+Country
+              <div className="BPcountryDropdown">
+                {props.trip.country}
+              </div>
+            </span>
+          </span>
+          <span
+            style={{
+              marginRight: '20px',
+            }}
+            className="BPcities"
+          >
+            <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
+            <span style={daysCountriesCitiesSpan} className="BPcities">
+              <strong style={{ marginLeft: '15px' }}>
+                {' '}
+                {props.trip.cities.length}
+              </strong>
+              {' '}
+Cities
+              <div className="BPcitiesDropdown">
+                {props.trip.cities.map((city, index) => (
+                  <span key={index}>
+                    {`${city}, `}
+                  </span>
+                ))}
+              </div>
+            </span>
+          </span>
+        </div>
+
+        <div>
+          <p style={firstDescription}>{props.trip.descriptions[0]}</p>
+          <p style={secondDescription}>{props.trip.descriptions[1]}</p>
+        </div>
+      </section>
+    </div>
   );
 };
 
