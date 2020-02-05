@@ -240,7 +240,7 @@ The Trafalgar difference
             }}
             >
               {difference1.map((diff, index) => (
-                <p
+                <div
                   key={index}
                   style={{
                     color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
@@ -258,7 +258,7 @@ The Trafalgar difference
                     <br />
                     {diff[0][1].join(' ')}
                   </p>
-                </p>
+                </div>
               ))}
             </div>
             <div style={{
@@ -266,7 +266,7 @@ The Trafalgar difference
             }}
             >
               {difference2.map((diff, index) => (
-                <p
+                <div
                   key={index}
                   style={{
                     color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
@@ -284,7 +284,7 @@ The Trafalgar difference
                     <br />
                     <span>{diff[0][1].join(' ')}</span>
                   </p>
-                </p>
+                </div>
               ))}
             </div>
           </div>
