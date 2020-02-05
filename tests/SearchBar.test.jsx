@@ -12,4 +12,23 @@ describe('<SearchBar />', () => {
     const wrapper = shallow(<SearchBar />);
     expect(wrapper).toExist();
   });
+
+  it('should invoke getAllTrips on componentDidMount', () => {
+    const wrapper = shallow(<SearchBar />);
+    const mock = jest.fn();
+    wrapper.instance().getAllTrips = mock;
+    wrapper.instance().forceUpdate();
+    wrapper.instance().componentDidMount();
+    expect(mock).toHaveBeenCalled();
+  });
+
+  it('should also invoke getOneTrip on componentDidMount', () => {
+    const wrapper = shallow(<SearchBar />);
+    const mock = jest.fn();
+    wrapper.instance().getOneTrip = mock;
+    wrapper.instance().forceUpdate();
+    wrapper.instance().componentDidMount();
+    expect(mock).toHaveBeenCalled();
+  });
+
 });
