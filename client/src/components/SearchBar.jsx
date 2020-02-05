@@ -67,7 +67,7 @@ export default class SearchBar extends React.Component {
         queryResults: [],
       }, () => console.log(this.state.currentTrip)))
       .catch((err) => console.error(err));
-    document.getElementById('BPsearchfield').reset();
+    if (this.state.query.length > 0) { document.getElementById('BPsearchfield').reset(); }
   }
 
   updateQuery(e) {
@@ -130,7 +130,6 @@ export default class SearchBar extends React.Component {
         queryResults: updatedTrips,
       });
     }
-    console.log(this.state.queryResults)
   }
 
   toggleCustomers() {
