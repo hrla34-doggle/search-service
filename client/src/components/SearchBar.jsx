@@ -448,16 +448,18 @@ export default class SearchBar extends React.Component {
             <span>Get a Quote</span>
           </div>
 
-          <div className="BProw2part2" id="BPbrands">
+          <div className="BProw2part2">
             {' '}
-            <span>Brands</span>
-            <i className="BPdownArrow" />
-            <div className="BPbrandsDropdown">
-              <section className="BPbrandsimages">
-                <img className="BPbrandsDropdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/BrendanVacations.png" alt="Brendan Vacations" />
-                <img className="BPbrandsDrowdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Costsaver.webp" alt="Costsaver" />
-              </section>
-            </div>
+            <span id="BPbrands">
+Brands
+              <i className="BPdownArrow" />
+              <div className="BPbrandsDropdown">
+                <section className="BPbrandsimages">
+                  <img className="BPbrandsDropdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/BrendanVacations.png" alt="Brendan Vacations" />
+                  <img className="BPbrandsDrowdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Costsaver.webp" alt="Costsaver" />
+                </section>
+              </div>
+            </span>
           </div>
 
           <div className="BProw2part2">
@@ -468,24 +470,24 @@ export default class SearchBar extends React.Component {
           <div className="BProw2part2">
             {' '}
             <img id="BPuserAvatar" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/user.svg.png" alt="User Avatar" />
-            <span>
+            <span className="BPmytrafalgar">
               My Trafalgar
               <i className="BPdownArrow" />
-            </span>
-            <div className="BPmyTrafalgarDropdown">
-              <a href="#">
+              <div className="BPmyTrafalgarDropdown">
+                <a href="#">
                 Log in
-                <i className="BPrightArrow" />
-              </a>
-              <a href="#">
+                  <i className="BPrightArrow" />
+                </a>
+                <a href="#">
                 Sign up
-                <i className="BPrightArrow" />
-              </a>
-              <a href="#">
+                  <i className="BPrightArrow" />
+                </a>
+                <a href="#">
                 Manage My Booking
-                <i className="BPrightArrow" />
-              </a>
-            </div>
+                  <i className="BPrightArrow" />
+                </a>
+              </div>
+            </span>
           </div>
         </div>
         <div style={tripdetailsplacement}>
