@@ -26,8 +26,15 @@ describe('<TripDetails />', () => {
     id: 8,
     __v: 0,
   };
+
   it('should render the TripDetails component on the screen', () => {
     const wrapper = shallow(<TripDetails trip={fakeTrip} />);
     expect(wrapper).toExist();
+  });
+
+  it('should render the correct trip information', () => {
+    const wrapper = shallow(<TripDetails trip={fakeTrip} />);
+    const name = wrapper.find('h1').text();
+    expect(name).toBe('Splendors of The United States');
   });
 });

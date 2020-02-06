@@ -26,8 +26,15 @@ describe('<MoreTripDetails />', () => {
     id: 8,
     __v: 0,
   };
+
   it('should render the MoreTripDetails component on the screen', () => {
     const wrapper = shallow(<MoreTripDetails trip={fakeTrip} />);
     expect(wrapper).toExist();
+  });
+
+  it('should render the correct trip details', () => {
+    const wrapper = shallow(<MoreTripDetails trip={fakeTrip} />);
+    const nights = wrapper.find('h4').first().text();
+    expect(nights).toEqual(' 5 Nights ');
   });
 });
