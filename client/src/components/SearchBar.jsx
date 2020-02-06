@@ -58,7 +58,7 @@ export default class SearchBar extends React.Component {
     // when user selects a trip, use its id to get all the info from that trip
     // and store the info in this.state as currentTrip
     // then will need to re-render the page accordingly with that data
-    // plus reset search results to empty and search form to its original state
+    // assuming this isn't original page load (user has typed text), reset search results to empty and search form to its original state
     // also run this with a random id (between 1-100) when page first loads
     if (id === 0) { return; }
     Axios.get(`/api/trips/${id}`)
@@ -67,7 +67,7 @@ export default class SearchBar extends React.Component {
         queryResults: [],
       }, () => console.log(this.state.currentTrip)))
       .catch((err) => console.error(err));
-    document.getElementById('BPsearchfield').reset();
+    if (this.state.query.length > 0) { document.getElementById('BPsearchfield').reset(); }
   }
 
   updateQuery(e) {
@@ -197,14 +197,14 @@ export default class SearchBar extends React.Component {
                 <span style={{ fontWeight: 'bold' }}>866 513 1995</span>
                 <br />
                 {' '}
-                        Can we help you?
+                Can we help you?
               </div>
             ) : (
               <div>
                 <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
                 <br />
                 {' '}
-                          or call your travel agent
+                  or call your travel agent
               </div>
             )}
           </div>
@@ -217,31 +217,31 @@ export default class SearchBar extends React.Component {
             <i className="BPdownArrow" />
             <div className="BPdestinationsDropdown">
               <div style={{ border: 'none' }}>
-EUROPE
+                EUROPE
                 <i className="BPrightArrow" />
               </div>
               <div>
-LATIN AMERICA
-                <i className="BPrightArrow" />
-              </div>
-
-              <div>
-USA, CANADA, AND MEXICO
+                LATIN AMERICA
                 <i className="BPrightArrow" />
               </div>
 
               <div>
-AFRICA AND MIDDLE EAST
+                USA, CANADA, AND MEXICO
                 <i className="BPrightArrow" />
               </div>
 
               <div>
-ASIA
+                AFRICA AND MIDDLE EAST
                 <i className="BPrightArrow" />
               </div>
 
               <div>
-AUSTRALIA AND NEW ZEALAND
+                ASIA
+                <i className="BPrightArrow" />
+              </div>
+
+              <div>
+                AUSTRALIA AND NEW ZEALAND
                 <i className="BPrightArrow" />
               </div>
             </div>
@@ -255,14 +255,14 @@ AUSTRALIA AND NEW ZEALAND
               <div>
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>DEALS</span>
                 <br />
-                            Our latest offers, making travel more affordable
+                Our latest offers, making travel more affordable
               </div>
               <section className="BPflexrow">
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EARLY PAYMENT DISCOUNTS</span>
                   {' '}
                   <br />
-                              Book early and save 7.5%* on select trips
+                  Book early and save 7.5%* on select trips
                   <i className="BPrightArrow" />
 
                 </div>
@@ -270,7 +270,7 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EUROPE 2020</span>
                   {' '}
                   <br />
-                              SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
+                  SAVE up to 7.5% on select 2020 trips + $300 off Europe Flights
                   <i className="BPrightArrow" />
                 </div>
 
@@ -278,7 +278,7 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>YEAR ROUND SAVINGS</span>
                   {' '}
                   <br />
-                              Savings for groups, multi trip bookings and more
+                  Savings for groups, multi trip bookings and more
                   <i className="BPrightArrow" />
                 </div>
               </section>
@@ -287,7 +287,7 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>LAST MINUTE DEALS</span>
                   {' '}
                   <br />
-                              Save on soon to depart trips
+                  Save on soon to depart trips
                   <i className="BPrightArrow" />
                 </div>
 
@@ -295,7 +295,7 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SOLO TRAVELER DEALS</span>
                   {' '}
                   <br />
-                              Savings for solo travelers
+                  Savings for solo travelers
                   <i className="BPrightArrow" />
                 </div>
 
@@ -303,7 +303,7 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TODAY'S BEST OFFERS</span>
                   {' '}
                   <br />
-                              Worldwide travel deals. Here today. Gone tomorrow.
+                  Worldwide travel deals. Here today. Gone tomorrow.
                   <i className="BPrightArrow" />
                 </div>
               </section>
@@ -311,7 +311,7 @@ AUSTRALIA AND NEW ZEALAND
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>PAST GUEST EXCLUSIVE OFFERS</span>
                 {' '}
                 <br />
-                              Savings for our Very Important Travelers
+                Savings for our Very Important Travelers
                 <i className="BPrightArrow" />
               </div>
             </div>
@@ -325,14 +325,14 @@ AUSTRALIA AND NEW ZEALAND
               <div>
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>ABOUT US</span>
                 <br />
-                            For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
+                For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
               </div>
               <section className="BPflexrow">
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EXPLORE MORE</span>
                   {' '}
                   <br />
-                              About Be My Guest
+                  About Be My Guest
 
                   <i className="BPrightArrow" />
                 </div>
@@ -340,14 +340,14 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHO WE ARE</span>
                   {' '}
                   <br />
-                              We are the world's leading and most awarded travel brand
+                  We are the world's leading and most awarded travel brand
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>MAKE A DIFFERENCE</span>
                   {' '}
                   <br />
-                              Travel today, sustain tomorrow
+                  Travel today, sustain tomorrow
                   <i className="BPrightArrow" />
                 </div>
               </section>
@@ -356,21 +356,21 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TRAFALGAR HIGHLIGHTS</span>
                   {' '}
                   <br />
-                              Our unique experiences that connect you to the world
+                  Our unique experiences that connect you to the world
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHAT OUR GUESTS SAY</span>
                   {' '}
                   <br />
-                              Our live, unedited reviews
+                  Our live, unedited reviews
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>BROCHURES</span>
                   {' '}
                   <br />
-                              Request a brochure and start dreaming
+                  Request a brochure and start dreaming
                   <i className="BPrightArrow" />
                 </div>
               </section>
@@ -379,21 +379,21 @@ AUSTRALIA AND NEW ZEALAND
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>MOMENTS</span>
                   {' '}
                   <br />
-                              7 continents. 302 trips. Magic moments on every one.
+                  7 continents. 302 trips. Magic moments on every one.
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TRAFALGAR LIVE</span>
                   {' '}
                   <br />
-                              Share your moments with #SimplyTrafalgar
+                  Share your moments with #SimplyTrafalgar
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>5 REASONS TO BOOK NOW</span>
                   {' '}
                   <br />
-                              Be confident
+                  Be confident
                   <i className="BPrightArrow" />
                 </div>
               </section>
@@ -409,35 +409,35 @@ AUSTRALIA AND NEW ZEALAND
               <div>
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>JoinTrafalgar</span>
                 <br />
-                            72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
+                72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
               </div>
               <section className="BPflexrow">
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>OUR STORY</span>
                   {' '}
                   <br />
-                              A decade of positive impact
+                  A decade of positive impact
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHAT WE DO</span>
                   {' '}
                   <br />
-                              We do our part wherever we can
+                  We do our part wherever we can
                   <i className="BPrightArrow" />
                 </div>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>OUR PLEDGE</span>
                   {' '}
                   <br />
-                              Make travel matter to people, places and wildlife
+                  Make travel matter to people, places and wildlife
                   <i className="BPrightArrow" />
                 </div>
               </section>
               <div>
                 <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TREADRIGHT</span>
                 <br />
-                              Supporting over 50 sustainable travel projects
+                Supporting over 50 sustainable travel projects
                 <i className="BPrightArrow" />
               </div>
             </div>
@@ -469,20 +469,20 @@ AUSTRALIA AND NEW ZEALAND
             {' '}
             <img id="BPuserAvatar" src="./graphics/user.svg.png" alt="User Avatar" />
             <span>
-                      My Trafalgar
+              My Trafalgar
               <i className="BPdownArrow" />
             </span>
             <div className="BPmyTrafalgarDropdown">
               <a href="#">
-                        Log in
+                Log in
                 <i className="BPrightArrow" />
               </a>
               <a href="#">
-                        Sign up
+                Sign up
                 <i className="BPrightArrow" />
               </a>
               <a href="#">
-                        Manage My Booking
+                Manage My Booking
                 <i className="BPrightArrow" />
               </a>
             </div>

@@ -112,7 +112,7 @@ const TripDetails = (props) => {
               {props.trip.days}
             </strong>
             {' '}
-Days
+            Days
           </span>
           <span style={daysCountriesCitiesSpan} className="BPcountry">
             <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
@@ -120,10 +120,10 @@ Days
             <span style={daysCountriesCitiesSpan} className="BPcountry">
               <strong style={{ marginLeft: '15px' }}>
                 {' '}
-            1
+                1
               </strong>
               {' '}
-Country
+              Country
               <div className="BPcountryDropdown">
                 {props.trip.country}
               </div>
@@ -142,7 +142,7 @@ Country
                 {props.trip.cities.length}
               </strong>
               {' '}
-Cities
+              Cities
               <div className="BPcitiesDropdown">
                 {props.trip.cities.map((city, index) => (
                   <span key={index}>

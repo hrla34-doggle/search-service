@@ -135,7 +135,7 @@ class MoreTripDetails extends React.Component {
             marginLeft: '60px',
           }}
           >
-Trip details
+            Trip details
           </h2>
           <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
             <h3 style={{
@@ -146,7 +146,7 @@ Trip details
               marginRight: '200px',
             }}
             >
-What's included
+              What's included
             </h3>
             <img
               style={{
@@ -164,7 +164,7 @@ What's included
                 {' '}
                 {this.props.trip.nights}
                 {' '}
-Nights
+                Nights
                 {' '}
               </h4>
               <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>Accommodation</p>
@@ -185,21 +185,21 @@ Nights
                 {' '}
                 {this.props.trip.meals.breakfasts + this.props.trip.meals.lunches + this.props.trip.meals.dinners}
                 {' '}
-Meals
+                Meals
                 {' '}
               </h4>
               <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>
                 {this.props.trip.meals.breakfasts}
                 {' '}
-breakfasts,
+                breakfasts,
                 {' '}
                 {this.props.trip.meals.lunches}
                 {' '}
-lunches,
+                lunches,
                 {' '}
                 {this.props.trip.meals.dinners}
                 {' '}
-dinners
+                dinners
               </p>
             </div>
 
@@ -216,7 +216,7 @@ dinners
               }}
               >
                 {' '}
-On-Trip Transport
+                On-Trip Transport
               </h4>
               <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>All transport shown</p>
             </div>
@@ -233,7 +233,7 @@ On-Trip Transport
               color: '#70005d',
             }}
             >
-The Trafalgar difference
+              The Trafalgar difference
             </h3>
             <div style={{
               display: 'inline-block', height: '50px',
@@ -300,7 +300,7 @@ The Trafalgar difference
               marginRight: '200px',
             }}
             >
-Sightseeing highlights
+              Sightseeing highlights
             </h3>
             <div style={{
               display: 'inline-block', marginTop: 'auto', height: '50px',
@@ -362,12 +362,12 @@ Sightseeing highlights
                   marginRight: '50px',
                 }}
                 >
-Travel highlights
+                  Travel highlights
                   <p style={{
                     color: '#4c4c4c', fontWeight: '400', fontSize: '18px', width: '400px',
                   }}
                   >
-Specific transfer information can be found here:
+                    Specific transfer information can be found here:
                   </p>
                   <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
                 </h3>
