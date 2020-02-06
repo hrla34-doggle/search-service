@@ -5,6 +5,7 @@ RELATED PROJECTS
 
 https://github.com/Front-End-Capstone-hrla34/calendar-quote
 https://github.com/Front-End-Capstone-hrla34/Itinerary
+https://github.com/Front-End-Capstone-hrla34/Reviews
 
 USAGE
 
@@ -16,7 +17,7 @@ Installing Dependencies
 
 From within the root directory:
 
-npm install
-npm start (to run server)
-npm run react-dev (to run webpack)
+npm install,
+npm start (to run server),
+npm run build (to run webpack),
 npm run seed (to seed database)
