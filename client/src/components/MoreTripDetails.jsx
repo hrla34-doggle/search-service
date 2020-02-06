@@ -349,7 +349,7 @@ class MoreTripDetails extends React.Component {
           </div>
         </div>
 
-        <button className="BPviewmore" style={ViewMore} onClick={this.showTravelDetails}>View More</button>
+        {this.state.travelDetails ? null : <button className="BPviewmore" style={ViewMore} onClick={this.showTravelDetails}>View More</button> }
         {this.state.travelDetails
           ? (
             <div style={divStyle}>
@@ -369,7 +369,7 @@ class MoreTripDetails extends React.Component {
                   >
                     Specific transfer information can be found here:
                   </p>
-                  <a style={airportTransfers} href="#" id="BPAirportTransfers">Airport Transfers</a>
+                  <a style={airportTransfers} id="BPAirportTransfers">Airport Transfers</a>
                 </h3>
 
 
