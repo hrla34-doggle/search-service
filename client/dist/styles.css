@@ -409,6 +409,14 @@
     margin-left: 350px
 }
 
+/* second search bar at bottom of page */
+#BPsecondSearchBar {
+    position: relative;
+    margin-left: 25%;
+    margin-top: 20px;
+    margin-bottom: 250px
+}
+
 /* SEARCH COMPONENT */
 
 /* change trip results when user hovers over one */

@@ -17,6 +17,7 @@ import ReactDom, { render } from 'react-dom';
 import Axios from 'axios';
 import TripDetails from './TripDetails';
 import Search from './Search';
+import Search2 from './Search2';
 import MoreTripDetails from './MoreTripDetails';
 
 export default class SearchBar extends React.Component {
@@ -496,6 +497,9 @@ Brands
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
+        <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+        <div id="BPsecondSearchBar" className="BPheader"><Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} /></div>
+
       </div>
     );
   }
