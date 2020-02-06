@@ -31,4 +31,13 @@ describe('<SearchBar />', () => {
     expect(mock).toHaveBeenCalled();
   });
 
+  it('should toggle customersInfo and agentsInfo on click', () => {
+    const wrapper = shallow(<SearchBar />);
+    expect(wrapper).toHaveState('customersInfo', true);
+    expect(wrapper).toHaveState('agentsInfo', false);
+    const agentsButton = wrapper.find('li').last();
+    agentsButton.simulate('click');
+    expect(wrapper).toHaveState('customersInfo', false);
+    expect(wrapper).toHaveState('agentsInfo', true);
+  });
 });
