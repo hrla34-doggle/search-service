@@ -17,3 +17,6 @@ Installing Dependencies
 From within the root directory:
 
 npm install
+npm start (to run server)
+npm run react-dev (to run webpack)
+npm run seed (to seed database)
