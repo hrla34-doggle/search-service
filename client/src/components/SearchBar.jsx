@@ -190,7 +190,7 @@ export default class SearchBar extends React.Component {
               <li style={agentsInfoStyle} onClick={this.toggleAgents}>Agents</li>
             </ul>
           </div>
-          <img id="BPphone_Receiver" src="./graphics/phone.svg.png" alt="phone receiver" />
+          <img id="BPphone_Receiver" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/phone.svg.png" alt="phone receiver" />
           <div id="BPcustomers_Agents_Switch">
             {this.state.customersInfo ? (
               <div>
@@ -454,8 +454,8 @@ export default class SearchBar extends React.Component {
             <i className="BPdownArrow" />
             <div className="BPbrandsDropdown">
               <section className="BPbrandsimages">
-                <img className="BPbrandsDropdownImg" src="./graphics/BrendanVacations.png" alt="Brendan Vacations" />
-                <img className="BPbrandsDrowdownImg" src="./graphics/Costsaver.webp" alt="Costsaver" />
+                <img className="BPbrandsDropdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/BrendanVacations.png" alt="Brendan Vacations" />
+                <img className="BPbrandsDrowdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Costsaver.webp" alt="Costsaver" />
               </section>
             </div>
           </div>
@@ -467,7 +467,7 @@ export default class SearchBar extends React.Component {
 
           <div className="BProw2part2">
             {' '}
-            <img id="BPuserAvatar" src="./graphics/user.svg.png" alt="User Avatar" />
+            <img id="BPuserAvatar" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/user.svg.png" alt="User Avatar" />
             <span>
               My Trafalgar
               <i className="BPdownArrow" />

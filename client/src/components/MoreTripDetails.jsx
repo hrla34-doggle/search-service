@@ -79,13 +79,13 @@ class MoreTripDetails extends React.Component {
     const difference = this.props.trip.the_trafalgar_difference;
     const diff = difference.map((item) => {
       if (item.includes('CONNECT WITH LOCALS') || item.includes('DIVE INTO CULTURE')) {
-        var image = './graphics/Handshake.svg.png';
+        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Handshake.svg.png';
       } else if (item.includes('LOCAL SPECIALISTS')) {
-        var image = './graphics/Key.svg.png';
+        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Key.svg.png';
       } else if (item.includes('STAYS WITH STORIES')) {
-        var image = './graphics/Home.svg.png';
+        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Home.svg.png';
       } else if (item.includes('MAKE A DIFFERENCE')) {
-        var image = './graphics/flower.svg.png';
+        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/flower.svg.png';
       }
       return [item, image];
     });
@@ -152,7 +152,7 @@ class MoreTripDetails extends React.Component {
               style={{
                 height: '40px', width: '40px', borderRadius: '50%', marginRight: '10px', backgroundColor: '#add8e6',
               }}
-              src="./graphics/Moon.svg.png"
+              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Moon.svg.png"
               alt="moon"
             />
 
@@ -174,7 +174,7 @@ class MoreTripDetails extends React.Component {
               style={{
                 height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
-              src="./graphics/Cutlery.svg.png"
+              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Cutlery.svg.png"
               alt="cutlery"
             />
             <div style={{ marginRight: '100px' }}>
@@ -207,7 +207,7 @@ class MoreTripDetails extends React.Component {
               style={{
                 height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
               }}
-              src="./graphics/route.svg.png"
+              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/route.svg.png"
               alt="route"
             />
             <div style={{ marginRight: '10px' }}>
@@ -317,7 +317,7 @@ class MoreTripDetails extends React.Component {
                     style={{
                       height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
                     }}
-                    src="./graphics/Map_pin.svg.png"
+                    src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Map_pin.svg.png"
                     alt="route"
                   />
                   {highlight}
@@ -339,7 +339,7 @@ class MoreTripDetails extends React.Component {
                     style={{
                       height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
                     }}
-                    src="./graphics/Map_pin.svg.png"
+                    src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Map_pin.svg.png"
                     alt="route"
                   />
                   {highlight}
@@ -379,7 +379,7 @@ class MoreTripDetails extends React.Component {
                 >
                   {travels1.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
-                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
+                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
                   ))}
@@ -388,7 +388,7 @@ class MoreTripDetails extends React.Component {
                 <div style={{ display: 'flex', flexDirection: 'column', width: 'fit-content' }}>
                   {travels2.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
-                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="./graphics/checkmark.svg.png" alt="checkmark" />
+                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" />
                       {highlight}
                     </p>
                   ))}

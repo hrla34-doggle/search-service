@@ -104,7 +104,7 @@ const TripDetails = (props) => {
         <h1 style={tripName}>{props.trip.name}</h1>
         <div style={daysCountriesCitiesDiv}>
           <span style={daysCountriesCitiesSpan}>
-            <img style={calendar} src="./graphics/calendar.svg.png" alt="calendar" />
+            <img style={calendar} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/calendar.svg.png" alt="calendar" />
           </span>
           <span style={daysCountriesCitiesSpan}>
             <strong>
@@ -115,7 +115,7 @@ const TripDetails = (props) => {
             Days
           </span>
           <span style={daysCountriesCitiesSpan} className="BPcountry">
-            <img style={flag} src="/graphics/flag.svg.png" alt="flag" />
+            <img style={flag} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/flag.svg.png" alt="flag" />
 
             <span style={daysCountriesCitiesSpan} className="BPcountry">
               <strong style={{ marginLeft: '15px' }}>
@@ -135,7 +135,7 @@ const TripDetails = (props) => {
             }}
             className="BPcities"
           >
-            <img style={pointer} src="/graphics/cursor.svg.png" alt="pointer" />
+            <img style={pointer} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/cursor.svg.png" alt="pointer" />
             <span style={daysCountriesCitiesSpan} className="BPcities">
               <strong style={{ marginLeft: '15px' }}>
                 {' '}
