@@ -37,15 +37,15 @@ const Search = (props) => {
 
   };
   return (
-    <div>
+    <div onMouseLeave= {props.removeSearchResults} onClick = {props.updateSearchResults}>
       <div style={{ display: 'flex' }}>
         <form id="BPsearchfield">
           {' '}
-          <input style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
+          <input id="BPsearch" style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
         </form>
         <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" />
       </div>
-      <div style={resultsArrayStyle}>
+      <div style={resultsArrayStyle} >
         {props.searchResults.map((result) => <div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div>)}
       </div>
       {' '}

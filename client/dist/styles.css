@@ -230,6 +230,7 @@
     position: absolute;
     background-color:white;
     width: fit-content;
+    height: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1; 
 }
@@ -267,7 +268,7 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
+  width: fit-content;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -411,7 +412,7 @@
 
 /* second search bar at bottom of page */
 #BPsecondSearchBar {
-    position: relative;
+    position: flex;
     margin-left: 25%;
     margin-top: 20px;
     margin-bottom: 250px

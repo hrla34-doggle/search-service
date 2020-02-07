@@ -40,6 +40,7 @@ export default class SearchBar extends React.Component {
     this.showtripdetails = this.showtripdetails.bind(this);
     this.updateQuery = this.updateQuery.bind(this);
     this.updateSearchResults = this.updateSearchResults.bind(this);
+    this.removeSearchResults = this.removeSearchResults.bind(this);
   }
 
   getAllTrips() {
@@ -48,7 +49,7 @@ export default class SearchBar extends React.Component {
     // store as allTrips in this.state
     // use name/season/year for search results dropdown
     // and id of a selected trip to retrieve the complete trip info
-    Axios.get('/api/trips')
+    Axios.get('http://localhost:3003/api/trips')
       .then((trips) => this.setState({
         allTrips: trips.data,
       }, () => console.log(this.state.allTrips)))
@@ -62,16 +63,18 @@ export default class SearchBar extends React.Component {
     // assuming this isn't original page load (user has typed text), reset search results to empty and search form to its original state
     // also run this with a random id (between 1-100) when page first loads
     if (id === 0) { return; }
-    Axios.get(`/api/trips/${id}`)
+    Axios.get(`http://localhost:3003/api/trips/${id}`)
       .then((trip) => this.setState({
         currentTrip: trip.data,
         queryResults: [],
+        query: ''
       }, () => console.log(this.state.currentTrip)))
       .catch((err) => console.error(err));
     if (this.state.query.length > 0) { document.getElementById('BPsearchfield').reset(); }
   }
 
   updateQuery(e) {
+    e.preventDefault();
     // as user types in search bar, update the state with their text
     // run function to update search results each time
     this.setState({
@@ -133,6 +136,13 @@ export default class SearchBar extends React.Component {
     }
   }
 
+  removeSearchResults() {
+    // erase search results when user clicks outside of that component
+    if (this.state.queryResults.length > 0) {this.setState({
+      queryResults: []
+    })}
+  }
+
   toggleCustomers() {
     // shows customers contact #
     this.setState({
@@ -184,7 +194,7 @@ export default class SearchBar extends React.Component {
       <div>
         <div className="BPheader">
           <div><a href="#" id="BPTrafalgar"> Trafalgar </a></div>
-          <div id="BPsearchbarlocation"><Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} /></div>
+          <div id="BPsearchbarlocation"><Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults}/></div>
           <div id="BPcustomers_agents">
             <ul>
               <li style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</li>
@@ -293,7 +303,7 @@ export default class SearchBar extends React.Component {
                 </div>
 
                 <div>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>SOLO TRAVELER DEALS</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '16px', marginRight: '20px' }}>SOLO TRAVELER DEALS</span>
                   {' '}
                   <br />
                   Savings for solo travelers
@@ -361,7 +371,7 @@ export default class SearchBar extends React.Component {
                   <i className="BPrightArrow" />
                 </div>
                 <div>
-                  <span style={{ fontWeight: 'bold', fontSize: '16px' }}>WHAT OUR GUESTS SAY</span>
+                  <span style={{ fontWeight: 'bold', fontSize: '16px', marginRight: '20px' }}>WHAT OUR GUESTS SAY</span>
                   {' '}
                   <br />
                   Our live, unedited reviews
@@ -498,7 +508,7 @@ Brands
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
         <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
-        <div id="BPsecondSearchBar" className="BPheader"><Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} getOneTrip={this.getOneTrip} /></div>
+        <div id="BPsecondSearchBar" className="BPheader"><Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults} /></div>
 
       </div>
     );

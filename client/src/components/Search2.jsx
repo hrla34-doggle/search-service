@@ -37,7 +37,7 @@ const Search2 = (props) => {
 
   };
   return (
-    <div>
+    <div onMouseLeave= {props.removeSearchResults} onClick = {props.updateSearchResults}>
       <div style={{ display: 'flex' }}>
         <form id="BPsearchfield">
           {' '}
