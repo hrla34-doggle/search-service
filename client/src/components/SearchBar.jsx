@@ -140,9 +140,11 @@ export default class SearchBar extends React.Component {
 
   removeSearchResults() {
     // erase search results when user clicks outside of that component
-    if (this.state.queryResults.length > 0) {this.setState({
-      queryResults: []
-    })}
+    if (this.state.queryResults.length > 0) {
+      this.setState({
+        queryResults: []
+      })
+    }
   }
 
   toggleCustomers() {
@@ -189,7 +191,7 @@ export default class SearchBar extends React.Component {
         })
       }
     }
-    , 1000)
+      , 100)
   }
 
   componentDidMount() {
@@ -214,7 +216,7 @@ export default class SearchBar extends React.Component {
       <div>
         <div className="BPheader">
           <div><a href="#" id="BPTrafalgar"> Trafalgar </a></div>
-          <div id="BPsearchbarlocation"><Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults}/></div>
+          <div id="BPsearchbarlocation"><Search searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults={this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults={this.removeSearchResults} /></div>
           <div id="BPcustomers_agents">
             <ul>
               <li style={customersInfoStyle} onClick={this.toggleCustomers}>Customers</li>
@@ -231,13 +233,13 @@ export default class SearchBar extends React.Component {
                 Can we help you?
               </div>
             ) : (
-              <div>
-                <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
-                <br />
-                {' '}
+                <div>
+                  <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
+                  <br />
+                  {' '}
                   or call your travel agent
               </div>
-            )}
+              )}
           </div>
         </div>
 
@@ -247,7 +249,7 @@ export default class SearchBar extends React.Component {
             <span>DESTINATIONS</span>
             <i className="BPdownArrow" />
             <div className="BPdestinationsDropdown">
-             
+
               <div style={{ border: 'none' }}>
                 EUROPE
                 <i className="BPrightArrow" />
@@ -277,7 +279,7 @@ export default class SearchBar extends React.Component {
                 <i className="BPrightArrow" />
               </div>
 
-              
+
             </div>
           </div>
 
@@ -485,12 +487,13 @@ export default class SearchBar extends React.Component {
           <div className="BProw2part2">
             {' '}
             <span id="BPbrands">
-Brands
+              Brands
               <i className="BPdownArrow" />
               <div className="BPbrandsDropdown">
                 <section className="BPbrandsimages">
                   <img className="BPbrandsDropdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/BrendanVacations.png" alt="Brendan Vacations" />
-                  <img className="BPbrandsDrowdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Costsaver.webp" alt="Costsaver" />
+                  <img style={{maxWidth:'24%',
+    height:'auto'}} className="BPbrandsDrowdownImg" src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/costsaver.png" alt="Costsaver" />
                 </section>
               </div>
             </span>
@@ -509,15 +512,15 @@ Brands
               <i className="BPdownArrow" />
               <div className="BPmyTrafalgarDropdown">
                 <a href="#">
-                Log in
+                  Log in
                   <i className="BPrightArrow" />
                 </a>
                 <a href="#">
-                Sign up
+                  Sign up
                   <i className="BPrightArrow" />
                 </a>
                 <a href="#">
-                Manage My Booking
+                  Manage My Booking
                   <i className="BPrightArrow" />
                 </a>
               </div>
@@ -531,8 +534,8 @@ Brands
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
         {this.state.showSecondSearchBar ? <div><div id="BPsecondSearchBar"><h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
-<Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults} /></div></div>
-: null}
+          <Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults={this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults={this.removeSearchResults} /></div></div>
+          : null}
 
       </div>
     );

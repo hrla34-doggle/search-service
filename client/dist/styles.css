@@ -120,7 +120,9 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 350px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
     border-right: 1px solid black;
     border-top: 1px solid black;
 }
@@ -148,7 +150,9 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 1200px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
     border: 1px solid black;
 }
 
@@ -175,7 +179,9 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 1200px;
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*show dropdown menu when hovering over About Us */
@@ -201,7 +207,9 @@
     z-index: 1; 
     cursor: pointer; 
     position: absolute;
-    width: 1200px;    
+    width: fit-content;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 /*show dropdown menu when hovering over Make A Difference */
 #BPmakeadifference:hover .BPmakeadifferenceDropdown {
