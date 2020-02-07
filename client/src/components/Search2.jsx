@@ -43,7 +43,12 @@ const Search2 = (props) => {
           {' '}
           <input style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
         </form>
-        <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" />
+        <div onClick={() => window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        })}>
+        <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" onClick = {() => props.getOneTrip(props.searchResults[0][1])} />
+      </div>
       </div>
       <div
         style={resultsArrayStyle}

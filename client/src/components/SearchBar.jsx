@@ -31,6 +31,7 @@ export default class SearchBar extends React.Component {
       customersInfo: true,
       agentsInfo: false,
       showtripdetails: true,
+      showSecondSearchBar: false,
     };
     this.getAllTrips = this.getAllTrips.bind(this);
     this.getOneTrip = this.getOneTrip.bind(this);
@@ -41,6 +42,7 @@ export default class SearchBar extends React.Component {
     this.updateQuery = this.updateQuery.bind(this);
     this.updateSearchResults = this.updateSearchResults.bind(this);
     this.removeSearchResults = this.removeSearchResults.bind(this);
+    this.showSecondSearchBar = this.showSecondSearchBar.bind(this);
   }
 
   getAllTrips() {
@@ -173,10 +175,28 @@ export default class SearchBar extends React.Component {
     });
   }
 
+  showSecondSearchBar() {
+    // display a second search bar (fixed to bottom of page) if user scrolls past first search bar
+    setInterval(() => {
+      if (window.scrollY > 1000) {
+        this.setState({
+          showSecondSearchBar: true
+        })
+      }
+      else {
+        this.setState({
+          showSecondSearchBar: false
+        })
+      }
+    }
+    , 1000)
+  }
+
   componentDidMount() {
-    // when the page first renders, get all trips' info and also pick a random trip to display its info
+    // when the page first renders, get all trips' info and also pick a random trip to display its info and check whether to show second search bar
     this.getAllTrips();
     this.getOneTrip(Math.floor(Math.random() * 100) + 1);
+    this.showSecondSearchBar()
   }
 
   render() {
@@ -227,6 +247,7 @@ export default class SearchBar extends React.Component {
             <span>DESTINATIONS</span>
             <i className="BPdownArrow" />
             <div className="BPdestinationsDropdown">
+             
               <div style={{ border: 'none' }}>
                 EUROPE
                 <i className="BPrightArrow" />
@@ -255,6 +276,8 @@ export default class SearchBar extends React.Component {
                 AUSTRALIA AND NEW ZEALAND
                 <i className="BPrightArrow" />
               </div>
+
+              
             </div>
           </div>
 
@@ -507,8 +530,9 @@ Brands
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
-        <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
-        <div id="BPsecondSearchBar" className="BPheader"><Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults} /></div>
+        {this.state.showSecondSearchBar ? <div><div id="BPsecondSearchBar"><h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+<Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults = {this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults = {this.removeSearchResults} /></div></div>
+: null}
 
       </div>
     );
