@@ -412,10 +412,18 @@
 
 /* second search bar at bottom of page */
 #BPsecondSearchBar {
-    position: flex;
+    position: fixed;
+    bottom: 0;
     margin-left: 25%;
     margin-top: 20px;
-    margin-bottom: 250px
+    margin-bottom: 250px;
+    align-items: center;
+    line-height: 32px;
+    height: auto;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #4c4c4c;
+    z-index: 2;
 }
 
 /* SEARCH COMPONENT */
@@ -432,3 +440,4 @@
 .BPviewmore:hover {
   opacity: .5
 }
+
