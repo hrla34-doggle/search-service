@@ -15,12 +15,15 @@ const data = {
     Math.floor(Math.random() * (21 - 4 + 1) + 4)
   ),
 
-  country: () => {
+  continent: () => (
     // generate a random continent
-    const continent = options.continents[Math.floor(Math.random() * 6)];
+    options.continents[Math.floor(Math.random() * 6)]
+  ),
+
+  country: (continent) => (
     // pick a random country on that continent
-    return options.countries[continent][Math.floor(Math.random() * (options.countries[continent].length))];
-  },
+    options.countries[continent][Math.floor(Math.random() * (options.countries[continent].length))]
+  ),
 
   cities: (country) => {
     const allCities = options.cities[country];

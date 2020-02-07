@@ -13,7 +13,8 @@ const tripGenerator = () => {
   trip.season = data.season();
   trip.year = 2020;
   trip.days = data.days();
-  trip.country = data.country();
+  trip.continent = data.continent();
+  trip.country = data.country(trip.continent);
   trip.cities = data.cities(trip.country);
   trip.imageUrl = data.imageUrl(trip.cities);
   trip.name = data.name(trip.country);

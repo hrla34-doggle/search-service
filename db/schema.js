@@ -7,6 +7,9 @@ const tripSchema = new mongoose.Schema({
   year: { type: Number },
   imageUrl: { type: String },
   days: { type: Number },
+  continent: {
+    type: String,
+  },
   country: {
     type: String,
   },
