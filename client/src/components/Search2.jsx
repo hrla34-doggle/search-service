@@ -17,6 +17,7 @@ const Search2 = (props) => {
     border: '1px solid #d6d6d6',
     boxShadow: '0 4px 4px -4px #767676',
     background: '#fff',
+    outline: 'none'
   };
   const imgStyle = {
     height: '44px',
@@ -57,7 +58,7 @@ const Search2 = (props) => {
           behavior: 'smooth',
         })}
       >
-        {props.searchResults.map((result) => <div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div>)}
+        {props.searchResults.map((result) => <a href={`/${result[1]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 

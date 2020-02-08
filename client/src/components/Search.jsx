@@ -17,6 +17,7 @@ const Search = (props) => {
     border: '1px solid #d6d6d6',
     boxShadow: '0 4px 4px -4px #767676',
     background: '#fff',
+    outline: 'none'
   };
   const imgStyle = {
     height: '44px',
@@ -46,7 +47,7 @@ const Search = (props) => {
         <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" onClick = {() => props.getOneTrip(props.searchResults[0][1])}/>
       </div>
       <div style={resultsArrayStyle} >
-        {props.searchResults.map((result) => <div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div>)}
+        {props.searchResults.map((result) => <a href={`/${result[1]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 

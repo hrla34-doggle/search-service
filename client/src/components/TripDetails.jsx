@@ -72,7 +72,7 @@ const TripDetails = (props) => {
     lineHeight: '22px',
     fontHeight: '16px',
     marginBottom: '10px',
-    width: '500px',
+    width: '40%',
   };
 
   const secondDescription = {
@@ -81,7 +81,7 @@ const TripDetails = (props) => {
     fontSize: '14px',
     lineHeight: '26px',
     fontFamily: 'opensans, sans-serif',
-    width: '500px',
+    width: '40%',
   };
 
   // check if imageUrl has a space (in city name), and if so add an _ for AWS references

@@ -421,7 +421,7 @@
 
 /* second search bar at bottom of page */
 #BPsecondSearchBar {
-    position: relative;
+    position: 'relative';
     bottom: 0;
     margin-left: 25%;
     margin-top: 20px;

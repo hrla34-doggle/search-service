@@ -364,7 +364,7 @@ class MoreTripDetails extends React.Component {
                 >
                   Travel highlights
                   <p style={{
-                    color: '#4c4c4c', fontWeight: '400', fontSize: '18px', width: '400px',
+                    color: '#4c4c4c', fontWeight: '400', fontSize: '18px', width: '90%',
                   }}
                   >
                     Specific transfer information can be found here:
