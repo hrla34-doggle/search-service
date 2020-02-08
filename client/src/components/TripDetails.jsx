@@ -95,7 +95,7 @@ const TripDetails = (props) => {
 
   return (
     <div>
-      <img style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
+      <img id="BPcityimage" style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
 
       <section style={{
         display: 'flex', flexDirection: 'column', width: '82%', margin: 'auto',
