@@ -25,7 +25,7 @@ const tripGenerator = (x) => {
   trip.year = 2020;
   trip.days = data.days();
   trip.country = locations[x];
-  trip.continent = ()=>{for( var continent in countries ){ if( countries.continent.includes(trip.country) ){return continent}}};
+  trip.continent = (()=>{for( var continent in countries ){ if( countries[continent].includes(trip.country) ){return continent}}})();
   trip.cities = data.cities(trip.country);
   trip.imageUrl = data.imageUrl(trip.cities);
   trip.name = data.name(trip.country);
