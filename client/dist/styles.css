@@ -141,6 +141,11 @@
     color: #4c4c4c;
 }
 
+/* when user hovers over a continent in dropdown menu, turn that red */
+.BPContinent:hover {
+    color: red
+}
+
 /*dropdown menu under Deals */
 .BPdealsDropdown {
     font-size: 12px;
