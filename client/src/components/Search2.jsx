@@ -58,7 +58,7 @@ const Search2 = (props) => {
           behavior: 'smooth',
         })}
       >
-        {props.searchResults.map((result) => <a href={`/${result[1]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
+        {props.searchResults.map((result) => <a href={`/${result[1]}/${result[6]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 

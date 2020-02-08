@@ -51,7 +51,7 @@ export default class SearchBar extends React.Component {
     // store as allTrips in this.state
     // use name/season/year for search results dropdown
     // and id of a selected trip to retrieve the complete trip info
-    Axios.get('/api/trips')
+    Axios.get('http://localhost:3003/api/trips')
       .then((trips) => this.setState({
         allTrips: trips.data,
       }, () => console.log(this.state.allTrips)))
@@ -65,7 +65,7 @@ export default class SearchBar extends React.Component {
     // assuming this isn't original page load (user has typed text), reset search results to empty and search form to its original state
     // also run this with a random id (between 1-100) when page first loads
     if (id === 0) { return; }
-    Axios.get(`api/trips/${id}`)
+    Axios.get(`http://localhost:3003/api/trips/${id}`)
       .then((trip) => this.setState({
         currentTrip: trip.data,
         queryResults: [],
@@ -152,7 +152,7 @@ export default class SearchBar extends React.Component {
         }
       }
 
-      let updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
+      let updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0], result[6]]);
       if (updatedTrips.length === 0) {
         updatedTrips = [['Sorry, no results found', 0]];
       }
