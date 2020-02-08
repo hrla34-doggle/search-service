@@ -424,7 +424,7 @@
     position: 'relative';
     bottom: 0;
     margin-left: 25%;
-    margin-top: 20px;
+    margin-top: fit-content;
     margin-bottom: 250px;
     align-items: center;
     line-height: 32px;
