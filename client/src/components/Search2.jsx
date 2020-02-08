@@ -46,7 +46,6 @@ const Search2 = (props) => {
         </form>
         <div onClick={() => window.scrollTo({
           top: 0,
-          behavior: 'smooth',
         })}>
         <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" onClick = {() => props.getOneTrip(props.searchResults[0][1])} />
       </div>
@@ -55,10 +54,9 @@ const Search2 = (props) => {
         style={resultsArrayStyle}
         onClick={() => window.scrollTo({
           top: 0,
-          behavior: 'smooth',
         })}
       >
-        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black'}} href={`/${result[1]}/${result[2]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
+        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black'}} href={`/${result[1]}?${result[2]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 

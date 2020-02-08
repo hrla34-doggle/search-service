@@ -12,7 +12,7 @@ var countries = {
   Europe: ['France', 'Germany', 'Greece', 'Ireland', 'Italy', 'The Netherlands', 'Norway', 'Poland', 'Portugal', 'Russia', 'Spain', 'Switzerland', 'The United Kingdom'],
   'North America': ['The United States', 'Costa Rica', 'Mexico', 'Canada'],
   'South America': ['Brazil', 'Peru'],
-  'South Pacific': ['Australia', 'New Zealand'],
+  'Australia': ['Australia', 'New Zealand'],
 };
 
 

@@ -3,7 +3,7 @@
 
 const options = {
 
-  continents: ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'South Pacific'],
+  continents: ['Africa', 'Asia', 'Europe', 'North America', 'South America', 'Australia'],
 
   countries: {
     Africa: ['Egypt', 'Kenya', 'Morocco', 'South Africa'],
@@ -11,7 +11,7 @@ const options = {
     Europe: ['France', 'Germany', 'Greece', 'Ireland', 'Italy', 'The Netherlands', 'Norway', 'Poland', 'Portugal', 'Russia', 'Spain', 'Switzerland', 'The United Kingdom'],
     'North America': ['The United States', 'Costa Rica', 'Mexico', 'Canada'],
     'South America': ['Brazil', 'Peru'],
-    'South Pacific': ['Australia', 'New Zealand'],
+    'Australia': ['Australia', 'New Zealand'],
   },
 
   cities: {
