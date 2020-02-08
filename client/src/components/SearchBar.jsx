@@ -40,6 +40,7 @@ export default class SearchBar extends React.Component {
     this.hidetripdetails = this.hidetripdetails.bind(this);
     this.showtripdetails = this.showtripdetails.bind(this);
     this.updateQuery = this.updateQuery.bind(this);
+    this.showContinentResults = this.showContinentResults.bind(this);
     this.updateSearchResults = this.updateSearchResults.bind(this);
     this.removeSearchResults = this.removeSearchResults.bind(this);
     this.showSecondSearchBar = this.showSecondSearchBar.bind(this);
@@ -201,6 +202,13 @@ export default class SearchBar extends React.Component {
     });
   }
 
+  showContinentResults (continent) {
+    // show search results for a continent when user clicks on it
+    this.setState({
+      query: continent
+    }, () => this.updateSearchResults())
+  }
+
   showSecondSearchBar() {
     // display a second search bar (fixed to bottom of page) if user scrolls all the way down
     setInterval(() => {
@@ -276,40 +284,35 @@ export default class SearchBar extends React.Component {
             <span>DESTINATIONS</span>
             <i className="BPdownArrow" />
             <div className="BPdestinationsDropdown">
-
-              <div style={{ border: 'none' }}>
-                EUROPE
+              
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('Europe')} style={{ border: 'none' }}>
+              <span >EUROPE</span>
                 <i className="BPrightArrow" />
               </div>
-              <div>
-                LATIN AMERICA
-                <i className="BPrightArrow" />
-              </div>
-
-              <div>
-                USA, CANADA, AND MEXICO
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('South America')}>
+              <span>SOUTH AMERICA</span>
                 <i className="BPrightArrow" />
               </div>
 
-              <div>
-                AFRICA AND MIDDLE EAST
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('North America')}>
+              <span>NORTH AMERICA</span>
                 <i className="BPrightArrow" />
               </div>
 
-              <div>
-                ASIA
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('Africa')}>
+              <span>AFRICA</span>
                 <i className="BPrightArrow" />
               </div>
 
-              <div>
-                AUSTRALIA AND NEW ZEALAND
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('Asia')}>
+                <span>ASIA</span>
                 <i className="BPrightArrow" />
-                <ul>
-                  
-                </ul>
               </div>
 
-
+              <div className = "BPContinent" onClick = {() => this.showContinentResults('Australia')}>
+                <span>AUSTRALIA</span>
+                <i className="BPrightArrow" />
+              </div>
             </div>
           </div>
 
