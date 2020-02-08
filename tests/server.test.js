@@ -43,7 +43,7 @@ afterAll(async (done) => {
 
 describe('server api', () => {
   it('gets all trips in the database', async (done) => {
-    const response = await request.get('/api/trips');
+    const response = await request.get('/api/trips/get');
     expect(response.statusCode).toBe(200);
     expect(response.body.length).toBe(1); // database should contain 1 trip after running sample trip
     done();

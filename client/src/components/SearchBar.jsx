@@ -51,7 +51,7 @@ export default class SearchBar extends React.Component {
     // store as allTrips in this.state
     // use name/season/year for search results dropdown
     // and id of a selected trip to retrieve the complete trip info
-    Axios.get('api/trips')
+    Axios.get('api/trips/get')
       .then((trips) => this.setState({
         allTrips: trips.data,
       }, () => console.log(this.state.allTrips)))

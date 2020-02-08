@@ -7,7 +7,7 @@ const controllers = require('./controllers.js');
 const router = express.Router();
 
 router
-  .route('/trips')
+  .route('/trips/get')
   .get(controllers.findAll);
 
 router
