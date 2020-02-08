@@ -202,9 +202,9 @@ export default class SearchBar extends React.Component {
   }
 
   showSecondSearchBar() {
-    // display a second search bar (fixed to bottom of page) if user scrolls past first search bar
+    // display a second search bar (fixed to bottom of page) if user scrolls all the way down
     setInterval(() => {
-      if (window.scrollY > 1000) {
+      if (window.scrollY > 2700) {
         this.setState({
           showSecondSearchBar: true
         })
@@ -557,9 +557,11 @@ export default class SearchBar extends React.Component {
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
-        {this.state.showSecondSearchBar ? <div><div id="BPsecondSearchBar"><h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+        <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+        {/* {this.state.showSecondSearchBar ?  */}
+        <div><div id="BPsecondSearchBar">
           <Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults={this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults={this.removeSearchResults} /></div></div>
-          : null}
+          {/* : null} */}
 
       </div>
     );
