@@ -101,13 +101,11 @@ export default class SearchBar extends React.Component {
           results.push(this.state.allTrips[h]);
         }
       }
-      // this.state.allTrips.filter((trip) => trip[1].toUpperCase().includes(search.toUpperCase()));
-      // console.log(results)
       // and also check if any cities in the trip include the query (not case-sensitive)
       const cityResults = [];
       const { allTrips } = this.state;
       for (let i = 0; i < allTrips.length; i += 1) {
-        const cities = allTrips[i][4];
+        const cities = allTrips[i][5];
         for (let j = 0; j < cities.length; j += 1) {
           if (cities[j].toUpperCase().includes(search.toUpperCase())) {
             cityResults.push(allTrips[i]);
@@ -128,6 +126,32 @@ export default class SearchBar extends React.Component {
           results.push(cityResults[q]);
         }
       }
+
+      // finally check if the trip's continent includes the query (not case-sensitive)
+      const continentResults = [];
+      // // const allTrips = this.state.allTrips;
+      for (let x = 0; x < allTrips.length; x += 1) {
+        const continent = allTrips[x][4];
+
+        if (continent.toUpperCase().includes(search.toUpperCase())) {
+          continentResults.push(allTrips[x]);
+        }
+      }
+
+      // // then if trip not already in the results array, add it
+      for (let z = 0; z < continentResults.length; z += 1) {
+        const tripName = continentResults[z][1];
+        let repeated = false;
+        for (let w = 0; w < results.length; w += 1) {
+          if (results[w][1] === tripName) {
+            repeated = true;
+          }
+        }
+        if (!repeated) {
+          results.push(continentResults[z])
+        }
+      }
+
       let updatedTrips = results.map((result) => [`${result[1]} ${result[2]} ${result[3]}`, result[0]]);
       if (updatedTrips.length === 0) {
         updatedTrips = [['Sorry, no results found', 0]];
@@ -178,9 +202,9 @@ export default class SearchBar extends React.Component {
   }
 
   showSecondSearchBar() {
-    // display a second search bar (fixed to bottom of page) if user scrolls past first search bar
+    // display a second search bar (fixed to bottom of page) if user scrolls all the way down
     setInterval(() => {
-      if (window.scrollY > 1000) {
+      if (window.scrollY > 2700) {
         this.setState({
           showSecondSearchBar: true
         })
@@ -533,9 +557,11 @@ export default class SearchBar extends React.Component {
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
-        {this.state.showSecondSearchBar ? <div><div id="BPsecondSearchBar"><h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+        <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
+        {/* {this.state.showSecondSearchBar ?  */}
+        <div><div id="BPsecondSearchBar">
           <Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults={this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults={this.removeSearchResults} /></div></div>
-          : null}
+          {/* : null} */}
 
       </div>
     );

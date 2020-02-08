@@ -4,7 +4,7 @@
     flex-direction: row;
     align-items: center;
     line-height: 32px;
-    width: 84%;
+    width: fit-content;
     height: auto;
     position: relative;
     margin-top: 10px;
@@ -70,7 +70,7 @@
     letter-spacing: 1px;
     position: block;
     margin: 0 20px 0 20px;
-    width: 150px
+    width: fit-content
 }
 
 /* second row of content */
@@ -81,7 +81,7 @@
     flex-direction: row;
     align-items: center;
     line-height: 32px;
-    width: 83%;
+    width: fit-content;
     height: auto;
     position: relative;
     margin: auto;
@@ -230,6 +230,7 @@
     font-size: 12px;
     cursor: pointer;
     padding-left: 70px;
+    width: fit-content;
 }
 
 /*Drowndown for Brands*/
@@ -420,18 +421,18 @@
 
 /* second search bar at bottom of page */
 #BPsecondSearchBar {
-    position: fixed;
+    position: relative;
     bottom: 0;
     margin-left: 25%;
     margin-top: 20px;
     margin-bottom: 250px;
     align-items: center;
     line-height: 32px;
-    height: auto;
+    height: fit-content;
     font-size: 16px;
     font-family: sans-serif;
     color: #4c4c4c;
-    z-index: 2;
+    z-index: 50;
 }
 
 /* SEARCH COMPONENT */
