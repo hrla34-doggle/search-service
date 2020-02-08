@@ -221,9 +221,10 @@ export default class SearchBar extends React.Component {
   componentDidMount() {
     // when the page first renders, get all trips' info and also pick a random trip to display its info and check whether to show second search bar
     this.getAllTrips();
-    var id = window.location.href.slice(22)
-    var edited = id.slice(id.length - 2)
-    this.getOneTrip(edited);
+    var id = window.location.href;
+    var edited = id.split('/');
+    var url = edited[edited.length - 1]
+    this.getOneTrip(url);
     this.showSecondSearchBar()
   }
 
@@ -260,10 +261,10 @@ export default class SearchBar extends React.Component {
               </div>
             ) : (
                 <div>
-                  <span style={{ fontWeight: 'bold' }}>800 854 0103</span>
+                  <span style={{ fontWeight: 'bold'}}>800 854 0103</span>
                   <br />
                   {' '}
-                  or call your travel agent
+                  call a travel agent
               </div>
               )}
           </div>
@@ -303,6 +304,9 @@ export default class SearchBar extends React.Component {
               <div>
                 AUSTRALIA AND NEW ZEALAND
                 <i className="BPrightArrow" />
+                <ul>
+                  
+                </ul>
               </div>
 
 
