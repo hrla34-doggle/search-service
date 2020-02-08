@@ -28,7 +28,7 @@ const Search = (props) => {
 
   const resultsArrayStyle = {
     position: 'absolute',
-    zIndex: '2',
+    zIndex: '5',
     backgroundColor: '#f9f9f9',
   };
 
@@ -47,7 +47,7 @@ const Search = (props) => {
         <img id="BPmagnifyingGlass" style={imgStyle} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/magnifyingglass.svg.png" alt="magnifying glass" onClick = {() => props.getOneTrip(props.searchResults[0][1])}/>
       </div>
       <div style={resultsArrayStyle} >
-        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black'}} href={`/${result[1]}?${result[2]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
+        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black', padding: '0px', textAlign: 'left'}} href={`/${result[1]}?${result[2]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 

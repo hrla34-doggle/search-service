@@ -33,7 +33,7 @@ class MoreTripDetails extends React.Component {
       borderTop: '1px dotted black',
       position: 'relative',
       width: '100%',
-      height: '300px',
+      height: '250px',
     };
 
     const ViewMore = {

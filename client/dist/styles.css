@@ -428,10 +428,9 @@
 #BPsecondSearchBar {
     position: 'relative';
     bottom: 0;
-    margin-left: 25%;
+    margin-left: 27%;
     margin-top: fit-content;
-    margin-bottom: 250px;
-    align-items: center;
+    margin-bottom: fit-content;
     line-height: 32px;
     height: fit-content;
     font-size: 16px;

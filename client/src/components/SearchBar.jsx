@@ -566,12 +566,14 @@ export default class SearchBar extends React.Component {
         <div style={tripdetailsplacement}>
           {this.state.currentTrip.length > 0 ? <MoreTripDetails trip={this.state.currentTrip[0]} /> : null}
         </div>
-        <h2 style={{ textAlign: 'center', color: '#4c4c4c' }}>Or search for something else</h2>
         {/* {this.state.showSecondSearchBar ?  */}
+        <div style={{textAlign: 'center', marginTop: '5%'}}>
+        <h2 style={{ color: '#4c4c4c'}}>Or search for something else</h2>
+
         <div><div id="BPsecondSearchBar">
           <Search2 searchResults={this.state.queryResults} updateQuery={this.updateQuery} updateSearchResults={this.updateSearchResults} getOneTrip={this.getOneTrip} removeSearchResults={this.removeSearchResults} /></div></div>
           {/* : null} */}
-
+</div>
       </div>
     );
   }
