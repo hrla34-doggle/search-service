@@ -333,7 +333,7 @@ class MoreTripDetails extends React.Component {
                 <div>
                     <span style={{ fontWeight: 'bold',paddingLeft:'6px',   }}>{diff[0][0].join(' ')}</span>
                     <br />
-                    <span style={{ paddingLeft:'6px', display:'inline-block',  }}>{diff[0][1].join(' ')}</span>
+                    <span style={{ paddingLeft:'6px', display:'block',  }}>{diff[0][1].join(' ')}</span>
                   </div>
                 </div>
               ))}
