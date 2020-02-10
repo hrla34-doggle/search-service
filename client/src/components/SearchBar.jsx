@@ -326,7 +326,7 @@ export default class SearchBar extends React.Component {
                 <br />
                 Our latest offers, making travel more affordable
               </div>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EARLY PAYMENT DISCOUNTS</span>
                   {' '}
@@ -351,7 +351,7 @@ export default class SearchBar extends React.Component {
                   <i className="BPrightArrow" />
                 </div>
               </section>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>LAST MINUTE DEALS</span>
                   {' '}
@@ -396,7 +396,7 @@ export default class SearchBar extends React.Component {
                 <br />
                 For over 70 years, we've carefully crafted our trips with one goal in mind; to enable our guests to live The Good Life
               </div>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>EXPLORE MORE</span>
                   {' '}
@@ -420,7 +420,7 @@ export default class SearchBar extends React.Component {
                   <i className="BPrightArrow" />
                 </div>
               </section>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>TRAFALGAR HIGHLIGHTS</span>
                   {' '}
@@ -443,7 +443,7 @@ export default class SearchBar extends React.Component {
                   <i className="BPrightArrow" />
                 </div>
               </section>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>MOMENTS</span>
                   {' '}
@@ -480,7 +480,7 @@ export default class SearchBar extends React.Component {
                 <br />
                 72 countries. 7 continents. Through JoinTrafalgar, we are doing our part to have a positive impact on the places we visit and the people who call them home.
               </div>
-              <section className="BPflexrow">
+              <section style={{display: 'flex', flexDirection: 'row'}}>
                 <div>
                   <span style={{ fontWeight: 'bold', fontSize: '16px' }}>OUR STORY</span>
                   {' '}
