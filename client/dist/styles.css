@@ -78,10 +78,11 @@
 .BPheader2 {
     border-bottom: 1px solid black;
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    align-content: center;
+    align-content: left;
     line-height: 32px;
-    width: fit-content;
+    width: 100%;
     height: auto;
     position: relative;
     margin: auto;
