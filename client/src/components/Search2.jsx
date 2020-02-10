@@ -39,7 +39,7 @@ const Search2 = (props) => {
   };
   return (
     <div onMouseLeave= {props.removeSearchResults} onClick = {props.updateSearchResults}>
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'flex', paddingLeft: '100px' }}>
         <form id="BPsearchfield">
           {' '}
           <input style={barStyle} type="text" placeholder="Where to or what trip?" onChange={(e) => props.updateQuery(e)} />
