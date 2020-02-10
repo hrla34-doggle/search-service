@@ -129,12 +129,11 @@ class MoreTripDetails extends React.Component {
         display: 'block', flexDirection: 'column', width: '93%', margin: 'auto',
       }}
       >
-        <div>
+        <div style={{display: 'inline-block'}}>
           <h2 style={{
             color: '#4c4c4c',
             font: '32px Nunito Sans',
             fontWeight: '900',
-            
           }}
           >
             Trip details
