@@ -245,6 +245,7 @@ export default class SearchBar extends React.Component {
     };
     const tripdetailsplacement = {
       opacity: this.state.showtripdetails ? 1 : 0.3,
+      marginBottom: '100px'
     };
 
     return (

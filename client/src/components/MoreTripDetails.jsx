@@ -313,7 +313,7 @@ class MoreTripDetails extends React.Component {
             }}
             >
               {difference2.map((diff, index) => (
-                <div id="fuck this"style={{
+                <div style={{
                   color: '#4c4c4c', fontWeight: '400', display: 'block', width: '400px', float:'left', height:'auto', padding:'10px 0 10px 0'
                 }}>
                 <div
@@ -334,7 +334,7 @@ class MoreTripDetails extends React.Component {
                 <div>
                     <span style={{ fontWeight: 'bold',paddingLeft:'6px',   }}>{diff[0][0].join(' ')}</span>
                     <br />
-                    <span style={{ paddingLeft:'6px', display:'block'  }}>{diff[0][1].join(' ')}</span>
+                    <span style={{ paddingLeft:'6px', display:'block',  }}>{diff[0][1].join(' ')}</span>
                   </div>
                 </div>
               ))}
