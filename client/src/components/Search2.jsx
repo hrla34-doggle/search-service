@@ -56,7 +56,7 @@ const Search2 = (props) => {
           top: 0,
         })}
       >
-        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black', padding: '0px', textAlign: 'left'}} href={`/${result[1]}?${result[2]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
+        {props.searchResults.map((result) => <a style={{textDecoration: 'none', color: 'black', padding: '0px', textAlign: 'left'}} href={`/${result[1]}`}><div className="BPsearchResults" onClick={() => props.getOneTrip(result[1])} style={resultsStyle} key={result[1]}>{result[0]}</div></a>)}
       </div>
       {' '}
 
