@@ -376,8 +376,11 @@
 /* the rows in deals/about us/make a difference dropdowns, and moretripdetails components */
 
 .BPflexrow {
-    display: flex;
-    flex-direction: row;
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: 0 !important;
+    font-family: 'Nunito Sans'!important;
 }
 
 /* TRIP DETAILS COMPONENT */
@@ -453,4 +456,14 @@
 .BPviewmore:hover {
   opacity: .5
 }
+#tripIntro {
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 35px !important;
+    font-weight: 900 !important;
+  }
 
+  .grey-border {
+      border-style: solid;
+      border-width: 1px 0 1px 0;
+      border-color: lightgrey;
+  }
