@@ -95,13 +95,13 @@ const TripDetails = (props) => {
 
   return (
     <div>
-      <img id="BPcityimage" style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} />
+      <div id="BPcityimage"><img  style={tripImg} src={imageUrl} alt={imageUrl.slice(0, -4)} /></div>
 
-      <section style={{
-        display: 'flex', flexDirection: 'column', width: '82%', margin: 'auto',
+      <section id="tripDetails" style={{
+        display: 'flex', flexDirection: 'column', width: '93%', margin: 'auto',
       }}
       >
-        <h1 style={tripName}>{props.trip.name}</h1>
+        <h1 id="tripIntro" style={tripName}>{props.trip.name}</h1>
         <div style={daysCountriesCitiesDiv}>
           <span style={daysCountriesCitiesSpan}>
             <img style={calendar} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/calendar.svg.png" alt="calendar" />
@@ -155,8 +155,8 @@ const TripDetails = (props) => {
         </div>
 
         <div>
-          <p style={firstDescription}>{props.trip.descriptions[0]}</p>
-          <p style={secondDescription}>{props.trip.descriptions[1]}</p>
+          <p className="nunito"style={firstDescription}>{props.trip.descriptions[0]}</p>
+          <p className="nunito" style={secondDescription}>{props.trip.descriptions[1]}</p>
         </div>
       </section>
     </div>

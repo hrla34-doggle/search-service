@@ -11,6 +11,7 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/no-unescaped-entities */
+
 import React from 'react';
 
 class MoreTripDetails extends React.Component {
@@ -30,7 +31,7 @@ class MoreTripDetails extends React.Component {
 
   render() {
     const divStyle = {
-      borderTop: '1px dotted black',
+      borderTop: '2px solid lightgrey',
       position: 'relative',
       width: '100%',
       height: '250px',
@@ -49,10 +50,11 @@ class MoreTripDetails extends React.Component {
       backgroundColor: 'rgba(74,75,77,.1)',
       borderRadius: '25px',
       border: '2px solid #c4082f',
-      padding: '12px 20px 10px',
+      padding: '12px 65px 10px',
       lineHeight: '22px',
       fontFamily: 'sans-serif',
       zIndex: '2',
+      borderStyle: 'none'
     };
 
     const airportTransfers = {
@@ -65,7 +67,7 @@ class MoreTripDetails extends React.Component {
       textTransform: 'uppercase',
       display: 'block',
       lineHeight: '22px',
-      width: '200px',
+      width: '300px',
       fontStyle: 'normal',
       padding: '12px 20px 10px',
       border: '2px solid #c4082f',
@@ -79,13 +81,13 @@ class MoreTripDetails extends React.Component {
     const difference = this.props.trip.the_trafalgar_difference;
     const diff = difference.map((item) => {
       if (item.includes('CONNECT WITH LOCALS') || item.includes('DIVE INTO CULTURE')) {
-        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Handshake.svg.png';
+        var image = 'https://ebtrafalgar.s3-us-west-1.amazonaws.com/TrafalgarDifference.png';
       } else if (item.includes('LOCAL SPECIALISTS')) {
-        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Key.svg.png';
+        var image = 'https://ebtrafalgar.s3-us-west-1.amazonaws.com/LocalSpecialist.png';
       } else if (item.includes('STAYS WITH STORIES')) {
-        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Home.svg.png';
+        var image = 'https://ebtrafalgar.s3-us-west-1.amazonaws.com/StayWithStories.png';
       } else if (item.includes('MAKE A DIFFERENCE')) {
-        var image = 'https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/flower.svg.png';
+        var image = 'https://ebtrafalgar.s3-us-west-1.amazonaws.com/MakeADifference.png';
       }
       return [item, image];
     });
@@ -123,42 +125,54 @@ class MoreTripDetails extends React.Component {
     // assigning the appropriate image to each trafalgar difference
 
     return (
-      <section style={{
-        display: 'flex', flexDirection: 'column', width: '90%', margin: 'auto',
+      <section id="moreTripDetails"style={{
+        display: 'block', flexDirection: 'column', width: '93%', margin: 'auto',
       }}
       >
-        <div style={divStyle}>
+        <div>
           <h2 style={{
             color: '#4c4c4c',
-            font: '28px sans-serif',
-            fontWeight: '700',
-            marginLeft: '60px',
+            font: '32px Nunito Sans',
+            fontWeight: '900',
+            
           }}
           >
             Trip details
           </h2>
-          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
+          <div className="BPflexrow" style={{ width: '100%', margin: 'auto', marginTop: '30px' }}>
+            <div style={{ height:'200px'}}>
             <h3 style={{
-              font: '22px sans-serif',
+              font: '25px Nunito Sans',
               color: '#003b75',
               fontWeight: '800',
               display: 'inline-block',
-              marginRight: '200px',
+              width: '400px',
+              float:'left'
+              
+            
             }}
             >
               What's included
             </h3>
+            <div style={{
+                height: '125px', width: '280px',  display: "inline-block", float:"left", padding: '15px', margin:'10px 0 10px 0'
+              }}>
+            <div style={{
+                height: '75px', width: '75px', borderRadius: '50%', backgroundColor: '#ecf3fa', display: "inline-block", float:'left'
+              }}>
             <img
               style={{
-                height: '40px', width: '40px', borderRadius: '50%', marginRight: '10px', backgroundColor: '#add8e6',
+                height: '50px', width: '50px', borderRadius: '0%', marginRight: '10px', backgroundColor: '#add8e6', position: 'relative', top:'20%', left:'15%'
               }}
-              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Moon.svg.png"
+              src="https://ebtrafalgar.s3-us-west-1.amazonaws.com/Moon.png"
               alt="moon"
             />
-
-            <div style={{ marginRight: '100px' }}>
+            </div>
+            <div style={{
+                display:'block', height:'100px', width:'150px', float:'left', paddingLeft: '8px'
+              }}>
               <h4 style={{
-                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+                textTransform: 'uppercase', fontWeight: '800', color: '#4c4c4c', display: "block", float: "left", marginTop: '0'
               }}
               >
                 {' '}
@@ -167,19 +181,31 @@ class MoreTripDetails extends React.Component {
                 Nights
                 {' '}
               </h4>
-              <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>Accommodation</p>
+              <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400', float:"left" }}>Accommodation</p>
             </div>
-
+            </div>
+            
+              
+            <div style={{
+                height: '125px', width: '280px',  display: "inline-block", float:"left", padding: '15px', margin:'10px 0 10px 0'
+              }}>
+            <div style={{
+                height: '75px', width: '75px', borderRadius: '50%', backgroundColor: '#ecf3fa', float: 'left'
+              }}>
             <img
               style={{
-                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+                height: '50px', width: '40px', marginRight: '10px', borderRadius: '0%', backgroundColor: '#add8e6', margin:'0', position:'relative', top:'20%', left: '25%'
               }}
-              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Cutlery.svg.png"
+              src="https://ebtrafalgar.s3-us-west-1.amazonaws.com/Food.png"
               alt="cutlery"
             />
-            <div style={{ marginRight: '100px' }}>
+            </div>
+            
+            <div style={{
+                display:'block', height:'100px', width:'150px', float:'left', paddingLeft: '6px'
+              }}>
               <h4 style={{
-                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+                textTransform: 'uppercase', fontWeight: '800', color: '#4c4c4c', marginTop: '0', 
               }}
               >
                 {' '}
@@ -202,17 +228,24 @@ class MoreTripDetails extends React.Component {
                 dinners
               </p>
             </div>
-
+            </div>
+            <div style={{
+                height: '125px', width: '280px',  display: "inline-block", float:"left", padding: '15px', margin:'10px 0 10px 0'
+              }}>
+            <div style={{
+                height: '75px', width: '75px', borderRadius: '50%', backgroundColor: '#ecf3fa', float: 'left'
+              }}>
             <img
               style={{
-                height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#add8e6',
+                height: '40px', width: '40px', marginRight: '10px', borderRadius: '0%', backgroundColor: '#add8e6', position:'relative', top:'25%', left:'25%'
               }}
-              src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/route.svg.png"
-              alt="route"
+              src="https://ebtrafalgar.s3-us-west-1.amazonaws.com/Path.png"
+              alt="cutlery"
             />
-            <div style={{ marginRight: '10px' }}>
+            </div>
+            <div style={{display:'block', height:'100px', width:'180px', float:'left',paddingLeft: '6px'}}>
               <h4 style={{
-                textTransform: 'uppercase', fontWeight: '600', color: '#4c4c4c',
+                textTransform: 'uppercase', fontWeight: '800', color: '#4c4c4c', marginTop: '0', 
               }}
               >
                 {' '}
@@ -221,129 +254,169 @@ class MoreTripDetails extends React.Component {
               <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>All transport shown</p>
             </div>
           </div>
+          </div>
+          </div>
 
         </div>
-        <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
+        <div style={{borderTop: '2px solid lightgrey',
+                     position: 'relative',
+                     width: '100%',
+                     height: 'content-fit',
+                     float:'left',
+                     padding: '30px 0 30px 0',
+                     }}>
+          <div className="BPflexrow" style={{ width: '90%', height:'fit-content' }}>
             <h3 style={{
-              font: '22px sans-serif',
-              fontWeight: '700',
-              display: 'block',
-              marginRight: '200px',
+              font: '25px Nunito Sans',
+              fontWeight: '800',
+              display: 'inline-block',
+              width: '400px',
+              float:'left',
               color: '#70005d',
             }}
             >
               The Trafalgar difference
             </h3>
             <div style={{
-              display: 'inline-block', height: '50px',
+              display: 'inline-block', height: 'content', width:'350px', padding: '15px', margin:'10px 0 10px 0', float:'left'
             }}
             >
               {difference1.map((diff, index) => (
                 <div
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row',
+                    color: '#4c4c4c', fontWeight: '400', display: 'block', width: '100%', float: 'left', padding:'10px 0 10px 0'
                   }}
                 >
+                  <div style={{
+                      height: '75px', width: '75px', borderRadius: '50%', backgroundColor: '#fcebf9', float:'left' 
+                    }}>
                   <img
                     style={{
-                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
+                      height: '40px', width: '40px', borderRadius: '0%', backgroundColor: '#fcebf9', float:'left', position:'relative', top:'25%', left:'23%'
                     }}
                     src={diff[1]}
                     alt={diff[1].slice(-8)}
                   />
-                  <p>
-                    <span style={{ fontWeight: 'bold' }}>{diff[0][0].join(' ')}</span>
+                  </div>
+                  <div style={{ float:'left', display:'block', width:'200px', paddingLeft:'6px'  }}>
+                    <span style={{ fontWeight: 'bold',   }}>{diff[0][0].join(' ')}</span>
                     <br />
-                    {diff[0][1].join(' ')}
-                  </p>
+                    <div style={{width:'200px'  }}>{diff[0][1].join(' ')}</div>
+                    
+                  </div>
                 </div>
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', height: '50px',
+              display: 'inline-block', height: 'content', width:'350px', padding: '15px', margin:'10px 0 10px 0', float:'left'
             }}
             >
               {difference2.map((diff, index) => (
+                <div id="fuck this"style={{
+                  color: '#4c4c4c', fontWeight: '400', display: 'block', width: '400px', float:'left', height:'auto', padding:'10px 0 10px 0'
+                }}>
                 <div
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
+                    height: '75px', width: '75px', borderRadius: '50%', backgroundColor: '#fcebf9', float:'left'
                   }}
                 >
                   <img
                     style={{
-                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#FFC0CB',
+                      height: '40px', width: '40px', borderRadius: '0%', backgroundColor: '#fcebf9', float:'left', position:'relative', top:'23%', left:'23%'
                     }}
                     src={diff[1]}
                     alt={diff[1].slice(-8)}
                   />
-                  <p>
-                    <span style={{ fontWeight: 'bold' }}>{diff[0][0].join(' ')}</span>
+                  
+                </div>
+                <div>
+                    <span style={{ fontWeight: 'bold',paddingLeft:'6px',   }}>{diff[0][0].join(' ')}</span>
                     <br />
-                    <span>{diff[0][1].join(' ')}</span>
-                  </p>
+                    <span style={{ paddingLeft:'6px', display:'block'  }}>{diff[0][1].join(' ')}</span>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        <div style={divStyle}>
-          <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
+        <div style={{borderTop: '2px solid lightgrey',
+      position: 'relative',
+      width: '100%',
+      height: 'fit-content',
+      float:'left',
+      padding: '50px 0 5px 0',
+      }}>
+          <div className="BPflexrow" style={{ width: '90%' }}>
             <h3 style={{
-              font: '22px sans-serif',
+              font: '25px Nunito Sans',
               color: '#0d5e2f',
-              fontWeight: '700',
+              fontWeight: '800',
               display: 'block',
-              marginRight: '200px',
+              width: "415px",
+              float: 'left',
+              margin: '0'
+              
             }}
             >
               Sightseeing highlights
             </h3>
             <div style={{
-              display: 'inline-block', marginTop: 'auto', height: '50px',
+              display: 'block', height: '200px', float: 'left', width:'400px'
             }}
             >
               {highlights1.map((highlight, index) => (
-                <p
+                <div
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
+                    height: '100px', width: '400px', float:'left'
                   }}
                 >
+                  <div style={{
+                    height: '45px', width: '45px', borderRadius: '50%', backgroundColor: '#e6ffe6', float:'left', paddingRight: '6px'
+                  }}>
                   <img
                     style={{
-                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
+                      height: '35px', width: '28px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90', position: 'relative', top: '15%', left:'20%'
                     }}
-                    src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Map_pin.svg.png"
+                    src="https://ebtrafalgar.s3-us-west-1.amazonaws.com/Highlights.png"
                     alt="route"
                   />
-                  {highlight}
-                </p>
+                  </div>
+                  <div style={{
+                      float:'left', width:'300px', paddingLeft:'6px'
+                    }}>{highlight}</div>
+                </div>
               ))}
             </div>
             <div style={{
-              display: 'inline-block', marginRight: '100px', marginTop: 'auto', height: '50px',
+              display: 'inline-block', height: '50px', width:'300px'
             }}
             >
               {highlights2.map((highlight, index) => (
-                <p
+                <div
                   key={index}
                   style={{
-                    color: '#4c4c4c', fontWeight: '400', display: 'flex', flexDirection: 'row', width: '100%',
+                    height: '100px', width: '400px', float:'left', 
                   }}
                 >
+                  <div style={{
+                    height: '45px', width: '45px', borderRadius: '50%', backgroundColor: '#e6ffe6', float:'left' 
+                  }}>
                   <img
                     style={{
-                      height: '40px', width: '40px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90',
+                      height: '35px', width: '28px', marginRight: '10px', borderRadius: '50%', backgroundColor: '#90EE90', position: 'relative', top: '15%', left:'20%'
                     }}
-                    src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/Map_pin.svg.png"
+                    src="https://ebtrafalgar.s3-us-west-1.amazonaws.com/Highlights.png"
                     alt="route"
                   />
-                  {highlight}
-                </p>
+                  </div>
+                  <div style={{
+                      float:'left', width:'300px', paddingLeft:'6px'
+                    }}>{highlight}</div>
+                </div>
               ))}
             </div>
           </div>
@@ -352,14 +425,26 @@ class MoreTripDetails extends React.Component {
         {this.state.travelDetails ? null : <button className="BPviewmore" style={ViewMore} onClick={this.showTravelDetails}>View More</button> }
         {this.state.travelDetails
           ? (
-            <div style={divStyle}>
-              <div className="BPflexrow" style={{ width: '90%', margin: 'auto', marginTop: '30px' }}>
+            <div id="edgarwashere" style={{borderTop: '2px solid lightgrey',
+            position: 'relative',
+            width: '100%',
+            height: '250px',
+            float: 'left',
+            height:'fit-content',
+            padding: '30px 0 45px 0',
+      
+            
+            }}>
+              <div className="BPflexrow" style={{ height:'fit-content',width: '90%',padding: '15px, 0 25px 0'}}>
                 <h3 style={{
-                  font: '22px sans-serif',
+                  font: '25px Nunito Sans',
                   color: '#9c1a00',
-                  fontWeight: '700',
-                  display: 'block',
-                  marginRight: '50px',
+                  fontWeight: '800',
+                  display: 'inline-block',
+                  width:'430px',
+                  margin: '0',
+                  float:'left'
+                  
                 }}
                 >
                   Travel highlights
@@ -374,22 +459,22 @@ class MoreTripDetails extends React.Component {
 
 
                 <div style={{
-                  display: 'flex', flexDirection: 'column', width: 'fit-content',
+                  display: 'block',float:'left' , width: '380px',
                 }}
                 >
                   {travels1.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
-                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" />
-                      {highlight}
+                      
+                      <div style={{float:'left', width:'100%',padding:'15px 0 15px 0'}}><div style={{display:'block', float:'left', }}><img style={{ height: '15px', width: '15px', float:'left', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" /></div><div style={{float:'left', width:'350px'}}>{highlight}</div></div>
                     </p>
                   ))}
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', width: 'fit-content' }}>
+                <div style={{ display: 'block', float:'left' , width: '380px', }}>
                   {travels2.map((highlight, index) => (
                     <p key={index} style={{ color: '#4c4c4c', fontWeight: '400', width: '100%' }}>
-                      <img style={{ height: '15px', width: '15px', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" />
-                      {highlight}
+                      
+                      <div style={{float:'left', width:'100%',padding:'15px 0 15px 0'}}><div style={{display:'block', float:'left', }}><img style={{ height: '15px', width: '15px', float:'left', marginRight: '10px' }} src="https://front-end-capstone-trafalgar.s3-us-west-1.amazonaws.com/checkmark.svg.png" alt="checkmark" /></div><div style={{float:'left', width:'350px'}}>{highlight}</div></div>
                     </p>
                   ))}
                 </div>
