@@ -7,7 +7,9 @@
     "build": "webpack -d --watch",
     "start": "nodemon server/server.js",
     "seed": "node db/seed.js",
-    "test": "jest --forceExit"
+    "test": "jest --forceExit",
+    "create-tsv": "node db/newseed.js",
+    "import-tsv": "mongoimport --db trafalgar --collection trips --type tsv  trips.tsv  --headerline --drop"
   },
   "repository": {
     "type": "git",
@@ -26,7 +28,9 @@
     "chai": "^4.2.0",
     "cors": "^2.8.5",
     "express": "^4.14.0",
+    "faker": "^4.1.0",
     "file-loader": "^5.0.2",
+    "fs": "0.0.1-security",
     "jquery": "^3.1.1",
     "mocha": "^7.0.0",
     "mongoose": "^5.8.9",
@@ -54,7 +58,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
-    "faker": "^4.1.0",
     "jest": "^25.1.0",
     "jest-environment-enzyme": "^7.1.1",
     "jest-enzyme": "^7.1.1",

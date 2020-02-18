@@ -202,7 +202,7 @@ export default class SearchBar extends React.Component {
     });
   }
 
-  showContinentResults (continent) {
+  showContinentResults(continent) {
     // show search results for a continent when user clicks on it
     this.setState({
       query: continent
