@@ -12,7 +12,28 @@ const controllers = {
   // for when a user selects a trip, use its id to get all the information about that trip in order to render the page appropriately
   findOne: (req, res) => (
     db.getOne(req.params.id)
-      .then((trip) => res.status(200).send(trip))
+      .then((trip) => {
+        const returnObj = {};
+        returnObj.id = trip[0].id;
+        returnObj.name = trip[0].name;
+        returnObj.season = trip[0].season;
+        returnObj.year = trip[0].year;
+        returnObj.imageUrl = trip[0].imageUrl;
+        returnObj.days = trip[0].days;
+        returnObj.continent = trip[0].continent;
+        returnObj.country = trip[0].country;
+        returnObj.cities = trip[0].citiesStr.split(',');
+        returnObj.descriptions = trip[0].descriptionsStr.split(',');
+        returnObj.nights = trip[0].nights;
+        returnObj.breakfasts = trip[0].breakfasts;
+        returnObj.lunches = trip[0].lunches;
+        returnObj.dinners = trip[0].dinners;
+        returnObj.the_trafalgar_difference = trip[0].differenceStr.split(',');
+        returnObj.sightseeing_highlights = trip[0].sightseeingStr.split(',');
+        returnObj.travel_highlights = trip[0].travelStr.split(',');
+
+        res.status(200).send(returnObj);
+      })
       .catch((err) => res.status(400).send(err))
   ),
   post: (req, res) => (
