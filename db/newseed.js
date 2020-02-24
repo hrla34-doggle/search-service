@@ -2,7 +2,7 @@ const faker = require('faker');
 const fs = require('fs');
 
 const writeUsers = fs.createWriteStream('trips.tsv');
-writeUsers.write(`id\tname\tseason\tyear\timageUrl\tdays\tcontinent\tcountry\tcitiesStr\tdescriptionsStr\tnights\tbreakfasts\tlunches\tdinners\tdifferenceStr\tsightseeingStr\ttravelStr\n`, 'utf8');
+// writeUsers.write(`id\tname\tseason\tyear\timageUrl\tdays\tcontinent\tcountry\tcitiesStr\tdescriptionsStr\tnights\tbreakfasts\tlunches\tdinners\tdifferenceStr\tsightseeingStr\ttravelStr\n`, 'utf8');
 
 function writeTenMillionUsers(writer, encoding, callback) {
   let i = 10000000;

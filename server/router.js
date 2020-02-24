@@ -2,7 +2,7 @@
 const express = require('express');
 
 // eslint-disable-next-line import/extensions
-const controllers = require('./controllers.js');
+const controllers = require('./pgcontrollers.js');
 
 const router = express.Router();
 
