@@ -208,21 +208,21 @@ class MoreTripDetails extends React.Component {
               }}
               >
                 {' '}
-                {this.props.trip.meals.breakfasts + this.props.trip.meals.lunches + this.props.trip.meals.dinners}
+                {this.props.trip.breakfasts + this.props.trip.lunches + this.props.trip.dinners}
                 {' '}
                 Meals
                 {' '}
               </h4>
               <p style={{ color: '#4c4c4c', marginTop: '-10px', fontWeight: '400' }}>
-                {this.props.trip.meals.breakfasts}
+                {this.props.trip.breakfasts}
                 {' '}
                 breakfasts,
                 {' '}
-                {this.props.trip.meals.lunches}
+                {this.props.trip.lunches}
                 {' '}
                 lunches,
                 {' '}
-                {this.props.trip.meals.dinners}
+                {this.props.trip.dinners}
                 {' '}
                 dinners
               </p>

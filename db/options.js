@@ -11,7 +11,7 @@ const options = {
     Europe: ['France', 'Germany', 'Greece', 'Ireland', 'Italy', 'The Netherlands', 'Norway', 'Poland', 'Portugal', 'Russia', 'Spain', 'Switzerland', 'The United Kingdom'],
     'North America': ['The United States', 'Costa Rica', 'Mexico', 'Canada'],
     'South America': ['Brazil', 'Peru'],
-    'Australia': ['Australia', 'New Zealand'],
+    Australia: ['Australia', 'New Zealand'],
   },
 
   cities: {
