@@ -1,0 +1,10 @@
+config:
+  target: 'http://localhost:3003'
+  phases:
+    - duration: 300
+      arrivalRate: 400
+scenarios:
+  - flow:
+    - get:
+        url: "/api/trips/{{ $randomNumber(9000000, 9999999) }}"
+
