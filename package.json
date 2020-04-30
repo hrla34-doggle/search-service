@@ -32,7 +32,7 @@
     "faker": "^4.1.0",
     "file-loader": "^5.0.2",
     "fs": "0.0.1-security",
-    "jquery": "^3.1.1",
+    "jquery": "^3.5.0",
     "mocha": "^7.0.0",
     "mongoose": "^5.8.9",
     "morgan": "^1.7.0",
