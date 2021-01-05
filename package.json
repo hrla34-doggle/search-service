@@ -20,7 +20,7 @@
   "dependencies": {
     "artillery": "^1.6.0-29",
     "aws-sdk": "^2.610.0",
-    "axios": "^0.19.1",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.15.2",
